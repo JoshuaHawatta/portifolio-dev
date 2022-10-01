@@ -1,0 +1,35 @@
+/*FONTS*/
+@font-face {
+    font-family: harry-fat;
+    src: url('./assets/fonts/harry-fat.otf');
+}
+
+@font-face {
+    font-family: alma-sans-thin;
+    src: url('./assets/fonts/AlmaSans-Thin.otf');
+}
+
+@font-face {
+    font-family: now-light;
+    src: url('./assets/fonts/now-light.otf');
+}
+
+/*BASIC_STYLING*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/*COLORS*/
+:root {
+    --blue-color: #4d4bcb;
+    --brighter-blue-color: #5a58df;
+    --green-color: #c7e87d;
+    --grey-color: #dfdfee;
+}
