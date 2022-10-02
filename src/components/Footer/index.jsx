@@ -17,7 +17,7 @@ import emailRegex from './regex';
 const Footer = () => {
     const [inputValues, setInputValues] = useState({});
     const [message, setMessage] = useState('');
-    const [emailInputRef, messageInputRef] = [useRef(null), useRef(null)];
+    const [emailRef, messageRef, nameRef] = [useRef(null), useRef(null), useRef(null)];
 
     const handleInputChange = e => {
         const { name, value } = e.target;
@@ -28,15 +28,21 @@ const Footer = () => {
         e.preventDefault();
         e.stopPropagation();
 
-        if (!inputValues.userMessage) {
-            setMessage('Digite a mensagem do e-mail!');
-            messageInputRef.current.focus();
+         if (!inputValues.userName) {
+            setMessage('Preciso saber seu nome, uai!');
+            nameRef.current.focus();
 
             return
         }
         else if (!emailRegex.test(inputValues.userEmail) || !inputValues.userEmail) {
-            setMessage('Digite um e-mail válido! Ex: usuario@gmail.com ');
-            emailInputRef.current.focus();
+            setMessage('Me diz o seu e-mail. Tipo assim: usuario@gmail.com');
+            emailRef.current.focus();
+
+            return
+        }
+        else if (!inputValues.userMessage) {
+            setMessage('Não tá esquecendo de me dizer alguma coisa não?');
+            messageRef.current.focus();
 
             return
         }
@@ -50,27 +56,44 @@ const Footer = () => {
 
     return (
         <FooterWrapper>
+            
+            { /*FORM*/ }
             <FormWrapper onSubmit={ sendEmail }>
                 <span>{ message }</span>
+                <h4>Me manda um e-mail!</h4>
+
                 <FormSection>
-                    <label htmlFor='user-email'>Digite seu email:</label>
+                    <label htmlFor='user-name'>Seu nome</label>
                     <input
                         type='text'
-                        ref={ emailInputRef }
-                        name='userEmail'
-                        id='user-email'
-                        value={ inputValues.userEmail || '' }
-                        onChange={handleInputChange }
-                        placeholder='ex: usuario@gmail.com'
+                        ref={ nameRef }
+                        name='userName'
+                        id='user-name'
+                        value={ inputValues.userName || '' }
+                        onChange={ handleInputChange }
+                        placeholder='ex: Marcos Andrade'
                     />
                 </FormSection>
 
                 <FormSection>
-                    <label htmlFor='user-message'>Mensagem:</label>
+                    <label htmlFor='user-email'>Seu e-mail</label>
+                    <input
+                        type='email'
+                        ref={ emailRef }
+                        name='userEmail'
+                        id='user-email'
+                        value={ inputValues.userEmail || '' }
+                        onChange={handleInputChange }
+                        placeholder='ex: marcosandrade@gmail.com'
+                    />
+                </FormSection>
+
+                <FormSection>
+                    <label htmlFor='user-message'>Mensagem</label>
                     <textarea
                         name='userMessage'
                         id='user-message'
-                        ref={ messageInputRef }
+                        ref={ messageRef }
                         onKeyUp={ e => e.key === 'Enter' && sendEmail(e) }
                         value={ inputValues.userMessage || '' }
                         onChange={ handleInputChange }
@@ -83,15 +106,24 @@ const Footer = () => {
                 </FormSection>
             </FormWrapper>
 
+            { /*LINKS*/}
             <FooterLinksSection>
                 <PrivacyPolicyDiv>
-                    <Link>Política de Privacidade</Link>
+                    <Link to='privacy-policy'>Política de Privacidade</Link>
                 </PrivacyPolicyDiv>
                 
                 <SocialMediaDiv> 
-                    <a href="" ><FaInstagram /> </a>
-                    <a href="" ><FaGithub /> </a>
-                    <a href="" ><FaLinkedin /> </a>
+                    <a href="https://www.instagram.com/joshuahawatta/" target='_blank'>
+                        <FaInstagram />
+                    </a>
+
+                    <a href="https://github.com/JoshuaHawatta" target='_blank'>
+                        <FaGithub />
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/joshua-hawatta/" target='_blank'>
+                        <FaLinkedin />
+                    </a>
                 </SocialMediaDiv>
             </FooterLinksSection>
         </FooterWrapper>
