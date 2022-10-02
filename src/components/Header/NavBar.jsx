@@ -12,15 +12,13 @@ const NAVBAR_JSX = () => {
                 <div/>
                 <div/>
             </HamburgerDiv>
-
-            { openMenu && 
-                <NavBar>
-                    <Link to='/'>Q<span>u</span>em Sou</Link>
-                    <Link to='/what-i-did'>T<span>r</span>abalhos</Link>
-                    <Link to='/resume'>C<span>u</span>rrículo</Link>
-                    <Link to='/contact'>C<span>o</span>ntato</Link>
-                </NavBar>
-            }
+            
+            <NavBar showNavBar={ openMenu }>
+                <Link to='/'>Q<span>u</span>em Sou</Link>
+                <Link to='/what-i-did'>T<span>r</span>abalhos</Link>
+                <Link to='/resume'>C<span>u</span>rrículo</Link>
+                <Link to='/contact'>C<span>o</span>ntato</Link>
+            </NavBar>
         </>
     )
 }

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.header `
     display: flex;
-    position: fixed;        //SE_LAYOUT_QUEBRAR,_REMOVER_ISSO!!!!!
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -44,10 +43,14 @@ export const NavBar = styled.nav `
         transition: all .3s ease-in-out;
 
         /*CHILDREN_ELEMENTS*/
-        span { color: #FFFFFF; }
+        span { color: #f0e7f1; }
 
         /*EFFECTS*/
-        &:hover { color: #FFFFFF; }
+        &:hover {
+            color: #FFFFFF;
+
+            span { color: #FFFFFF; }
+        }
     
         &:focus {
             font: 3rem harry-fat, Helvetica, sans-serif;
@@ -72,6 +75,7 @@ export const NavBar = styled.nav `
 
         a {
             color: #FFFFFF;
+            margin-left: 2rem;
             
             /*EFFECTS*/
             &:focus {
@@ -119,15 +123,15 @@ export const HamburgerDiv = styled.div `
 
         /*PSEUDO_ELEMENTS*/
         &:nth-child(1) {
-            transform: ${ ({ opened }) => !opened && 'rotate(45deg)' };
+            transform: ${ ({ opened }) => opened && 'rotate(45deg)' };
         }
 
         &:nth-child(2) {
-            opacity: ${ ({ opened }) => !opened ? 0 : 1 };
+            opacity: ${ ({ opened }) => opened ? 0 : 1 };
         }
 
         &:nth-child(3) {
-            transform: ${ ({ opened }) => !opened && 'translateY(-.7rem) rotate(-45deg)' };
+            transform: ${ ({ opened }) => opened && 'translateY(-.7rem) rotate(-45deg)' };
         }
     }
 
