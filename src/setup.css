@@ -5,8 +5,13 @@
 }
 
 @font-face {
-    font-family: alma-sans-thin;
-    src: url('./assets/fonts/AlmaSans-Thin.otf');
+    font-family: harry-heavy;
+    src: url('./assets/fonts/harry-heavy.otf');
+}
+
+@font-face {
+    font-family: now-medium;
+    src: url('./assets/fonts/Now-Medium.otf');
 }
 
 @font-face {
@@ -24,6 +29,10 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 /*COLORS*/
