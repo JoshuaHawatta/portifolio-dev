@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HamburgerDiv, NavBar } from './Styles';
+import { FaHome, FaCode, FaFile, FaPaperPlane } from 'react-icons/fa';
 
 const NAVBAR_JSX = () => {
     const [openMenu, setOpenMenu] = useState(true);
@@ -14,10 +15,25 @@ const NAVBAR_JSX = () => {
             </HamburgerDiv>
             
             <NavBar showNavBar={ openMenu }>
-                <Link to='/'>Q<span>u</span>em Sou</Link>
-                <Link to='/what-i-did'>T<span>r</span>abalhos</Link>
-                <Link to='/resume'>C<span>u</span>rrículo</Link>
-                <Link to='/contact'>C<span>o</span>ntato</Link>
+                <Link to='/'>
+                    <FaHome />
+                    Q<span>u</span>em Sou
+                </Link>
+            
+                <Link to='/what-i-did'>
+                    <FaCode />
+                    T<span>r</span>abalhos
+                </Link>
+
+                <Link to='/resume'>
+                    <FaFile />
+                    C<span>u</span>rrículo
+                </Link>
+
+                <Link to='/contact'>
+                    <FaPaperPlane />
+                    C<span>o</span>ntato
+                </Link>
             </NavBar>
         </>
     )

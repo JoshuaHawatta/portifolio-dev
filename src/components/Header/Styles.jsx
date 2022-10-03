@@ -4,25 +4,35 @@ export const HeaderWrapper = styled.header `
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
     width: 100%;
+    top: 0; 
     height: 15rem;
     padding: 0 2rem;
     background-color: var(--blue-color);
     box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, .5);
-
 `;
 
 export const LogoDiv = styled.div `
-    img {
-        padding: none;
-        width: 40rem;
-        transform: translateY(-1.2rem);
+    a {
+        font: 6.5rem harry-fat, Helvetica, sans-serif;
+        color: var(--green-color);
+        text-decoration: none;
+
+        span { color: #FFFFFF; }
     }
 
     /*MOBILE*/
     @media (max-width: 779px) {
-        img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        a {
+            font-size: 6rem;
             margin-top: 5rem;
+            transform: translateY(-2rem);
         }
     }
 `;
@@ -58,6 +68,8 @@ export const NavBar = styled.nav `
         }
     }
 
+    svg { display: none; }
+
     /*MOBILE*/
     @media (max-width: 779px) {
         display: flex;
@@ -65,19 +77,36 @@ export const NavBar = styled.nav `
         justify-content: space-evenly;
         align-items: flex-start;
         position: fixed;
-        width: 35vw;
+        width: 45vw;
         top: 0;
         right: 0;
         height: 100vh;
         transform: ${ ({ showNavBar }) => showNavBar ? 'translateX(100%)' : 'translateX(0)' };
         box-shadow: ${ ({ showNavBar }) => !showNavBar && '-2rem 0rem 4rem rgba(0, 0, 0, .5)' };
         background-color: var(--brighter-blue-color);
-
+    
         a {
-            color: #FFFFFF;
-            margin-left: 2rem;
+            color: var(--green-color);
+            display: flex;
+            align-items: center;
+
+            span { color: var(--green-color); }
+
+            svg {
+                display: inline-block;
+                color: var(--green-color);
+                font-size: 2rem;
+                margin-left: .2rem;
+                margin-right: .7rem;
+            }
             
             /*EFFECTS*/
+            &:hover {
+                color: #FFFFFF;
+                
+                svg { color: #FFFFFF; }
+            }
+            
             &:focus {
                 font: 2rem now-light, Helvetica, sans-serif;
                 color: #FFFFFF;
@@ -123,15 +152,15 @@ export const HamburgerDiv = styled.div `
 
         /*PSEUDO_ELEMENTS*/
         &:nth-child(1) {
-            transform: ${ ({ opened }) => opened && 'rotate(45deg)' };
+            transform: ${ ({ opened }) => !opened && 'rotate(45deg)' };
         }
 
         &:nth-child(2) {
-            opacity: ${ ({ opened }) => opened ? 0 : 1 };
+            opacity: ${ ({ opened }) => !opened ? 0 : 1 };
         }
 
         &:nth-child(3) {
-            transform: ${ ({ opened }) => opened && 'translateY(-.7rem) rotate(-45deg)' };
+            transform: ${ ({ opened }) => !opened && 'translateY(-.7rem) rotate(-45deg)' };
         }
     }
 
