@@ -7,8 +7,8 @@ import {
     FormSection,
     SendEmailButton,
     FooterLinksSection,
-    SocialMediaDiv,
-    PrivacyPolicyDiv
+    PrivacyPolicyDiv,
+    SocialMediaDiv
 } from './Styles';
 
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -35,13 +35,13 @@ const Footer = () => {
             return
         }
         else if (!emailRegex.test(inputValues.userEmail) || !inputValues.userEmail) {
-            setMessage('Me diz o seu e-mail. Tipo assim: usuario@gmail.com');
+            setMessage('Me fala o seu e-mail!');
             emailRef.current.focus();
 
             return
         }
         else if (!inputValues.userMessage) {
-            setMessage('Não tá esquecendo de me dizer alguma coisa não?');
+            setMessage('Não esquece da mensagem!');
             messageRef.current.focus();
 
             return
@@ -56,63 +56,74 @@ const Footer = () => {
 
     return (
         <FooterWrapper>
-            
-            { /*FORM*/ }
             <FormWrapper onSubmit={ sendEmail }>
-                <span>{ message }</span>
-                <h4>Me manda um e-mail!</h4>
+                <h4>{ message || <>Me manda um E-mail!</> }</h4>
 
+                {/*NAME_INPUT*/}
                 <FormSection>
-                    <label htmlFor='user-name'>Seu nome</label>
-                    <input
-                        type='text'
-                        ref={ nameRef }
-                        name='userName'
-                        id='user-name'
-                        value={ inputValues.userName || '' }
-                        onChange={ handleInputChange }
-                        placeholder='ex: Marcos Andrade'
-                    />
+                    <div>
+                        <label htmlFor='user-name'>Seu nome</label>
+                        <input
+                            type='text'
+                            ref={ nameRef }
+                            name='userName'
+                            id='user-name'
+                            autoComplete='off'
+                            value={inputValues.userName || ''}
+                            onChange={handleInputChange}
+                            placeholder='ex: Marcos Andrade'
+                        />
+                        <div />
+                    </div>
+                </FormSection>
+
+                {/*E-MAIL_INPUT*/}
+                <FormSection>
+                    <div>
+                        <label htmlFor='user-email'>Seu e-mail</label>
+                        <input
+                            type='email'
+                            ref={ emailRef }
+                            autoComplete='off'
+                            name='userEmail'
+                            id='user-email'
+                            value={inputValues.userEmail || ''}
+                            onChange={handleInputChange}
+                            placeholder='ex: marcosandrade@gmail.com'
+                        />
+                        <div />
+                    </div>
+                </FormSection>
+                
+                {/*MESSAGE_AREA*/}
+                <FormSection>
+                    <div>
+                        <label htmlFor='user-message'>Mensagem</label>
+                        <textarea
+                            name='userMessage'
+                            id='user-message'
+                            autoComplete='off'
+                            ref={ messageRef }
+                            onKeyUp={ e => e.key === 'Enter' && sendEmail(e) }
+                            value={ inputValues.userMessage || '' }
+                            onChange={ handleInputChange }
+                            placeholder='Olá, tenho um projeto que...'
+                        />
+                    </div>
                 </FormSection>
 
                 <FormSection>
-                    <label htmlFor='user-email'>Seu e-mail</label>
-                    <input
-                        type='email'
-                        ref={ emailRef }
-                        name='userEmail'
-                        id='user-email'
-                        value={ inputValues.userEmail || '' }
-                        onChange={handleInputChange }
-                        placeholder='ex: marcosandrade@gmail.com'
-                    />
-                </FormSection>
-
-                <FormSection>
-                    <label htmlFor='user-message'>Mensagem</label>
-                    <textarea
-                        name='userMessage'
-                        id='user-message'
-                        ref={ messageRef }
-                        onKeyUp={ e => e.key === 'Enter' && sendEmail(e) }
-                        value={ inputValues.userMessage || '' }
-                        onChange={ handleInputChange }
-                        placeholder='Olá, tenho um projeto que...'
-                    />
-                </FormSection>
-
-                <FormSection>
-                    <SendEmailButton>Enviar Email</SendEmailButton>
+                    <SendEmailButton onClick={ sendEmail }>Enviar Email</SendEmailButton>
                 </FormSection>
             </FormWrapper>
 
-            { /*LINKS*/}
+            {/*LINKS_SECTION*/}
             <FooterLinksSection>
                 <PrivacyPolicyDiv>
                     <Link to='privacy-policy'>Política de Privacidade</Link>
                 </PrivacyPolicyDiv>
-                
-                <SocialMediaDiv> 
+
+                <SocialMediaDiv>
                     <a href="https://www.instagram.com/joshuahawatta/" target='_blank'>
                         <FaInstagram />
                     </a>
