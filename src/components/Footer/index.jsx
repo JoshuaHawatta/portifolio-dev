@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 
 import {
     FooterWrapper,
@@ -28,26 +29,44 @@ const Footer = () => {
         e.preventDefault();
         e.stopPropagation();
 
-         if (!inputValues.userName) {
+        const { userName, userEmail, userMessage } = inputValues;
+
+        const TEMPLATE_PARAMS = {
+            from_name: userName,
+            message: userMessage,
+            email: userEmail,
+        };
+
+         if (!userName) {
             setMessage('Preciso saber seu nome, uai!');
             nameRef.current.focus();
 
             return
         }
-        else if (!emailRegex.test(inputValues.userEmail) || !inputValues.userEmail) {
+        else if (!emailRegex.test(userEmail) || !userEmail) {
             setMessage('Me fala o seu e-mail!');
             emailRef.current.focus();
 
             return
         }
-        else if (!inputValues.userMessage) {
+        else if (!userMessage) {
             setMessage('Não esquece da mensagem!');
             messageRef.current.focus();
 
             return
         }
         
-        setMessage('Email enviado com sucesso!')
+        emailjs.send('service_ivq1che', 'template_xd283ip', TEMPLATE_PARAMS, 'i7eLUpcHUWqqF7gMs')
+            .then(_ => {
+                setMessage('E-mail enviado com sucesso!');
+
+                inputValues.userName = '';
+                inputValues.userEmail = '';
+                inputValues.userMessage = ''
+            },
+                (_) => setMessage('Não foi possível enviar o e-mail :(')
+            )
+        ;
     }
 
     useEffect(() => {
