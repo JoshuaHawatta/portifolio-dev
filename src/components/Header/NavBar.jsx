@@ -11,7 +11,6 @@ const NAVBAR_JSX = () => {
             <HamburgerDiv opened={ openMenu } onClick={ () => setOpenMenu(state => !state) }>
                 <div/>
                 <div/>
-                <div/>
             </HamburgerDiv>
             
             <NavBar showNavBar={ openMenu }>

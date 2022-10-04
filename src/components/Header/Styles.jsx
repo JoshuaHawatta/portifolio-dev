@@ -132,11 +132,12 @@ export const HamburgerDiv = styled.div `
     display: none;
     position: fixed;
     justify-content: space-around;
+    align-items: flex-end;
     flex-flow: column nowrap;
     width: 5rem;
     height: 3rem;
     top: 1rem;
-    margin: 1rem .5rem 0 0;
+    margin: 1rem .8rem 0 0;
     right: 0;
     z-index: 1;
     transform: translateY(-.5rem);
@@ -144,7 +145,7 @@ export const HamburgerDiv = styled.div `
     /*CHILDREN_ELEMENTS*/
     div {
         width: 2rem;
-        height: .25rem;
+        height: .20rem;
         border-radius: 0.5rem;
         transform-origin: 1px;
         transition: .2s ease all;
@@ -156,11 +157,7 @@ export const HamburgerDiv = styled.div `
         }
 
         &:nth-child(2) {
-            opacity: ${ ({ opened }) => !opened ? 0 : 1 };
-        }
-
-        &:nth-child(3) {
-            transform: ${ ({ opened }) => !opened && 'translateY(-.7rem) rotate(-45deg)' };
+            transform: ${ ({ opened }) => !opened && 'translateY(-.2rem) rotate(-45deg)' };
         }
     }
 
