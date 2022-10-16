@@ -6,11 +6,10 @@ export const HeaderWrapper = styled.header `
     align-items: center;
     position: sticky;
     width: 100%;
-    top: 0; 
+    top: 0;
     height: 15rem;
     padding: 0 2rem;
     background-color: var(--blue-color);
-    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, .5);
 `;
 
 export const LogoDiv = styled.div `
