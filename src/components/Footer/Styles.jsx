@@ -104,6 +104,13 @@ export const SendEmailButton = styled.button.attrs({ type: 'submit' }) `
         width: 30%;
         margin-bottom: 1.3rem;
     }
+
+    /*TABLETS*/
+    @media (min-width: 780px) and (max-width: 1015px) {
+        font-size: 1.6rem;
+        width: 100%;
+        margin-bottom: 1.3rem;
+    }
 `;
 
 export const FooterLinksSection = styled.section `
