@@ -54,12 +54,11 @@ export const FormSection = styled.section `
 
         input {
             color: #FFFFFF;
-            background: none;
             border: none;
             height: 5vh;
             background: linear-gradient(to bottom, var(--blue-color) 50%, #FFFFFF 50%) top;
-            background-size: 200% 200%;
-            transition: .2s ease-out;
+            background-size: 100% 300%;
+            transition: .3s ease-out;
 
             /*SIBLINGS*/
             & + div {

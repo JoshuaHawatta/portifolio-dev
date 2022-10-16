@@ -88,8 +88,8 @@ const Footer = () => {
                             name='userName'
                             id='user-name'
                             autoComplete='off'
-                            value={inputValues.userName || ''}
-                            onChange={handleInputChange}
+                            value={ inputValues.userName || ''}
+                            onChange={ handleInputChange }
                             placeholder='ex: Marcos Andrade'
                         />
                         <div />
@@ -103,11 +103,11 @@ const Footer = () => {
                         <input
                             type='email'
                             ref={ emailRef }
-                            autoComplete='off'
                             name='userEmail'
                             id='user-email'
-                            value={inputValues.userEmail || ''}
-                            onChange={handleInputChange}
+                            autoComplete='off'
+                            value={ inputValues.userEmail || ''}
+                            onChange={ handleInputChange }
                             placeholder='ex: marcosandrade@gmail.com'
                         />
                         <div />
