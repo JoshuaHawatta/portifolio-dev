@@ -27,6 +27,11 @@ export const Presentation = styled.section `
         height: 93vh;
     }
 
+    /*MOBILE_LANDSCAPE*/
+    @media (min-height: 350px) and (max-height: 415px) and (min-width: 780px) and (orientation:landscape) {
+        height: 80vh;
+    }
+
     /*TABLETS*/
     @media (min-width: 780px) and (max-width: 1015px) { padding: 0 6rem; }
 `;

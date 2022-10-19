@@ -76,7 +76,7 @@ const Footer = () => {
     return (
         <FooterWrapper>
             <FormWrapper onSubmit={ sendEmail }>
-                <h4>{ message || <>Me manda um E-mail!</> }</h4>
+                <h4>{ message || 'Me manda um E-mail!' }</h4>
 
                 {/*NAME_INPUT*/}
                 <FormSection>
