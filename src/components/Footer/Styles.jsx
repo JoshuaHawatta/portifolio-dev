@@ -118,7 +118,7 @@ export const FooterLinksSection = styled.section `
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4rem;
+    padding: 0 8rem;
     width: 100%;
 
     /*MOBILE*/
