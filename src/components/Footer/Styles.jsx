@@ -122,9 +122,7 @@ export const FooterLinksSection = styled.section `
     width: 100%;
 
     /*MOBILE*/
-    @media (max-width: 779px) {
-        padding: 0 1rem;
-    }
+    @media (max-width: 779px) { padding: 0 2.5rem; }
 `;
 
 export const PrivacyPolicyDiv = styled.div `
