@@ -81,7 +81,9 @@ export const NavBar = styled.nav `
         right: 0;
         height: 100vh;
         transform: ${ ({ showNavBar }) => showNavBar ? 'translateX(100%)' : 'translateX(0)' };
-        box-shadow: ${ ({ showNavBar }) => !showNavBar && '-2rem 0rem 4rem rgba(0, 0, 0, .5)' };
+        box-shadow: 
+            ${ ({ showNavBar }) => !showNavBar && '-2rem 0rem 4rem rgba(0, 0, 0, .5' }
+        ;
         background-color: var(--brighter-blue-color);
     
         a {
