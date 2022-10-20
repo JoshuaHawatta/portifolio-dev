@@ -9,8 +9,11 @@ export const MainWrapper = styled.main `
     /*MOBILE*/
     @media (max-width: 779px) { height: 100vh; }
 
-    /*SO_THE_HEADER_WON'T_CUT_THE_PAGE_VIEW*/
-    @media (max-height: 425px) and (orientation: landscape) { padding-top: 2rem; }
+    /*NEITHER_THE_HEADER_NOR_THE_FOOTER_WILL_CUT_THE_PAGE_VIEW*/
+    @media (max-height: 425px) and (orientation: landscape) {
+        padding-top: 2rem;
+        height: 80vh;
+    }
 `;
 
 export const Presentation = styled.section `
