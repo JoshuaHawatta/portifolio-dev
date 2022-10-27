@@ -2,6 +2,7 @@ import { MainWrapper, Presentation, WhoIAm, PresentationImage } from './Styles';
 import PresentationImageUrl from '../../assets/images/presentation-image.jpg';
 import { useNavigate } from 'react-router-dom';
 import { FaPaperPlane } from 'react-icons/fa';
+import CTA_BUTTON from '../../components/CtaButton';
 
 const HomePage = () => {
     const navigate = useNavigate();
@@ -19,9 +20,11 @@ const HomePage = () => {
                             Gosto de usar esse superpoder para ajudar você a criar seu site!
                         </p>
 
-                        <button onClick={ () => navigate('/contact') }>
-                            <FaPaperPlane /> Me chame!
-                        </button>
+                        <CTA_BUTTON
+                            icon={ <FaPaperPlane /> }
+                            text='Me chame!'
+                            action={ () => navigate('/contact') }
+                        />
                     </div>
                 </WhoIAm>
 

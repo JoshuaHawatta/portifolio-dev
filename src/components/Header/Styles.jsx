@@ -42,7 +42,7 @@ export const NavBar = styled.nav `
     align-items: center;
     width: 50%;
     transition: all .2s ease;
-    
+
     /*CHILDREN_ELEMENTS*/
     a {
         font: 2rem now-light, Helvetica, sans-serif;
@@ -81,9 +81,6 @@ export const NavBar = styled.nav `
         right: 0;
         height: 100vh;
         transform: ${ ({ showNavBar }) => showNavBar ? 'translateX(100%)' : 'translateX(0)' };
-        box-shadow: 
-            ${ ({ showNavBar }) => !showNavBar && '-2rem 0rem 4rem rgba(0, 0, 0, .5' }
-        ;
         background-color: var(--brighter-blue-color);
     
         a {
@@ -163,7 +160,5 @@ export const HamburgerDiv = styled.div `
     }
 
     /*MOBILE*/
-    @media (max-width: 779px) {
-        display: flex;
-    }
+    @media (max-width: 779px) { display: flex; }
 `;
