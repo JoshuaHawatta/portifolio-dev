@@ -90,7 +90,7 @@ const Footer = () => {
                             autoComplete='off'
                             value={ inputValues.userName || ''}
                             onChange={ handleInputChange }
-                            placeholder='ex: Marcos Andrade'
+                            placeholder='Usuário 123'
                         />
                         <div />
                     </div>
@@ -108,7 +108,7 @@ const Footer = () => {
                             autoComplete='off'
                             value={ inputValues.userEmail || ''}
                             onChange={ handleInputChange }
-                            placeholder='ex: marcosandrade@gmail.com'
+                            placeholder='usuario123@gmail.com'
                         />
                         <div />
                     </div>

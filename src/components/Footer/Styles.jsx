@@ -128,7 +128,6 @@ export const FooterLinksSection = styled.section `
 export const PrivacyPolicyDiv = styled.div `
     a {
         font: 1.5rem now-light, Helvetica, sans-serif;
-        text-decoration: none;
         color: var(--green-color);
 
         /*EFFECTS*/
