@@ -34,9 +34,11 @@ export const Presentation = styled.section `
     }
 
     /*MOBILE_LANDSCAPE*/
-    @media (min-height: 350px) and (max-height: 415px) and (min-width: 780px) and (orientation:landscape) {
-        height: 80vh;
-    }
+    @media 
+    (min-height: 350px) 
+    and (max-height: 415px) 
+    and (min-width: 780px) 
+    and (orientation: landscape) { height: 80vh; }
 
     /*TABLETS*/
     @media (min-width: 780px) and (max-width: 1015px) { padding: 0 6rem; }
@@ -66,35 +68,6 @@ export const WhoIAm = styled.div `
             font: 1.6rem now-light, Helvetica, sans-serif;
             color: #FFFFFF;
         }
-
-        button {
-            display: flex;
-            align-items: center;
-            font: 2.3rem now-light, Helvetica, sans-serif;
-            background: linear-gradient(to left, var(--blue-color) 50%, #FFFFFF 50%) right;
-            border: .1rem solid #FFFFFF;
-            outline: none;
-            width: 22rem;
-            height: 3rem;
-            padding: 2.5rem;
-            margin-top: 5rem;
-            padding-top: 2.8rem;
-            border-radius: .4rem;
-            background-size: 200% 100%;
-            transition: .3s ease-out;
-            color: #FFFFFF;
-
-            /*CHILDREN_ELEMENTS*/
-            svg { margin-right: 1rem; }
-
-            /*EFFECTS*/
-            &:hover {
-                background-position: left;
-                color: var(--blue-color);
-                cursor: pointer;
-            }
-
-        }
     }
 
     /*MOBILE*/
@@ -116,13 +89,6 @@ export const WhoIAm = styled.div `
             p {
                 font-size: 1.3rem;
                 max-width: 90%;
-            }
-
-            button {
-                margin-top: 2rem;
-                width: 18rem;
-                padding: 2rem;
-                font-size: 2rem;
             }
         }
     }
@@ -149,13 +115,6 @@ export const WhoIAm = styled.div `
             br { display: none; }
             p { font-size: 1.2rem; }
             p + p + p { max-width: 90%; }
-
-            button {
-                margin-top: 2rem;
-                width: 18rem;
-                padding: 2rem;
-                font-size: 2rem;
-            }
         }
     }
 `;
@@ -166,8 +125,8 @@ export const PresentationImage = styled.div `
 
     /*CHILDREN_ELEMENTS*/
     img {
-        width: 75%;
-        border-radius: .5rem;
+        width: 80%;
+        border-radius: 50%;
         box-shadow: -4rem 1rem 3rem rgba(0, 0, 0, .3);
     }
 
@@ -176,7 +135,10 @@ export const PresentationImage = styled.div `
         justify-content: center;
 
         /*CHILDREN_ELEMENTS*/
-        img { margin: 2rem 0; }
+        img {
+            margin: 2rem 0;
+            box-shadow: none;
+        }
     }
 
     /*SMALL_SCREENS*/
@@ -187,6 +149,7 @@ export const PresentationImage = styled.div `
         img {
             margin-bottom: 2rem;
             max-width: 60%;
+            box-shadow: none;
         }
     }
 
