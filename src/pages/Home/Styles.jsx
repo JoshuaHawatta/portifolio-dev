@@ -125,7 +125,7 @@ export const PresentationImage = styled.div `
 
     /*CHILDREN_ELEMENTS*/
     img {
-        width: 80%;
+        width: 75%;
         border-radius: 50%;
         box-shadow: -4rem 1rem 3rem rgba(0, 0, 0, .3);
     }
