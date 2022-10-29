@@ -29,7 +29,13 @@ export const LogoDiv = styled.div `
     z-index: 4;
     
     /*CHILDREN_ELEMENTS*/
-    img { width: 5rem; }
+    a {
+        font: 4.5rem harry-fat, Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: var(--green-color);
+
+        span { color: #FFFFFF; }
+    }
 `;
 
 export const NavBar = styled.nav `
