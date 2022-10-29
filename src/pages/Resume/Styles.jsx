@@ -28,8 +28,7 @@ export const ArticleWrapper = styled.article `
 
 export const LayoutContent = styled.div `
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
@@ -39,7 +38,7 @@ export const LayoutContent = styled.div `
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
     animation: ${ pop } .5s ease forwards;
-    
+
     /*CHILDREN_COMPONENTS*/
     h1 { 
         font: 8rem harry-fat, Arial, Helvetica;
@@ -71,5 +70,36 @@ export const HardSkills = styled.section `
 `;
 
 export const SoftSkills = styled(HardSkills) `
+    div > div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 0 4rem;
+        width: 95%;
 
+        /*CHILDREN_ELEMENTS*/
+        img {
+            z-index: unset;
+            position: unset;
+            width: 30rem;
+            height: 30rem;
+            border-radius: 50%;
+        }
+        
+        div {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            margin: 0 auto;
+            width: 80%;
+            height: 41vh;
+
+            /*CHILDREN_ELEMENTS*/
+            p {
+                font: 1.7rem now-light Arial, Helvetica, sans-serif;
+                color: #FFFFFF;
+            }
+        }
+
+    }
 `;
