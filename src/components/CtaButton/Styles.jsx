@@ -3,11 +3,17 @@ import styled from "styled-components"
 export const CallToActionButton = styled.button `
     display: flex;
     align-items: center;
+    justify-content: center;
     font: 2.3rem now-light, Helvetica, sans-serif;
-    background: linear-gradient(to left, var(--blue-color) 50%, #FFFFFF 50%) right;
+
+    background: ${({ outLined }) => outLined
+        ? 'linear-gradient(to left, rgba(0, 0, 0, 0) 50%, #FFFFFF 50%) right'
+        : 'linear-gradient(to left, var(--blue-color) 50%, #FFFFFF 50%) right'
+    };
+
     border: .1rem solid #FFFFFF;
     outline: none;
-    width: 22rem;
+    width: ${ ({btnWidth}) => !btnWidth ? '22rem' : btnWidth }; 
     height: 3rem;
     padding: 2.5rem;
     margin-top: 5rem;
@@ -25,6 +31,8 @@ export const CallToActionButton = styled.button `
         background-position: left;
         color: var(--blue-color);
         cursor: pointer;
+
+        color: ${({ outLined }) => outLined ? '#000000' : 'color: var(--blue- color)'};
     }
 
     /*MOBILE*/
