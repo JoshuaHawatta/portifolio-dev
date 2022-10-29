@@ -1,17 +1,15 @@
 import { Link } from 'react-router-dom';
 import { HeaderWrapper, LogoDiv } from './Styles';
 import NAVBAR_JSX from './NavBar';
-import Logo from '../../assets/images/logo-inteira-sem-fundo.png';
+import MiniLogo from '../../assets/images/logo_Instagram.png'
 
-const Header = () => {
-    return (
-        <HeaderWrapper>
-            <LogoDiv>
-                <Link to='/'>J<span>o</span>shua Hawatta</Link>
-            </LogoDiv>
-            <NAVBAR_JSX />
-        </HeaderWrapper>
-    )
-}
+const Header = () => (
+    <HeaderWrapper>
+        <LogoDiv>
+            <Link to='/'><img src={ MiniLogo } alt="my-logo" /></Link>
+        </LogoDiv>
+        <NAVBAR_JSX />
+    </HeaderWrapper>
+)
 
 export default Header

@@ -14,25 +14,10 @@ const NAVBAR_JSX = () => {
             </HamburgerDiv>
             
             <NavBar showNavBar={ openMenu }>
-                <Link to='/'>
-                    <FaHome />
-                    Q<span>u</span>em Sou
-                </Link>
-            
-                <Link to='/what-i-did'>
-                    <FaCode />
-                    T<span>r</span>abalhos
-                </Link>
-
-                <Link to='/resume'>
-                    <FaFile />
-                    C<span>u</span>rrículo
-                </Link>
-
-                <Link to='/contact'>
-                    <FaPaperPlane />
-                    C<span>o</span>ntato
-                </Link>
+                <Link to='/'><FaHome /></Link>
+                <Link to='/works'><FaCode /></Link>
+                <Link to='/resume'><FaFile /></Link>
+                <Link to='/contact'><FaPaperPlane /></Link>
             </NavBar>
         </>
     )

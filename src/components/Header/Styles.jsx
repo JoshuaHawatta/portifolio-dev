@@ -2,24 +2,24 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.header `
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    position: sticky;
-    width: 100%;
+    position: absolute;
+    left: 0;
     top: 0;
-    height: 15rem;
-    padding: 0 2rem;
+    bottom: 0;
+    right: 0;
+    width: 5%;
+    height: 100vh;
+    padding: 2rem;
+    z-index: 2;
     background-color: var(--blue-color);
+    box-shadow: .4rem 0 2rem rgba(0, 0, 0, .2);
 `;
 
 export const LogoDiv = styled.div `
-    a {
-        font: 6.5rem harry-fat, Helvetica, sans-serif;
-        color: var(--green-color);
-        text-decoration: none;
-
-        span { color: #FFFFFF; }
-    }
+    img { width: 5rem; }
 
     /*MOBILE*/
     @media (max-width: 779px) {
@@ -38,9 +38,11 @@ export const LogoDiv = styled.div `
 
 export const NavBar = styled.nav `
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    width: 50%;
+    width: 100%;
+    height: 100vh;
     transition: all .2s ease;
 
     /*CHILDREN_ELEMENTS*/
@@ -66,8 +68,6 @@ export const NavBar = styled.nav `
             color: var(--green-color);
         }
     }
-
-    svg { display: none; }
 
     /*MOBILE*/
     @media (max-width: 779px) {
