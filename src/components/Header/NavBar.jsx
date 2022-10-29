@@ -6,31 +6,41 @@ import { FaHome, FaCode, FaFile, FaPaperPlane } from 'react-icons/fa';
 const NAVBAR_JSX = () => {
     const [openMenu, setOpenMenu] = useState(true);
 
+    const handleDisplayMenu = () => setOpenMenu(state => !state);
+
     return (
         <>
-            <HamburgerDiv opened={ openMenu } onClick={ () => setOpenMenu(state => !state) }>
+            <HamburgerDiv opened={ openMenu } onClick={ handleDisplayMenu }>
                 <div/>
                 <div/>
             </HamburgerDiv>
             
             <NavBar showNavBar={ openMenu }>
                 <div>
-                    <Link to='/'><FaHome /></Link>
+                    <Link onClick={ handleDisplayMenu } to='/'>
+                        <FaHome />
+                    </Link>
                     <p>Home</p>
                 </div>
 
                 <div>
-                    <Link to='/works'><FaCode /></Link>
+                    <Link onClick={ handleDisplayMenu } to='/works'>
+                        <FaCode />
+                    </Link>
                     <p>Jobs</p>
                 </div>
 
                 <div>
-                    <Link to='/resume'><FaFile /></Link>
+                    <Link onClick={ handleDisplayMenu } to='/resume'>
+                        <FaFile />
+                    </Link>
                     <p>Currículo</p>
                 </div>
 
                 <div>
-                    <Link to='/contact'><FaPaperPlane /></Link>
+                    <Link onClick={ handleDisplayMenu } to='/contact'>
+                        <FaPaperPlane />
+                    </Link>
                     <p>Contato</p>
                 </div>
             </NavBar>

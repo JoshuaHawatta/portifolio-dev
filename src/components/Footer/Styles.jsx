@@ -125,6 +125,9 @@ export const FooterLinksSection = styled.section `
 
     /*MOBILE*/
     @media (max-width: 779px) { padding: 0 2.5rem; }
+
+    /*MOBILE_LANDSCAPE*/
+    @media (orientation: landscape) and (max-height: 520px) { display: none; }
 `;
 
 export const PrivacyPolicyDiv = styled.div `
@@ -137,9 +140,7 @@ export const PrivacyPolicyDiv = styled.div `
     }
 
     /*MOBILE*/
-    @media (max-width: 779px) {
-        a { font-size: 1.2rem; } 
-    }
+    @media (max-width: 779px) { a { font-size: 1.2rem; } }
 `;
 
 export const SocialMediaDiv = styled(PrivacyPolicyDiv) `

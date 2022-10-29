@@ -7,33 +7,29 @@ export const HeaderWrapper = styled.header `
     align-items: center;
     position: absolute;
     left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
     width: 6%;
     height: 100vh;
     padding: 2rem;
     z-index: 2;
-    background-color: var(--blue-color);
     box-shadow: .4rem 0 2rem rgba(0, 0, 0, .2);
-`;
-
-export const LogoDiv = styled.div `
-    img { width: 5rem; }
+    background-color: var(--blue-color);
 
     /*MOBILE*/
     @media (max-width: 779px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-
-        a {
-            font-size: 6rem;
-            margin-top: 5rem;
-            transform: translateY(-2rem);
-        }
+        background: none;
+        box-shadow: none;
+        width: 17%;
     }
+
+    /*TABLETS*/
+    @media (min-width: 780px) and (max-width: 1015px) { width: 8%; }
+`;
+
+export const LogoDiv = styled.div `
+    z-index: 4;
+    
+    /*CHILDREN_ELEMENTS*/
+    img { width: 5rem; }
 `;
 
 export const NavBar = styled.nav `
@@ -59,6 +55,7 @@ export const NavBar = styled.nav `
             color: var(--green-color);
             transition: all .3s ease-in-out;
 
+            /*EFFECTS*/
             &:focus {
                 font-size: 3.2rem;
                 color: #FFFFFF;
@@ -73,56 +70,21 @@ export const NavBar = styled.nav `
 
     /*MOBILE*/
     @media (max-width: 779px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: flex-start;
         position: fixed;
-        width: 45vw;
+        width: 17%;
         top: 0;
-        right: 0;
-        height: 100vh;
-        transform: ${ ({ showNavBar }) => showNavBar ? 'translateX(100%)' : 'translateX(0)' };
-        background-color: var(--brighter-blue-color);
-    
-        a {
-            color: var(--green-color);
-            display: flex;
-            align-items: center;
+        left: 0;
+        padding: 8rem 0;
+        transform: ${({ showNavBar }) => showNavBar ? 'translateX(-100%)' : 'translateX(0)' };
+        background-color: var(--blue-color);
 
-            svg {
-                display: inline-block;
-                color: var(--green-color);
-                font-size: 2rem;
-                margin-left: .2rem;
-                margin-right: .7rem;
-            }
-            
-            /*EFFECTS*/
-            &:hover {
-                color: #FFFFFF;
-                
-                svg { color: #FFFFFF; }
-            }
-            
-            &:focus {
-                font: 2rem now-light, Helvetica, sans-serif;
-                color: #FFFFFF;
-            }
-        }
-    }
+        box-shadow: ${({ showNavBar }) => !showNavBar
+            ? '.4rem 0 2rem rgba(0, 0, 0, .2)'
+            : 'none' 
+        };
 
-    /*TABLETS*/
-    @media (min-width: 780px) and (max-width: 1015px) {
-        justify-content: center;
-        align-items: center;
-
-        a {
-            font-size: 1.5rem;
-
-            /*EFFECTS*/
-            &:focus { font-size: 2rem; }
-        }
+        /*CHILDREN_ELEMENTS*/
+        div { transform: translateY(4rem); }
     }
 `;
 
@@ -134,15 +96,14 @@ export const HamburgerDiv = styled.div `
     flex-flow: column nowrap;
     width: 5rem;
     height: 3rem;
-    top: 1rem;
-    margin: 1rem .8rem 0 0;
+    top: 2rem;
+    margin: 1rem 2rem 0 0;
     right: 0;
-    z-index: 1;
     transform: translateY(-.5rem);
 
     /*CHILDREN_ELEMENTS*/
     div {
-        width: 2rem;
+        width: 3rem;
         height: .20rem;
         border-radius: 0.5rem;
         transform-origin: 1px;
@@ -150,12 +111,10 @@ export const HamburgerDiv = styled.div `
         background-color: var(--green-color);
 
         /*PSEUDO_ELEMENTS*/
-        &:nth-child(1) {
-            transform: ${ ({ opened }) => !opened && 'rotate(45deg)' };
-        }
+        &:nth-child(1) { transform: ${ ({ opened }) => !opened && 'rotate(45deg)' }; }
 
         &:nth-child(2) {
-            transform: ${ ({ opened }) => !opened && 'translateY(-.2rem) rotate(-45deg)' };
+            transform: ${ ({ opened }) => !opened && 'translateY(-.8rem) rotate(-180deg)' };
         }
     }
 

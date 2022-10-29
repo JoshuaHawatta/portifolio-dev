@@ -3,14 +3,6 @@ import styled from "styled-components";
 export const MainWrapper = styled.main `
     width: 100%;
     height: 100vh;
-    padding: 0;
-    background-color: var(--blue-color);
-
-    /*NEITHER_THE_HEADER_NOR_THE_FOOTER_WILL_CUT_THE_PAGE_VIEW*/
-    @media (max-height: 425px) and (orientation: landscape) {
-        padding-top: 2rem;
-        height: 80vh;
-    }
 `;
 
 export const Presentation = styled.section `
@@ -27,18 +19,10 @@ export const Presentation = styled.section `
         flex-flow: column-reverse;
         justify-content: center;
         padding: 0 6rem;
-        height: 93vh;
     }
 
-    /*MOBILE_LANDSCAPE*/
-    @media 
-    (min-height: 350px) 
-    and (max-height: 415px) 
-    and (min-width: 780px) 
-    and (orientation: landscape) { height: 80vh; }
-
     /*TABLETS*/
-    @media (min-width: 780px) and (max-width: 1015px) { padding: 0 6rem; }
+    @media (min-width: 780px) and (max-width: 1015px) { padding: 0 8rem; }
 `;
 
 export const WhoIAm = styled.div `
