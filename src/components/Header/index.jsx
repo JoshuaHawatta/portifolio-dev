@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { HeaderWrapper, LogoDiv } from './Styles';
 import NAVBAR_JSX from './NavBar';
-import MiniLogo from '../../assets/images/logo_Instagram.png'
+import MiniLogo from '../../assets/images/logo_instagram.png'
 
 const Header = () => (
     <HeaderWrapper>
