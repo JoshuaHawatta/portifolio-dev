@@ -129,7 +129,7 @@ export const FooterLinksSection = styled.section `
 
 export const PrivacyPolicyDiv = styled.div `
     a {
-        font: 1.5rem now-light, Helvetica, sans-serif;
+        font: 1rem now-light, Helvetica, sans-serif;
         color: var(--green-color);
 
         /*EFFECTS*/
@@ -144,7 +144,7 @@ export const PrivacyPolicyDiv = styled.div `
 
 export const SocialMediaDiv = styled(PrivacyPolicyDiv) `
     a {
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin: 0 .8rem;
     }
 
