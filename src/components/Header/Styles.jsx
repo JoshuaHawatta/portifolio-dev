@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.header `
     top: 0;
     bottom: 0;
     right: 0;
-    width: 5%;
+    width: 6%;
     height: 100vh;
     padding: 2rem;
     z-index: 2;
@@ -46,26 +46,28 @@ export const NavBar = styled.nav `
     transition: all .2s ease;
 
     /*CHILDREN_ELEMENTS*/
-    a {
-        font: 2rem now-light, Helvetica, sans-serif;
-        text-decoration: none;
-        margin: 0 .8rem;
-        color: #f0e7f1;
-        transition: all .3s ease-in-out;
+    div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
         /*CHILDREN_ELEMENTS*/
-        span { color: #f0e7f1; }
-
-        /*EFFECTS*/
-        &:hover {
-            color: #FFFFFF;
-
-            span { color: #FFFFFF; }
-        }
-    
-        &:focus {
-            font: 3rem harry-fat, Helvetica, sans-serif;
+        a {
+            font: 2.5rem now-light, Helvetica, sans-serif;
+            text-decoration: none;
+            margin: 0 .8rem;
             color: var(--green-color);
+            transition: all .3s ease-in-out;
+
+            &:focus {
+                font-size: 3.2rem;
+                color: #FFFFFF;
+            }
+        }
+
+        p {
+            color: #FFFFFF;
+            font: 1.1rem now-light, Arial, Helvetica; 
         }
     }
 
@@ -87,8 +89,6 @@ export const NavBar = styled.nav `
             color: var(--green-color);
             display: flex;
             align-items: center;
-
-            span { color: var(--green-color); }
 
             svg {
                 display: inline-block;
