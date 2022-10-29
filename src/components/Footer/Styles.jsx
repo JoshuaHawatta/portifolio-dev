@@ -118,8 +118,10 @@ export const FooterLinksSection = styled.section `
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8rem;
+    position: absolute;
+    padding: 1rem 12rem;
     width: 100%;
+    bottom: 0;
 
     /*MOBILE*/
     @media (max-width: 779px) { padding: 0 2.5rem; }
