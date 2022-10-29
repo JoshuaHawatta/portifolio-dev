@@ -2,12 +2,9 @@ import styled from "styled-components";
 
 export const MainWrapper = styled.main `
     width: 100%;
-    height: 73vh;
+    height: 100vh;
     padding: 0;
     background-color: var(--blue-color);
-
-    /*MOBILE*/
-    @media (max-width: 779px) { height: 100vh; }
 
     /*NEITHER_THE_HEADER_NOR_THE_FOOTER_WILL_CUT_THE_PAGE_VIEW*/
     @media (max-height: 425px) and (orientation: landscape) {
@@ -21,7 +18,7 @@ export const Presentation = styled.section `
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 65vh;
+    height: 100vh;
     padding: 0 12rem;
     background-color: var(--blue-color);
 
