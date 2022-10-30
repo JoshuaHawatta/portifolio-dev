@@ -1,10 +1,10 @@
 import { StackWrapper } from './Styles';
 
-const STACKS = ({ stackIcon, title, percentage }) => (
+const ICON_WITH_TEXT_JSX = ({ stackIcon, title, percentage }) => (
     <StackWrapper>
         { stackIcon }
         <h5>{ title } - { percentage }%</h5>
     </StackWrapper>
 )
 
-export default STACKS
+export default ICON_WITH_TEXT_JSX
