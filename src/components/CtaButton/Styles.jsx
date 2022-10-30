@@ -5,6 +5,7 @@ export const CallToActionButton = styled.button `
     align-items: center;
     justify-content: center;
     font: 2.3rem now-light, Helvetica, sans-serif;
+    z-index: 1;
 
     background: ${({ outLined }) => outLined
         ? 'linear-gradient(to left, rgba(0, 0, 0, 0) 50%, #FFFFFF 50%) right'
