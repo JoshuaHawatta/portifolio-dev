@@ -116,44 +116,31 @@ export const SendEmailButton = styled.button.attrs({ type: 'submit' }) `
 export const FooterLinksSection = styled.section `
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     position: absolute;
-    padding: 1rem 12rem;
+    padding: 1rem 4rem;
     width: 100%;
     bottom: 0;
 
-    /*MOBILE*/
-    @media (max-width: 779px) { padding: 0 2.5rem; }
-
-    /*MOBILE_LANDSCAPE*/
-    @media (orientation: landscape) and (max-height: 520px) { display: none; }
-`;
-
-export const PrivacyPolicyDiv = styled.div `
+    /*CHILDREN_ELEMENTS*/
     a {
-        font: 1rem now-light, Helvetica, sans-serif;
-        color: var(--green-color);
-
-        /*EFFECTS*/
-        &:hover { text-decoration: underline; }
-    }
-
-    /*MOBILE*/
-    @media (max-width: 779px) { a { font-size: 1.2rem; } }
-`;
-
-export const SocialMediaDiv = styled(PrivacyPolicyDiv) `
-    a {
-        font-size: 3rem;
+        font-size: 2rem;
         margin: 0 .8rem;
+        color: var(--green-color);
     }
 
     /*MOBILE*/
     @media (max-width: 779px) {
+        padding: 0 2.5rem;
+
+        /*CHILDREN_ELEMENTS*/
         a {
             font-size: 1.8rem;
             margin: 0 1.2rem;
         } 
     }
+
+    /*MOBILE_LANDSCAPE*/
+    @media (orientation: landscape) and (max-height: 520px) { display: none; }
 `;
