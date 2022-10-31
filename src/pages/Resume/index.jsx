@@ -1,7 +1,14 @@
 import { useState } from 'react';
 
 //REACT_ICONS
-import { FaDatabase, FaTools, FaPen, FaUserAlt, FaWeightHanging } from 'react-icons/fa';
+import { 
+    FaDatabase, 
+    FaTools, 
+    FaPen, 
+    FaUserAlt, 
+    FaWeightHanging, 
+    FaRegClock
+} from 'react-icons/fa';
 import { SiJavascript, SiReact, SiHtml5, SiCss3, SiNodedotjs, SiJava } from 'react-icons/si';
 import { RiUserVoiceFill, RiUserSettingsFill } from 'react-icons/ri';
 import { HiUserGroup, HiEmojiHappy } from 'react-icons/hi';
@@ -133,21 +140,23 @@ const ResumePage = () => {
                                 percentage={ 90 }
                             />
 
-                            <ICON_WITH_TEXT_JSX
-                                stackIcon={ <FaWeightHanging color='#d1140d' /> }
-                                title='Lidar com pressão'
-                                percentage={ 95 }
-                            />
+                           
 
                             <ICON_WITH_TEXT_JSX
                                 stackIcon={ <HiEmojiHappy color='#4aaf4f' /> }
-                                title='Atitude Positiva'
+                                title='Positividade'
                                 percentage={ 100 }
                             />
 
                             <ICON_WITH_TEXT_JSX
-                                stackIcon={<RiUserSettingsFill color='#FFFFFF' /> }
+                                stackIcon={ <RiUserSettingsFill color='#FFFFFF' /> }
                                 title='Adaptabilidade'
+                                percentage={ 100 }
+                            />
+
+                            <ICON_WITH_TEXT_JSX
+                                stackIcon={ <FaRegClock color='#8c9dff' /> }
+                                title='Gestão'
                                 percentage={ 100 }
                             />
                         </div>

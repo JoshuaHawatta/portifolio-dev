@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const StackWrapper = styled.div `
     display: flex;
     flex-direction: column;
@@ -17,5 +16,5 @@ export const StackWrapper = styled.div `
     h5 {
         font: 1.2rem now-light, Arial, Helvetica;
         color: #FFFFFF;
-    } 
+    }
 `;

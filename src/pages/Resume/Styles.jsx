@@ -16,7 +16,7 @@ export const ArticleWrapper = styled.article `
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-
+    
     /*CHILDREN_COMPONENTS*/
     img {
         width: 100%;
@@ -48,6 +48,12 @@ export const Glasmorphisim = styled.div `
         /*CHILDREN_COMPONENTS*/
         span { color: #FFFFFF; }
     }
+
+    /*MOBILE*/
+    @media (max-width: 779px) { h1{ font-size: 4rem; } }
+
+    /*TABLETS*/
+    //@media (min-width: 780px) and (max-width: 1015px) { width: 8%; }
 `;
 
 export const HardSkills = styled.section `
@@ -74,6 +80,51 @@ export const HardSkills = styled.section `
     button {
         position: absolute;
         bottom: 1.5rem;
+    }
+
+    /*MOBILE*/
+    @media (max-width: 779px) {
+        
+        /*CHILDREN_ELEMENTS*/
+        button {
+            bottom: 5rem;
+            font-size: 1.5rem;
+            width: 60%;
+        }
+    }
+`;
+
+export const SoftSkills = styled(HardSkills)`
+    /*ICON_WITH_PERCENTAGE_ELEMENT*/
+    div > div > div { width: 15%; }
+
+    /*MOBILE*/
+    @media (max-width: 779px) {
+        margin: 0 auto;
+        padding: 0;
+
+        /*CHILDREN_ELEMENTS*/
+        div {
+            border-radius: unset;
+            flex-flow: row wrap;
+            margin: 0 auto;
+            width: 80%;
+            margin: 2rem 0;
+
+            /*CHILDREN_ELEMENTS*/
+           div > div {
+                width: 12rem;
+                margin: .5rem;
+                align-items: center;
+                text-align: center;
+
+                /*CHILDREN_ELEMENTS*/
+                svg { font-size: 5rem; }
+                h5 { font-size: 1.2rem; }
+           }
+
+           div :nth-child(4) { width: 15rem; }
+       }
     }
 `;
 
@@ -109,12 +160,9 @@ export const MySelf = styled(HardSkills) `
             }
         }
     }
-`;
 
-export const SoftSkills = styled(HardSkills) `
+    /*MOBILE*/
+    @media (max-width: 779px) { h1{ font-size: 4rem; } }
 
-    /*CHILDREN_ELEMENTS*/
-
-    /*ICON_WITH_PERCENTAGE_ELEMENT*/
-    div > div > div { width: 15%; }
+    
 `;
