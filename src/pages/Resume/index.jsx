@@ -1,23 +1,17 @@
 import { useState } from 'react';
+import { ArticleWrapper, HardSkills, Glasmorphisim, SoftSkills, MySelf } from './Styles';
 
 //REACT_ICONS
-import { 
-    FaDatabase, 
-    FaTools, 
-    FaPen, 
-    FaUserAlt, 
-    FaWeightHanging, 
-    FaRegClock
-} from 'react-icons/fa';
+import { FaDatabase, FaTools, FaPen, FaUserAlt, FaRegClock } from 'react-icons/fa';
 import { SiJavascript, SiReact, SiHtml5, SiCss3, SiNodedotjs, SiJava } from 'react-icons/si';
 import { RiUserVoiceFill, RiUserSettingsFill } from 'react-icons/ri';
 import { HiUserGroup, HiEmojiHappy } from 'react-icons/hi';
 
-import { ArticleWrapper, HardSkills, Glasmorphisim, SoftSkills, MySelf } from './Styles';
-
+//COMPONENTS
 import ICON_WITH_TEXT_JSX from '../../components/IconWithText';
 import CTA_BUTTON_JSX from '../../components/CtaButton';
 
+//IMAGES
 import laptopImage from '../../assets/images/knowledges.jpg';
 import aboutMeImage from '../../assets/images/about-me.jpg';
 
@@ -38,11 +32,11 @@ const ResumePage = () => {
 
                             <div>
                                 <p>
-                                    Oi! Meu nome é Joshua Hawatta, tenho 19 anos e sou Programador Full-Stack. Eu crio tanto o banco de dados, quanto a parte visual de uma aplicação-web.
+                                    Oi! Meu nome é Joshua Hawatta, tenho 19 anos e sou Programador Full-Stack. Eu crio tanto o banco de dados quanto a parte visual de uma aplicação-web.
                                 </p>
 
                                 <p>
-                                    Isso significa que: se você tem uma ideia de site, blog, landing-page, etc... Eu sou o cara para isso!
+                                    Isso significa que: se você tem uma ideia de site, blog, landing-page, etc... eu sou o cara para isso!
                                 </p>
 
                                 <p>
@@ -129,34 +123,32 @@ const ResumePage = () => {
 
                         <div>
                             <ICON_WITH_TEXT_JSX
-                                stackIcon={<RiUserVoiceFill color='#2a69f1' /> }
-                                title='Inglês'
-                                percentage={ 100 }
-                            />
-
-                            <ICON_WITH_TEXT_JSX
                                 stackIcon={ <HiUserGroup color='#e7d63e' /> }
-                                title='Comunicação'
-                                percentage={ 90 }
-                            />
-
-                           
-
-                            <ICON_WITH_TEXT_JSX
-                                stackIcon={ <HiEmojiHappy color='#4aaf4f' /> }
-                                title='Positividade'
-                                percentage={ 100 }
-                            />
+                                title='Liderança'
+                                percentage={ 95 }
+                            /> 
 
                             <ICON_WITH_TEXT_JSX
                                 stackIcon={ <RiUserSettingsFill color='#FFFFFF' /> }
-                                title='Adaptabilidade'
+                                title='Maleável'
+                                percentage={ 100 }
+                            />
+
+                            <ICON_WITH_TEXT_JSX
+                                stackIcon={ <HiEmojiHappy color='#4aaf4f' /> }
+                                title='Positivo'
+                                percentage={ 100 }
+                            />
+
+                            <ICON_WITH_TEXT_JSX
+                                stackIcon={<RiUserVoiceFill color='#2a69f1' /> }
+                                title='Bilíngue (Inglês)'
                                 percentage={ 100 }
                             />
 
                             <ICON_WITH_TEXT_JSX
                                 stackIcon={ <FaRegClock color='#8c9dff' /> }
-                                title='Gestão'
+                                title='Lidar com prazo'
                                 percentage={ 100 }
                             />
                         </div>

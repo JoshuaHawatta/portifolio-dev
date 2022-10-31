@@ -50,7 +50,17 @@ export const Glasmorphisim = styled.div `
     }
 
     /*MOBILE*/
-    @media (max-width: 779px) { h1{ font-size: 4rem; } }
+    @media (max-width: 779px) {
+        margin: 0 auto;
+        padding: 2rem 0;
+        border-radius: unset;
+        flex-flow: row wrap;
+        margin: 0 auto;
+        width: 100%;
+
+        /*CHILDREN ELEMENTS*/
+        h1{ font-size: 4rem; }
+    }
 
     /*TABLETS*/
     //@media (min-width: 780px) and (max-width: 1015px) { width: 8%; }
@@ -84,47 +94,37 @@ export const HardSkills = styled.section `
 
     /*MOBILE*/
     @media (max-width: 779px) {
-        
+        padding: 0;
+
         /*CHILDREN_ELEMENTS*/
         button {
-            bottom: 5rem;
+            bottom: 7rem;
             font-size: 1.5rem;
-            width: 60%;
+            width: 65%;
+        }
+
+        /*ICON_WITH_PERCENTAGE_ELEMENT*/
+        div > div > div {
+            width: 20%;
+            text-align: center;
+            h5 { font-size: 1rem; }
         }
     }
 `;
 
-export const SoftSkills = styled(HardSkills)`
+export const SoftSkills = styled(HardSkills) `
     /*ICON_WITH_PERCENTAGE_ELEMENT*/
     div > div > div { width: 15%; }
 
     /*MOBILE*/
     @media (max-width: 779px) {
-        margin: 0 auto;
-        padding: 0;
 
-        /*CHILDREN_ELEMENTS*/
-        div {
-            border-radius: unset;
-            flex-flow: row wrap;
-            margin: 0 auto;
-            width: 80%;
-            margin: 2rem 0;
-
-            /*CHILDREN_ELEMENTS*/
-           div > div {
-                width: 12rem;
-                margin: .5rem;
-                align-items: center;
-                text-align: center;
-
-                /*CHILDREN_ELEMENTS*/
-                svg { font-size: 5rem; }
-                h5 { font-size: 1.2rem; }
-           }
-
-           div :nth-child(4) { width: 15rem; }
-       }
+        /*ICON_WITH_PERCENTAGE_ELEMENT*/
+        div > div > div {
+            width: 25%;
+            align-items: center;
+            margin: 1rem;
+        }  
     }
 `;
 
@@ -162,7 +162,25 @@ export const MySelf = styled(HardSkills) `
     }
 
     /*MOBILE*/
-    @media (max-width: 779px) { h1{ font-size: 4rem; } }
+    @media (max-width: 779px) {
+        div > div {
+            flex-flow: column wrap;
+            padding: 0 1rem;
+            /*CHILDREN_ELEMENTS*/
+            img {
+                width: 20rem;
+                height: 20rem;
+            }
 
-    
+            div {
+                height: unset;
+                margin-top: 2rem;
+                width: 100%;
+
+                /*CHIDLREN_ELEMENTS*/
+                p { font-size: 1.4rem; }
+                p ~ p { margin-top: 1rem; }
+            }
+        }
+    }
 `;
