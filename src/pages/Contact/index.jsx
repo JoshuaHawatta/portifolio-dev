@@ -5,6 +5,8 @@ import {
     SendEmailButton
 } from '../../components/Footer/Styles';
 
+import emailRegex from './regex';
+
 const ContactPage = () => {
     const [inputValues, setInputValues] = useState({});
     const [message, setMessage] = useState('');
@@ -28,13 +30,13 @@ const ContactPage = () => {
         };
 
         if (!userName) {
-            setMessage('Preciso saber seu nome, uai!');
+            setMessage('Por favor, digite seu nome.');
             nameRef.current.focus();
 
             return
         }
         else if (!emailRegex.test(userEmail) || !userEmail) {
-            setMessage('Me fala o seu e-mail!');
+            setMessage('Por favor, digite seu e-mail');
             emailRef.current.focus();
 
             return
@@ -51,14 +53,17 @@ const ContactPage = () => {
             'template_xd283ip',
             TEMPLATE_PARAMS,
             'i7eLUpcHUWqqF7gMs'
-        ).then(_ => {
+        )
+            .then(() => {
                 setMessage('E-mail enviado com sucesso!');
 
                 inputValues.userName = '';
                 inputValues.userEmail = '';
                 inputValues.userMessage = ''
-            }, () => setMessage('Não foi possível enviar o e-mail :('))
-            ;
+            },
+                //ERROR_MESSAGE
+                () => setMessage('Não foi possível enviar o e-mail :(')
+            )
     }
 
     useEffect(() => {
