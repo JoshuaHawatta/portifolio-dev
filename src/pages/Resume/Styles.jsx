@@ -55,15 +55,22 @@ export const Glasmorphisim = styled.div `
         padding: 2rem 0;
         border-radius: unset;
         flex-flow: row wrap;
-        margin: 0 auto;
         width: 100%;
 
         /*CHILDREN ELEMENTS*/
         h1{ font-size: 4rem; }
     }
 
-    /*TABLETS*/
-    //@media (min-width: 780px) and (max-width: 1015px) { width: 8%; }
+    /*MOBILE_LANDSCAPE*/
+    @media (orientation: landscape) and (max-height: 520px) {
+        border-radius: unset;
+        margin: 0 auto;
+        height: 100vh;
+        padding: 0;
+
+        /*CHILDREN ELEMENTS*/
+        h1{ font-size: 5rem; }
+    }
 `;
 
 export const HardSkills = styled.section `
@@ -110,6 +117,53 @@ export const HardSkills = styled.section `
             h5 { font-size: 1rem; }
         }
     }
+
+    /*MOBILE_LANDSCAPE*/
+    @media (orientation: landscape) and (max-height: 520px) {
+        padding: 0;
+        height: 100vh;
+
+        /*CHILDREN_ELEMENTS*/
+        div { margin: 0; }
+
+        button {
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.3rem;
+            width: 20%; 
+        }
+
+        div > div { transform: translateX(1rem); }
+        
+        /*ICON_WITH_PERCENTAGE_ELEMENT*/
+        div > div > div {
+            width: 12%;
+            margin-right: .4rem;
+
+            /*CHILDREN_ELEMENTS*/
+            svg { font-size: 5rem; }
+            h5 { font-size: 1rem; }
+        }
+    }
+
+    /*TABLETS*/
+    @media (min-width: 780px) and (max-width: 1015px) {
+        div > div { padding: 0; }
+        
+        /*ICON_WITH_PERCENTAGE_ELEMENT*/
+        div > div > div {
+            width: 15%;
+
+            /*CHILDREN_ELEMENTS*/
+            h5 { font-size: .8rem; }
+        }
+
+        /*CHILDREN_ELEMENTS*/
+        button {
+            width: 35%;
+
+        }
+    }
 `;
 
 export const SoftSkills = styled(HardSkills) `
@@ -125,6 +179,32 @@ export const SoftSkills = styled(HardSkills) `
             align-items: center;
             margin: 1rem;
         }  
+    }
+
+    /*MOBILE_LANDSCAPE*/
+    @media (orientation: landscape) and (max-height: 520px) {     
+        div > div { transform: unset; }
+        
+        /*ICON_WITH_PERCENTAGE_ELEMENT*/
+        div > div > div {
+            width: 25%;
+
+            /*CHILDREN_ELEMENTS*/
+            h5 { font-size: 1rem; }
+        }
+    }
+
+    /*TABLETS*/
+    @media (min-width: 780px) and (max-width: 1015px) {
+        div > div { padding: 0; }
+        
+        /*ICON_WITH_PERCENTAGE_ELEMENT*/
+        div > div > div {
+            width: 25%;
+
+            /*CHILDREN_ELEMENTS*/
+            h5 { font-size: 1rem; }
+        }
     }
 `;
 
@@ -166,6 +246,7 @@ export const MySelf = styled(HardSkills) `
         div > div {
             flex-flow: column wrap;
             padding: 0 1rem;
+
             /*CHILDREN_ELEMENTS*/
             img {
                 width: 20rem;
@@ -180,6 +261,57 @@ export const MySelf = styled(HardSkills) `
                 /*CHIDLREN_ELEMENTS*/
                 p { font-size: 1.4rem; }
                 p ~ p { margin-top: 1rem; }
+            }
+        }
+    }
+
+    /*MOBILE_LANDSCAPE*/
+    @media (orientation: landscape) and (max-height: 520px) {
+        div > div {
+            padding: 0 8rem;
+            width: 100%;
+            transform: unset;
+            justify-content: center;
+            align-items: center;
+
+            /*CHILDREN_ELEMENTS*/
+            img {
+                width: 22rem;
+                height: 22rem;
+                transform: translateX(4rem);
+
+            }
+
+            div {
+                height: unset;
+                margin-top: 2rem;
+                width: 100%;
+                transform: translateX(4rem);
+
+                /*CHIDLREN_ELEMENTS*/
+                p {
+                    font-size: 1.4rem;
+                    width: 100%;
+                }
+
+                p ~ p { margin-top: 1rem; }
+            }
+        }
+    }
+
+    /*TABLETS*/
+    @media (min-width: 780px) and (max-width: 1015px) {
+        padding: 0;
+
+        /*CHILDREN_ELEMENTS*/
+        div { border-radius: unset; }
+
+        div > div {
+            /*CHILDREN_ELEMENTS*/
+            div > p {
+                font-size: 1.4rem;
+                padding: 0;
+                margin: 0;
             }
         }
     }

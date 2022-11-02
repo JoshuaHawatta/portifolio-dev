@@ -25,7 +25,7 @@ const ResumePage = () => {
             { showSection === 'myself' &&
                 <MySelf>
                     <Glasmorphisim>
-                        <h1>Q<span>u</span>em eu sou</h1>
+                        <h1>S<span>o</span>bre mim</h1>
 
                         <div>
                             <img src={ aboutMeImage } alt="presenting-my-self" />
@@ -50,7 +50,7 @@ const ResumePage = () => {
                         btnWidth="35%"
                         outLined={ true }
                         action={ () => setShowSection('hard-skills') }
-                        text="Veja minhas Hard-Skills!"
+                        text="Hard-Skills!"
                         icon={ <FaTools /> }
                     />
                 </MySelf>
@@ -65,13 +65,13 @@ const ResumePage = () => {
                             <ICON_WITH_TEXT_JSX
                                 stackIcon={ <SiJavascript color='#F0DB4F' /> }
                                 title='JavaScript'
-                                percentage={ 95 }
+                                percentage={ 100 }
                             />
 
                             <ICON_WITH_TEXT_JSX
                                 stackIcon={ <SiReact color='#61DBFB' /> }
                                 title='React'
-                                percentage={ 90 }
+                                percentage={ 95 }
                             />
 
                             <ICON_WITH_TEXT_JSX
@@ -89,7 +89,7 @@ const ResumePage = () => {
                             <ICON_WITH_TEXT_JSX
                                 stackIcon={ <SiNodedotjs color='#68AD63' /> }
                                 title='Node.js'
-                                percentage={ 45 }
+                                percentage={ 50 }
                             />
 
                             <ICON_WITH_TEXT_JSX
@@ -110,7 +110,7 @@ const ResumePage = () => {
                         btnWidth="35%"
                         outLined={ true }
                         action={ () => setShowSection('soft-skills') }
-                        text="Veja minhas Soft-Skills!"
+                        text="Soft-Skills"
                         icon={ <FaPen /> }
                     />
                 </HardSkills>
@@ -123,31 +123,31 @@ const ResumePage = () => {
 
                         <div>
                             <ICON_WITH_TEXT_JSX
-                                stackIcon={ <HiUserGroup color='#e7d63e' /> }
+                                stackIcon={ <HiUserGroup color='#C7E87D' /> }
                                 title='Liderança'
                                 percentage={ 95 }
                             /> 
 
                             <ICON_WITH_TEXT_JSX
                                 stackIcon={ <RiUserSettingsFill color='#FFFFFF' /> }
-                                title='Maleável'
+                                title='Flexível'
                                 percentage={ 100 }
                             />
 
                             <ICON_WITH_TEXT_JSX
-                                stackIcon={ <HiEmojiHappy color='#4aaf4f' /> }
+                                stackIcon={ <HiEmojiHappy color='#4AAF4F' /> }
                                 title='Positivo'
                                 percentage={ 100 }
                             />
 
                             <ICON_WITH_TEXT_JSX
-                                stackIcon={<RiUserVoiceFill color='#2a69f1' /> }
+                                stackIcon={<RiUserVoiceFill color='#4D4BCB' /> }
                                 title='Bilíngue (Inglês)'
                                 percentage={ 100 }
                             />
 
                             <ICON_WITH_TEXT_JSX
-                                stackIcon={ <FaRegClock color='#8c9dff' /> }
+                                stackIcon={ <FaRegClock color='#ED1D25' /> }
                                 title='Lidar com prazo'
                                 percentage={ 100 }
                             />
