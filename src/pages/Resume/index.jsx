@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArticleWrapper, HardSkills, Glasmorphisim, SoftSkills, MySelf } from './Styles';
+import { ArticleWrapper, HardSkills, Glasmorphosim, SoftSkills, MySelf } from './Styles';
 
 //REACT_ICONS
 import { FaDatabase, FaTools, FaPen, FaUserAlt, FaRegClock } from 'react-icons/fa';
@@ -24,7 +24,7 @@ const ResumePage = () => {
 
             { showSection === 'myself' &&
                 <MySelf>
-                    <Glasmorphisim>
+                    <Glasmorphosim>
                         <h1>S<span>o</span>bre mim</h1>
 
                         <div>
@@ -44,7 +44,7 @@ const ResumePage = () => {
                                 </p>
                             </div>
                         </div>
-                    </Glasmorphisim>
+                    </Glasmorphosim>
 
                     <CTA_BUTTON_JSX
                         btnWidth="35%"
@@ -58,7 +58,7 @@ const ResumePage = () => {
             
             { showSection === 'hard-skills' &&
                 <HardSkills>
-                    <Glasmorphisim>
+                    <Glasmorphosim>
                         <h1>H<span>a</span>rd-Skills</h1>                           
                                                
                         <div>
@@ -104,7 +104,7 @@ const ResumePage = () => {
                                 percentage={ 45 }
                             />
                         </div>
-                    </Glasmorphisim>
+                    </Glasmorphosim>
 
                     <CTA_BUTTON_JSX
                         btnWidth="35%"
@@ -118,7 +118,7 @@ const ResumePage = () => {
 
             { showSection === 'soft-skills' &&
                 <SoftSkills>
-                    <Glasmorphisim>    
+                    <Glasmorphosim>    
                         <h1>S<span>o</span>ft-Skills</h1>
 
                         <div>
@@ -152,7 +152,7 @@ const ResumePage = () => {
                                 percentage={ 100 }
                             />
                         </div>
-                    </Glasmorphisim>
+                    </Glasmorphosim>
 
                     <CTA_BUTTON_JSX
                         btnWidth="35%"

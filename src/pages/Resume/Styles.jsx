@@ -26,7 +26,7 @@ export const ArticleWrapper = styled.article `
     }
 `;
 
-export const Glasmorphisim = styled.div `
+export const Glasmorphosim = styled.div `
     display: flex;
     flex-flow: column wrap;
     justify-content: space-evenly;
@@ -69,7 +69,11 @@ export const Glasmorphisim = styled.div `
         padding: 0;
 
         /*CHILDREN ELEMENTS*/
-        h1{ font-size: 5rem; }
+        h1{
+            font-size: 5rem;
+            position: absolute;
+            top: 2rem;
+        }
     }
 `;
 
@@ -97,6 +101,7 @@ export const HardSkills = styled.section `
     button {
         position: absolute;
         bottom: 1.5rem;
+        width: 18%;
     }
 
     /*MOBILE*/
@@ -127,10 +132,9 @@ export const HardSkills = styled.section `
         div { margin: 0; }
 
         button {
-            top: 1rem;
+            top: 0;
             right: 1rem;
             font-size: 1.3rem;
-            width: 20%; 
         }
 
         div > div { transform: translateX(1rem); }
@@ -157,12 +161,6 @@ export const HardSkills = styled.section `
             /*CHILDREN_ELEMENTS*/
             h5 { font-size: .8rem; }
         }
-
-        /*CHILDREN_ELEMENTS*/
-        button {
-            width: 35%;
-
-        }
     }
 `;
 
@@ -184,7 +182,7 @@ export const SoftSkills = styled(HardSkills) `
     /*MOBILE_LANDSCAPE*/
     @media (orientation: landscape) and (max-height: 520px) {     
         div > div { transform: unset; }
-        
+
         /*ICON_WITH_PERCENTAGE_ELEMENT*/
         div > div > div {
             width: 25%;
