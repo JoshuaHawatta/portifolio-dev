@@ -7,10 +7,16 @@ export const CallToActionButton = styled.button `
     font: 2.3rem now-light, Helvetica, sans-serif;
     z-index: 1;
 
-    background: ${({ outLined }) => outLined
-        ? 'linear-gradient(to left, rgba(0, 0, 0, 0) 50%, #FFFFFF 50%) right'
-        : 'linear-gradient(to left, var(--blue-color) 50%, #FFFFFF 50%) right'
-    };
+    background: ${({ outlined, color }) => {
+        if(outlined) {
+            return 'linear-gradient(to left, rgba(0, 0, 0, 0) 50%, #FFFFFF 50%) right'
+        }
+        else if (color) {
+            return `linear-gradient(to left, rgba(0, 0, 0, 0) 50%, #${ color } 50%) right`
+        }
+
+        return 'linear-gradient(to left, var(--blue-color) 50%, #FFFFFF 50%) right'
+    }};
 
     border: .1rem solid #FFFFFF;
     outline: none;
@@ -33,7 +39,12 @@ export const CallToActionButton = styled.button `
         color: var(--blue-color);
         cursor: pointer;
 
-        color: ${({ outLined }) => outLined ? '#000000' : 'color: var(--blue- color)'};
+        color: ${({ outlined, color }) => {
+            if (outlined) return '#000000'
+            else if (color) return '#FFFFFF'
+
+            return 'var(--blue-color)'
+        }};
     }
 
     /*MOBILE*/

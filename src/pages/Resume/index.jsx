@@ -48,7 +48,7 @@ const ResumePage = () => {
 
                     <CTA_BUTTON_JSX
                         btnWidth="35%"
-                        outLined={ true }
+                        outlined={ true }
                         action={ () => setShowSection('hard-skills') }
                         text="Hard-Skills!"
                         icon={ <FaTools /> }
@@ -108,7 +108,7 @@ const ResumePage = () => {
 
                     <CTA_BUTTON_JSX
                         btnWidth="35%"
-                        outLined={ true }
+                        outlined={ true }
                         action={ () => setShowSection('soft-skills') }
                         text="Soft-Skills"
                         icon={ <FaPen /> }
@@ -156,7 +156,7 @@ const ResumePage = () => {
 
                     <CTA_BUTTON_JSX
                         btnWidth="35%"
-                        outLined={ true }
+                        outlined={ true }
                         action={ () => setShowSection('myself') }
                         text="Me conheça"
                         icon={ <FaUserAlt /> }

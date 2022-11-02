@@ -1,10 +1,11 @@
 import { CallToActionButton } from "./Styles"
 
-const CTA_BUTTON_JSX = ({ icon, text, action, btnWidth, outLined }) => (
+const CTA_BUTTON_JSX = ({ icon, text, action, btnWidth, outlined, color }) => (
     <CallToActionButton
         btnWidth={ btnWidth }
         onClick={ action }
-        outLined={ outLined }
+        outlined={ outlined }
+        color={ color }
     >
         { icon } { text }
     </CallToActionButton>
