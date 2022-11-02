@@ -16,7 +16,7 @@ import laptopImage from '../../assets/images/knowledges.jpg';
 import aboutMeImage from '../../assets/images/about-me.jpg';
 
 const ResumePage = () => {
-    const [showSection, setShowSection] = useState('myself');
+    const [showSection, setShowSection] = useState('hard-skills');
 
     return (
         <ArticleWrapper>
@@ -25,8 +25,6 @@ const ResumePage = () => {
             { showSection === 'myself' &&
                 <MySelf>
                     <Glasmorphosim>
-                        <h1>S<span>o</span>bre mim</h1>
-
                         <div>
                             <img src={ aboutMeImage } alt="presenting-my-self" />
 
@@ -50,7 +48,7 @@ const ResumePage = () => {
                         btnWidth="35%"
                         outlined={ true }
                         action={ () => setShowSection('hard-skills') }
-                        text="Hard-Skills!"
+                        text="Hard-Skills"
                         icon={ <FaTools /> }
                     />
                 </MySelf>
@@ -58,9 +56,7 @@ const ResumePage = () => {
             
             { showSection === 'hard-skills' &&
                 <HardSkills>
-                    <Glasmorphosim>
-                        <h1>H<span>a</span>rd-Skills</h1>                           
-                                               
+                    <Glasmorphosim>                                               
                         <div>
                             <ICON_WITH_TEXT_JSX
                                 stackIcon={ <SiJavascript color='#F0DB4F' /> }
@@ -119,8 +115,6 @@ const ResumePage = () => {
             { showSection === 'soft-skills' &&
                 <SoftSkills>
                     <Glasmorphosim>    
-                        <h1>S<span>o</span>ft-Skills</h1>
-
                         <div>
                             <ICON_WITH_TEXT_JSX
                                 stackIcon={ <HiUserGroup color='#C7E87D' /> }

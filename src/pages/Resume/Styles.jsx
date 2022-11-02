@@ -41,7 +41,7 @@ export const Glasmorphosim = styled.div `
     animation: ${ pop } .5s ease forwards;
    
     /*CHILDREN_COMPONENTS*/
-    h1 { 
+    h4 { 
         font: 8rem harry-fat, Arial, Helvetica;
         color: var(--green-color);
 
@@ -58,7 +58,7 @@ export const Glasmorphosim = styled.div `
         width: 100%;
 
         /*CHILDREN ELEMENTS*/
-        h1{ font-size: 4rem; }
+        h4{ font-size: 4rem; }
     }
 
     /*MOBILE_LANDSCAPE*/
@@ -69,9 +69,9 @@ export const Glasmorphosim = styled.div `
         padding: 0;
 
         /*CHILDREN ELEMENTS*/
-        h1{
-            font-size: 5rem;
+        h4{
             position: absolute;
+            font-size: 5rem;
             top: 2rem;
         }
     }
@@ -127,26 +127,34 @@ export const HardSkills = styled.section `
     @media (orientation: landscape) and (max-height: 520px) {
         padding: 0;
         height: 100vh;
+        width: 100%;
 
         /*CHILDREN_ELEMENTS*/
-        div { margin: 0; }
+        div {
+            width: 50vw;
+            margin: 0;
+
+            /*CHILDREN_ELEMENTS*/
+            div {
+                width: 100%;
+                padding: 0;
+
+                /*CHILDREN_ELEMENTS*/
+                div {
+                    text-align: center;
+
+                    margin: 2rem;
+
+                    /*CHILDREN_ELEMENTS*/
+                    svg { font-size: 5rem; }                    
+                }
+            }
+        }
 
         button {
             top: 0;
             right: 1rem;
             font-size: 1.3rem;
-        }
-
-        div > div { transform: translateX(1rem); }
-        
-        /*ICON_WITH_PERCENTAGE_ELEMENT*/
-        div > div > div {
-            width: 12%;
-            margin-right: .4rem;
-
-            /*CHILDREN_ELEMENTS*/
-            svg { font-size: 5rem; }
-            h5 { font-size: 1rem; }
         }
     }
 
@@ -180,15 +188,12 @@ export const SoftSkills = styled(HardSkills) `
     }
 
     /*MOBILE_LANDSCAPE*/
-    @media (orientation: landscape) and (max-height: 520px) {     
-        div > div { transform: unset; }
-
-        /*ICON_WITH_PERCENTAGE_ELEMENT*/
+    @media (orientation: landscape) and (max-height: 520px) {
+        /*ICON_WITH_TEXT*/
         div > div > div {
-            width: 25%;
-
-            /*CHILDREN_ELEMENTS*/
-            h5 { font-size: 1rem; }
+            margin: 1rem;
+            padding: 0;
+            width: 10%;
         }
     }
 
@@ -266,32 +271,25 @@ export const MySelf = styled(HardSkills) `
     /*MOBILE_LANDSCAPE*/
     @media (orientation: landscape) and (max-height: 520px) {
         div > div {
-            padding: 0 8rem;
-            width: 100%;
-            transform: unset;
             justify-content: center;
             align-items: center;
+            flex-flow: column wrap;
+            padding: 0;
+            width: 100%;
 
             /*CHILDREN_ELEMENTS*/
             img {
-                width: 22rem;
-                height: 22rem;
-                transform: translateX(4rem);
-
+                width: 17rem;
+                height: 17rem;
             }
 
             div {
                 height: unset;
                 margin-top: 2rem;
                 width: 100%;
-                transform: translateX(4rem);
+                padding: 0 2rem;
 
                 /*CHIDLREN_ELEMENTS*/
-                p {
-                    font-size: 1.4rem;
-                    width: 100%;
-                }
-
                 p ~ p { margin-top: 1rem; }
             }
         }
