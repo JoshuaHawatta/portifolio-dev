@@ -1,137 +1,57 @@
-import {
-    FormWrapper,
-    FooterWrapper,
-    FormSection,
-    SendEmailButton
-} from '../../components/Footer/Styles';
+import EMAIL_FORM_JSX from './EmailForm';
+import { ArticleWrapper, Line, Concats } from './Styles';
+import CTA_BUTTON_JSX from '../../components/CtaButton';
 
-import emailRegex from './regex';
+import { FaGithub, FaWhatsapp, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const ContactPage = () => {
-    const [inputValues, setInputValues] = useState({});
-    const [message, setMessage] = useState('');
-    const [emailRef, messageRef, nameRef] = [useRef(null), useRef(null), useRef(null)];
-
-    const handleInputChange = e => {
-        const { name, value } = e.target;
-        setInputValues(state => ({ ...state, [name]: value }))
-    }
-
-    const sendEmail = e => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        const { userName, userEmail, userMessage } = inputValues;
-
-        const TEMPLATE_PARAMS = {
-            from_name: userName,
-            message: userMessage,
-            email: userEmail,
-        };
-
-        if (!userName) {
-            setMessage('Por favor, digite seu nome.');
-            nameRef.current.focus();
-
-            return
-        }
-        else if (!emailRegex.test(userEmail) || !userEmail) {
-            setMessage('Por favor, digite seu e-mail');
-            emailRef.current.focus();
-
-            return
-        }
-        else if (!userMessage) {
-            setMessage('Não esquece da mensagem!');
-            messageRef.current.focus();
-
-            return
-        }
-
-        emailjs.send(
-            'service_ivq1che',
-            'template_xd283ip',
-            TEMPLATE_PARAMS,
-            'i7eLUpcHUWqqF7gMs'
-        )
-            .then(() => {
-                setMessage('E-mail enviado com sucesso!');
-
-                inputValues.userName = '';
-                inputValues.userEmail = '';
-                inputValues.userMessage = ''
-            },
-                //ERROR_MESSAGE
-                () => setMessage('Não foi possível enviar o e-mail :(')
-            )
-    }
-
-    useEffect(() => {
-        setTimeout(() => setMessage(''), 6000)
-    }, [message]);
-
     return (
-        <FooterWrapper>
-            <FormWrapper onSubmit={ sendEmail }>
-                <h4>{ message || 'Me manda um E-mail!' }</h4>
+        <ArticleWrapper>
+            <Concats>
+                <h4>Redes Sociais</h4>
 
-                {/*NAME_INPUT*/}
-                <FormSection>
-                    <div>
-                        <label htmlFor='user-name'>Seu nome</label>
-                        <input
-                            type='text'
-                            ref={nameRef}
-                            name='userName'
-                            id='user-name'
-                            autoComplete='off'
-                            value={inputValues.userName || ''}
-                            onChange={handleInputChange}
-                            placeholder='Usuário 123'
+                <div>
+                    <a href='https://github.com/JoshuaHawatta' target='_blank'>
+                        <CTA_BUTTON_JSX
+                            icon={<FaGithub />}
+                            text='GitHub'
+                            color='000000'
+                            btnWidth='100%'
                         />
-                        <div />
-                    </div>
-                </FormSection>
+                    </a>
 
-                {/*E-MAIL_INPUT*/}
-                <FormSection>
-                    <div>
-                        <label htmlFor='user-email'>Seu e-mail</label>
-                        <input
-                            type='email'
-                            ref={emailRef}
-                            name='userEmail'
-                            id='user-email'
-                            autoComplete='off'
-                            value={inputValues.userEmail || ''}
-                            onChange={handleInputChange}
-                            placeholder='usuario123@gmail.com'
+                    <a href='https://wa.me/5561998784278' target='_blank'>
+                        <CTA_BUTTON_JSX
+                            icon={ <FaWhatsapp /> }
+                            text='WhatsApp'
+                            color='25D366'
+                            btnWidth='100%'
                         />
-                        <div />
-                    </div>
-                </FormSection>
+                    </a>
 
-                {/*MESSAGE_AREA*/}
-                <FormSection>
-                    <div>
-                        <label htmlFor='user-message'>Mensagem</label>
-                        <textarea
-                            name='userMessage'
-                            id='user-message'
-                            autoComplete='off'
-                            ref={messageRef}
-                            onKeyUp={e => e.key === 'Enter' && sendEmail(e)}
-                            value={inputValues.userMessage || ''}
-                            onChange={handleInputChange}
-                            placeholder='Olá, tenho um projeto que...'
+                    <a href='https://www.instagram.com/joshuahawatta/' target='_blank'>
+                        <CTA_BUTTON_JSX
+                            icon={ <FaInstagram /> }
+                            text='Instagram'
+                            color='833AB4'
+                            btnWidth='100%'
                         />
-                    </div>
-                </FormSection>
+                    </a>
 
-                <FormSection>
-                    <SendEmailButton onClick={sendEmail}>Enviar Email</SendEmailButton>
-                </FormSection>
-            </FormWrapper>
-        </FooterWrapper>
+                    <a href='https://linkedin.com/in/joshua-hawatta' target='_blank'>
+                        <CTA_BUTTON_JSX
+                            icon={ <FaLinkedin /> }
+                            text='LinkedIn'
+                            color='0077b5'
+                            btnWidth='100%'
+                        />
+                    </a>
+                </div>
+            </Concats>
+            <Line />
+            <EMAIL_FORM_JSX />
+        </ArticleWrapper>
     )
 }
+
+export default ContactPage

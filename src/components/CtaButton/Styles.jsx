@@ -18,7 +18,7 @@ export const CallToActionButton = styled.button `
         return 'linear-gradient(to left, var(--blue-color) 50%, #FFFFFF 50%) right'
     }};
 
-    border: .1rem solid #FFFFFF;
+    border: ${ ({ color }) => color ? `.1rem solid #${ color }` : `.1rem solid #FFFFFF` };
     outline: none;
     width: ${ ({btnWidth}) => !btnWidth ? '22rem' : btnWidth }; 
     height: 3rem;
@@ -28,7 +28,7 @@ export const CallToActionButton = styled.button `
     border-radius: .4rem;
     background-size: 200% 100%;
     transition: .3s ease-out;
-    color: #FFFFFF;
+    color: ${ ({ color }) => color ? `#${ color }` : `#FFFFFF` };;
 
     /*CHILDREN_ELEMENTS*/
     svg { margin-right: 1rem; }
