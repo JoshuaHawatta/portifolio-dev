@@ -124,7 +124,7 @@ const EMAIL_FORM_JSX = () => {
             </FormSection>
 
             <FormSection>
-                <SendEmailButton onClick={ sendEmail }>Enviar E-mail</SendEmailButton>
+                <SendEmailButton onClick={ sendEmail }>Enviar</SendEmailButton>
             </FormSection>
         </FormWrapper>
     )

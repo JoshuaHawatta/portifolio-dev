@@ -31,6 +31,9 @@ html {
     scroll-behavior: smooth;
 }
 
+/*MESSAGE_TO_SHOW_THE_USER_TO_ROTATE_THE_PHONE*/
+h6 { display: none }
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -41,4 +44,31 @@ html {
     --brighter-blue-color: #5a58df;
     --green-color: #c7e87d;
     --gray-color: #d8e5e7;
+}
+
+/*MOBILE_LAND_SCAPE_WITH_BUTTONS*/
+@media
+(max-height: 520px)
+and (min-width: 750px)
+and (max-width: 800px)
+and (orientation: landscape) {
+    h6 {
+        display: inline;
+        font: 6rem harry-fat, Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: var(--green-color);
+    }
+
+    h6 > span { color: #FFFFFF; }
+   
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--blue-color);
+    }
+    
+    header, main, article, a { display: none; }
 }

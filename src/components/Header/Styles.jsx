@@ -26,6 +26,11 @@ export const HeaderWrapper = styled.header `
 
     /*MOBILE_LANDSCAPE*/
     @media (orientation: landscape) and (max-height: 520px) { width: 10%; }
+
+    /*MOBILE_LANDSCAPE_WITH_NO_SMARTPHONE_BUTTON*/
+    @media (orientation: landscape) and (max-height: 520px) and (max-width: 830px) { 
+        width: 8%;
+    }
 `;
 
 export const LogoDiv = styled.div `
@@ -39,13 +44,6 @@ export const LogoDiv = styled.div `
 
         span { color: #FFFFFF; }
     }
-
-     /*MOBILE_LANDSCAPE*/
-        @media (orientation: landscape) and (max-height: 520px) {
-            width: 10%;
-            position: fixed;
-            left: 2.2rem;
-        }
 `;
 
 export const NavBar = styled.nav `
@@ -102,12 +100,6 @@ export const NavBar = styled.nav `
         /*CHILDREN_ELEMENTS*/
         div { transform: translateY(4rem); }
     }
-
-    /*MOBILE_LANDSCAPE*/
-    @media (orientation: landscape) and (max-height: 520px) {
-        width: 10%;
-        padding: 4rem 0;
-    }
 `;
 
 export const HamburgerDiv = styled.div `
@@ -142,4 +134,11 @@ export const HamburgerDiv = styled.div `
 
     /*MOBILE*/
     @media (max-width: 779px) { display: flex; }
+
+    /*MOBILE_LAND_SCAPE_WITH_BUTTONS*/
+    @media
+    (max-height: 520px)
+    and (min-width: 750px)
+    and (max-width: 800px)
+    and (orientation: landscape) { display: none; }
 `;

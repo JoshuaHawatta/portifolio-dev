@@ -60,21 +60,6 @@ export const Glasmorphosim = styled.div `
         /*CHILDREN ELEMENTS*/
         h4{ font-size: 4rem; }
     }
-
-    /*MOBILE_LANDSCAPE*/
-    @media (orientation: landscape) and (max-height: 520px) {
-        border-radius: unset;
-        margin: 0 auto;
-        height: 100vh;
-        padding: 0;
-
-        /*CHILDREN ELEMENTS*/
-        h4{
-            position: absolute;
-            font-size: 5rem;
-            top: 2rem;
-        }
-    }
 `;
 
 export const HardSkills = styled.section `
@@ -123,41 +108,6 @@ export const HardSkills = styled.section `
         }
     }
 
-    /*MOBILE_LANDSCAPE*/
-    @media (orientation: landscape) and (max-height: 520px) {
-        padding: 0;
-        height: 100vh;
-        width: 100%;
-
-        /*CHILDREN_ELEMENTS*/
-        div {
-            width: 50vw;
-            margin: 0;
-
-            /*CHILDREN_ELEMENTS*/
-            div {
-                width: 100%;
-                padding: 0;
-
-                /*CHILDREN_ELEMENTS*/
-                div {
-                    text-align: center;
-                    margin: 1rem;
-
-                    /*CHILDREN_ELEMENTS*/
-                    svg { font-size: 5rem; }                    
-                }
-            }
-        }
-
-        button {
-            bottom: 0;
-            width: 20%;
-            right: 1rem;
-            font-size: 1.3rem;
-        }
-    }
-
     /*TABLETS*/
     @media (min-width: 780px) and (max-width: 1015px) {
         div > div { padding: 0; }
@@ -185,16 +135,6 @@ export const SoftSkills = styled(HardSkills) `
             align-items: center;
             margin: 1rem;
         }  
-    }
-
-    /*MOBILE_LANDSCAPE*/
-    @media (orientation: landscape) and (max-height: 520px) {
-        /*ICON_WITH_TEXT*/
-        div > div > div {
-            margin: 1rem;
-            padding: 0;
-            width: 20%;
-        }
     }
 
     /*TABLETS*/
@@ -263,33 +203,6 @@ export const MySelf = styled(HardSkills) `
 
                 /*CHIDLREN_ELEMENTS*/
                 p { font-size: 1.4rem; }
-                p ~ p { margin-top: 1rem; }
-            }
-        }
-    }
-
-    /*MOBILE_LANDSCAPE*/
-    @media (orientation: landscape) and (max-height: 520px) {
-        div > div {
-            justify-content: center;
-            align-items: center;
-            flex-flow: column wrap;
-            padding: 0;
-            width: 100%;
-
-            /*CHILDREN_ELEMENTS*/
-            img {
-                width: 17rem;
-                height: 17rem;
-            }
-
-            div {
-                height: unset;
-                margin-top: 2rem;
-                width: 100%;
-                padding: 0 2rem;
-
-                /*CHIDLREN_ELEMENTS*/
                 p ~ p { margin-top: 1rem; }
             }
         }
