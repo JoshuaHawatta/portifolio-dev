@@ -23,6 +23,9 @@ export const HeaderWrapper = styled.header `
 
     /*TABLETS*/
     @media (min-width: 780px) and (max-width: 1015px) { width: 8%; }
+
+    /*MOBILE_LANDSCAPE*/
+    @media (orientation: landscape) and (max-height: 520px) { width: 10%; }
 `;
 
 export const LogoDiv = styled.div `
@@ -36,6 +39,13 @@ export const LogoDiv = styled.div `
 
         span { color: #FFFFFF; }
     }
+
+     /*MOBILE_LANDSCAPE*/
+        @media (orientation: landscape) and (max-height: 520px) {
+            width: 10%;
+            position: fixed;
+            left: 2.2rem;
+        }
 `;
 
 export const NavBar = styled.nav `
@@ -91,6 +101,12 @@ export const NavBar = styled.nav `
 
         /*CHILDREN_ELEMENTS*/
         div { transform: translateY(4rem); }
+    }
+
+    /*MOBILE_LANDSCAPE*/
+    @media (orientation: landscape) and (max-height: 520px) {
+        width: 10%;
+        padding: 4rem 0;
     }
 `;
 
