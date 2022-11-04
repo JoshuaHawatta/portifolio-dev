@@ -106,11 +106,11 @@ export const HardSkills = styled.section `
 
     /*MOBILE*/
     @media (max-width: 779px) {
-        padding: 0;
+        padding: 0 4rem;
 
         /*CHILDREN_ELEMENTS*/
         button {
-            bottom: 7rem;
+            bottom: 6rem;
             font-size: 1.5rem;
             width: 65%;
         }
@@ -142,8 +142,7 @@ export const HardSkills = styled.section `
                 /*CHILDREN_ELEMENTS*/
                 div {
                     text-align: center;
-
-                    margin: 2rem;
+                    margin: 1rem;
 
                     /*CHILDREN_ELEMENTS*/
                     svg { font-size: 5rem; }                    
@@ -152,7 +151,8 @@ export const HardSkills = styled.section `
         }
 
         button {
-            top: 0;
+            bottom: 0;
+            width: 20%;
             right: 1rem;
             font-size: 1.3rem;
         }
@@ -193,7 +193,7 @@ export const SoftSkills = styled(HardSkills) `
         div > div > div {
             margin: 1rem;
             padding: 0;
-            width: 10%;
+            width: 20%;
         }
     }
 

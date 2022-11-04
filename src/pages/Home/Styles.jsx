@@ -21,6 +21,9 @@ export const Presentation = styled.section `
         padding: 0 6rem;
     }
 
+    /*MOBILE_LANDSCAPE*/
+    @media (orientation: landscape) and (max-height: 520px) { padding: 25rem 0; }
+
     /*TABLETS*/
     @media (min-width: 780px) and (max-width: 1015px) { padding: 0 8rem; }
 `;
@@ -34,7 +37,7 @@ export const WhoIAm = styled.div `
 
     /*CHILDREN_ELEMENTS*/
     div {
-        
+
         /*CHILDREN_ELEMENTS*/
         h1 {
             width: 100%;
@@ -130,6 +133,16 @@ export const PresentationImage = styled.div `
         img {
             margin-bottom: 2rem;
             max-width: 60%;
+            box-shadow: none;
+        }
+    }
+
+    /*MOBILE_LANDSCAPE*/
+    @media (orientation: landscape) and (max-height: 520px) {
+       /*CHILDREN_ELEMENTS*/
+        img {
+            margin-bottom: 2rem;
+            width: 40%;
             box-shadow: none;
         }
     }
