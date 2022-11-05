@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArticleWrapper, HardSkills, Glasmorphosim, SoftSkills, MySelf } from './Styles';
+import { ArticleWrapper, HardSkills, Glassmorphisim, SoftSkills, MySelf } from './Styles';
 
 //REACT_ICONS
 import { FaDatabase, FaTools, FaPen, FaUserAlt, FaRegClock } from 'react-icons/fa';
@@ -24,7 +24,7 @@ const ResumePage = () => {
 
             { showSection === 'myself' &&
                 <MySelf>
-                    <Glasmorphosim>
+                    <Glassmorphisim>
                         <div>
                             <img src={ aboutMeImage } alt="presenting-my-self" />
 
@@ -42,7 +42,7 @@ const ResumePage = () => {
                                 </p>
                             </div>
                         </div>
-                    </Glasmorphosim>
+                    </Glassmorphisim>
 
                     <CTA_BUTTON_JSX
                         btnWidth="35%"
@@ -56,7 +56,7 @@ const ResumePage = () => {
             
             { showSection === 'hard-skills' &&
                 <HardSkills>
-                    <Glasmorphosim>                                               
+                    <Glassmorphisim>                                               
                         <div>
                             <ICON_WITH_TEXT_JSX
                                 stackIcon={ <SiJavascript color='#F0DB4F' /> }
@@ -100,7 +100,7 @@ const ResumePage = () => {
                                 percentage={ 45 }
                             />
                         </div>
-                    </Glasmorphosim>
+                    </Glassmorphisim>
 
                     <CTA_BUTTON_JSX
                         btnWidth="35%"
@@ -114,7 +114,7 @@ const ResumePage = () => {
 
             { showSection === 'soft-skills' &&
                 <SoftSkills>
-                    <Glasmorphosim>    
+                    <Glassmorphisim>    
                         <div>
                             <ICON_WITH_TEXT_JSX
                                 stackIcon={ <HiUserGroup color='#C7E87D' /> }
@@ -146,7 +146,7 @@ const ResumePage = () => {
                                 percentage={ 100 }
                             />
                         </div>
-                    </Glasmorphosim>
+                    </Glassmorphisim>
 
                     <CTA_BUTTON_JSX
                         btnWidth="35%"

@@ -26,7 +26,7 @@ export const ArticleWrapper = styled.article `
     }
 `;
 
-export const Glasmorphosim = styled.div `
+export const Glassmorphisim = styled.div `
     display: flex;
     flex-flow: column wrap;
     justify-content: space-evenly;
@@ -53,7 +53,6 @@ export const Glasmorphosim = styled.div `
     @media (max-width: 779px) {
         margin: 0 auto;
         padding: 2rem 0;
-        border-radius: unset;
         flex-flow: row wrap;
         width: 100%;
 
