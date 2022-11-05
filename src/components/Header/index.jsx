@@ -3,7 +3,7 @@ import { HeaderWrapper, LogoDiv } from './Styles';
 import NAVBAR_JSX from './NavBar';
 
 const Header = () => (
-    <HeaderWrapper>
+    <HeaderWrapper id='header-wrapper'>
         <LogoDiv>
             <Link to='/'>J<span>o</span></Link>
         </LogoDiv>

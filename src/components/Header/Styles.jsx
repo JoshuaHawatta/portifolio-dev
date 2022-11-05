@@ -20,12 +20,6 @@ export const HeaderWrapper = styled.header `
         box-shadow: none;
         width: 17%;
     }
-
-    /*TABLETS*/
-    @media (min-width: 780px) and (max-width: 1015px) { width: 8%; }
-
-    /*MOBILE_LAND_SCAPE_WITH_BUTTONS*/
-    @media (max-height: 520px) and (orientation: landscape) { display: none; }
 `;
 
 export const LogoDiv = styled.div `
@@ -129,11 +123,4 @@ export const HamburgerDiv = styled.div `
 
     /*MOBILE*/
     @media (max-width: 779px) { display: flex; }
-
-    /*MOBILE_LAND_SCAPE_WITH_BUTTONS*/
-    @media
-    (max-height: 520px)
-    and (min-width: 750px)
-    and (max-width: 800px)
-    and (orientation: landscape) { display: none; }
 `;
