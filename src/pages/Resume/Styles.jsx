@@ -107,21 +107,6 @@ export const HardSkills = styled.section `
         }
     }
 
-    /*TABLETS*/
-    @media (min-width: 780px) and (max-width: 1015px) {
-        div > div { padding: 0; }
-        
-        /*ICON_WITH_PERCENTAGE_ELEMENT*/
-        div > div > div {
-            width: 15%;
-
-            /*CHILDREN_ELEMENTS*/
-            h5 { font-size: .8rem; }
-        }
-
-        button { width: 35%; }
-    }
-
     /*JUST_FIXING_BUTTON_SIZE_ON_iPADS*/
     @media (min-width: 1016px) and (max-width: 1240px) { button { width: 30%; } }
 `;
@@ -139,19 +124,6 @@ export const SoftSkills = styled(HardSkills) `
             align-items: center;
             margin: 1rem;
         }  
-    }
-
-    /*TABLETS*/
-    @media (min-width: 780px) and (max-width: 1015px) {
-        div > div { padding: 0; }
-        
-        /*ICON_WITH_PERCENTAGE_ELEMENT*/
-        div > div > div {
-            width: 25%;
-
-            /*CHILDREN_ELEMENTS*/
-            h5 { font-size: 1rem; }
-        }
     }
 `;
 
@@ -208,40 +180,6 @@ export const MySelf = styled(HardSkills) `
                 /*CHIDLREN_ELEMENTS*/
                 p { font-size: 1.4rem; }
                 p ~ p { margin-top: 1rem; }
-            }
-        }
-    }
-
-    /*TABLETS*/
-    @media (min-width: 780px) and (max-width: 1015px) {
-        padding: 0;
-
-        /*CHILDREN_ELEMENTS*/
-        div { border-radius: unset; }
-
-        div > div {
-            /*CHILDREN_ELEMENTS*/
-            div > p {
-                font-size: 1.4rem;
-                padding: 0;
-                margin: 0;
-            }
-        }
-    }
-
-    /*JUST_FIXING_TEXT_SIZE_ON_iPADS*/
-    @media (min-width: 1016px) and (max-width: 1035px) {
-        padding: 0;
-
-        /*CHILDREN_ELEMENTS*/
-        div { border-radius: unset; }
-
-        div > div {
-            /*CHILDREN_ELEMENTS*/
-            div > p {
-                font-size: 1.8rem;
-                padding: 0;
-                margin: 0;
             }
         }
     }

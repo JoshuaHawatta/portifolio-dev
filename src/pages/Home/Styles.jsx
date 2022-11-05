@@ -20,9 +20,6 @@ export const Presentation = styled.section `
         justify-content: center;
         padding: 0 6rem;
     }
-
-    /*TABLETS*/
-    @media (min-width: 780px) and (max-width: 1015px) { padding: 0 10rem; }
 `;
 
 export const WhoIAm = styled.div `
@@ -84,20 +81,6 @@ export const WhoIAm = styled.div `
 
     /*JUST_TO_KEEP_THE_H1_ON_A_REGULAR_SIZE*/
     @media (min-width: 434px) and (max-width: 779px) { div > h1 { width: 50%; } }
-
-    /*TABLETS*/
-    @media (min-width: 780px) and (max-width: 1015px) {
-
-        /*CHILDREN_ELEMENTS*/
-        div {
-
-            /*CHILDREN_ELEMENTS*/
-            h1 { font-size: 7rem; }
-            br { display: none; }
-            p { font-size: 1.2rem; }
-            p + p + p { max-width: 90%; }
-        }
-    }
 `;
 
 export const PresentationImage = styled.div `
@@ -133,7 +116,4 @@ export const PresentationImage = styled.div `
             box-shadow: none;
         }
     }
-
-    /*TABLETS*/
-    @media (min-width: 780px) and (max-width: 1015px) { img { max-width: 70%; } }
 `;
