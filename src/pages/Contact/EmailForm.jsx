@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
-import { FormWrapper, FormSection, SendEmailButton } from './FormStyles';
+import { FormWrapper, FormSection, SendEmailButton } from './Styles';
+
+const EMAIL_REGEX = /\w{2,}\@\w{2,}.com/;
 
 const EMAIL_FORM_JSX = () => {
     const [inputValues, setInputValues] = useState({});
@@ -29,14 +31,14 @@ const EMAIL_FORM_JSX = () => {
 
             return
         }
-        else if (!emailRegex.test(userEmail) || !userEmail) {
+        else if (!EMAIL_REGEX.test(userEmail) || !userEmail) {
             setMessage('Por favor, digite seu e-mail');
             emailRef.current.focus();
 
             return
         }
         else if (!userMessage) {
-            setMessage('Não esquece da mensagem!');
+            setMessage('Não esqueça do texto!');
             messageRef.current.focus();
 
             return
