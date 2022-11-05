@@ -8,6 +8,9 @@ export const ArticleWrapper = styled.article `
     height: 100vh;
     padding: 0 12rem;
     background: var(--gray-color);
+
+    /*MOBILE_LAND_SCAPE_WITH_BUTTONS*/
+    @media (max-height: 520px) and (orientation: landscape) { display: none; }
 `;
 
 export const Line = styled.div `

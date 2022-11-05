@@ -64,5 +64,5 @@ h6 { display: none }
         background-color: var(--blue-color);
     }
     
-    main, article { display: none; }
+    main, article, section, form { display: none; }
 }
