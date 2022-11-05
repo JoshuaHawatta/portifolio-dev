@@ -34,9 +34,7 @@ html {
 /*MESSAGE_TO_SHOW_THE_USER_TO_ROTATE_THE_PHONE*/
 h6 { display: none }
 
-::-webkit-scrollbar {
-    display: none;
-}
+::-webkit-scrollbar { display: none; }
 
 /*COLORS*/
 :root {
@@ -47,11 +45,7 @@ h6 { display: none }
 }
 
 /*MOBILE_LAND_SCAPE_WITH_BUTTONS*/
-@media
-(max-height: 520px)
-and (min-width: 750px)
-and (max-width: 800px)
-and (orientation: landscape) {
+@media (max-height: 520px) and (orientation: landscape) {
     h6 {
         display: inline;
         font: 6rem harry-fat, Arial, Helvetica, sans-serif;
@@ -70,5 +64,5 @@ and (orientation: landscape) {
         background-color: var(--blue-color);
     }
     
-    header, main, article, a { display: none; }
+    main, article { display: none; }
 }

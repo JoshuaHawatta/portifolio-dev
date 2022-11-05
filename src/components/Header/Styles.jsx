@@ -24,13 +24,8 @@ export const HeaderWrapper = styled.header `
     /*TABLETS*/
     @media (min-width: 780px) and (max-width: 1015px) { width: 8%; }
 
-    /*MOBILE_LANDSCAPE*/
-    @media (orientation: landscape) and (max-height: 520px) { width: 10%; }
-
-    /*MOBILE_LANDSCAPE_WITH_NO_SMARTPHONE_BUTTON*/
-    @media (orientation: landscape) and (max-height: 520px) and (max-width: 830px) { 
-        width: 8%;
-    }
+    /*MOBILE_LAND_SCAPE_WITH_BUTTONS*/
+    @media (max-height: 520px) and (orientation: landscape) { display: none; }
 `;
 
 export const LogoDiv = styled.div `
