@@ -97,7 +97,7 @@ export const HardSkills = styled.section `
         button {
             bottom: 6rem;
             font-size: 1.5rem;
-            width: 65%;
+            width: 45%;
         }
 
         /*ICON_WITH_PERCENTAGE_ELEMENT*/
@@ -119,7 +119,12 @@ export const HardSkills = styled.section `
             /*CHILDREN_ELEMENTS*/
             h5 { font-size: .8rem; }
         }
+
+        button { width: 35%; }
     }
+
+    /*JUST_FIXING_BUTTON_SIZE_ON_iPADS*/
+    @media (min-width: 1016px) and (max-width: 1240px) { button { width: 30%; } }
 `;
 
 export const SoftSkills = styled(HardSkills) `
@@ -219,6 +224,23 @@ export const MySelf = styled(HardSkills) `
             /*CHILDREN_ELEMENTS*/
             div > p {
                 font-size: 1.4rem;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    /*JUST_FIXING_TEXT_SIZE_ON_iPADS*/
+    @media (min-width: 1016px) and (max-width: 1035px) {
+        padding: 0;
+
+        /*CHILDREN_ELEMENTS*/
+        div { border-radius: unset; }
+
+        div > div {
+            /*CHILDREN_ELEMENTS*/
+            div > p {
+                font-size: 1.8rem;
                 padding: 0;
                 margin: 0;
             }
