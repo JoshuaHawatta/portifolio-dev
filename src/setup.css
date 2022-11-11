@@ -1,95 +1,122 @@
 /*FONTS*/
 @font-face {
-    font-family: harry-fat;
-    src: url('./assets/fonts/harry-fat.otf');
+	font-family: harry-fat;
+	src: url('./assets/fonts/harry-fat.otf');
 }
 
 @font-face {
-    font-family: harry-heavy;
-    src: url('./assets/fonts/harry-heavy.otf');
+	font-family: harry-heavy;
+	src: url('./assets/fonts/harry-heavy.otf');
 }
 
 @font-face {
-    font-family: now-medium;
-    src: url('./assets/fonts/Now-Medium.otf');
+	font-family: now-medium;
+	src: url('./assets/fonts/Now-Medium.otf');
 }
 
 @font-face {
-    font-family: now-light;
-    src: url('./assets/fonts/now-light.otf');
+	font-family: now-light;
+	src: url('./assets/fonts/now-light.otf');
 }
 
 /*BASIC_STYLING*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-rendering: geometricPrecision !important;
 }
 
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 /*MESSAGE_TO_SHOW_THE_USER_TO_ROTATE_THE_PHONE*/
-h6 { display: none }
+h6 {
+	display: none;
+}
 
-::-webkit-scrollbar { display: none; }
+::-webkit-scrollbar {
+	display: none;
+}
 
 /*COLORS*/
 :root {
-    --blue-color: #4d4bcb;
-    --brighter-blue-color: #5a58df;
-    --green-color: #c7e87d;
-    --gray-color: #d8e5e7;
+	--blue-color: #4d4bcb;
+	--brighter-blue-color: #5a58df;
+	--green-color: #c7e87d;
+	--gray-color: #d8e5e7;
 }
 
 /*MOBILES_LAND_SCAPE*/
 @media (max-height: 520px) and (orientation: landscape) {
-    h6 {
-        display: inline;
-        font: 6rem harry-fat, Arial, Helvetica, sans-serif;
-        text-decoration: none;
-        color: var(--green-color);
-    }
+	h6 {
+		display: inline;
+		font: 6rem harry-fat, Arial, Helvetica, sans-serif;
+		text-decoration: none;
+		color: var(--green-color);
+	}
 
-    h6 > span { color: #FFFFFF; }
-   
-    body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--blue-color);
-    }
-    
-    #header-wrapper { display: none; }
-    #contact-article { display: none; }
-    main, article, section, form { display: none; }
+	h6 > span {
+		color: #ffffff;
+	}
+
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100vh;
+		background-color: var(--blue-color);
+	}
+
+	#header-wrapper {
+		display: none;
+	}
+	#contact-article {
+		display: none;
+	}
+	main,
+	article,
+	section,
+	form {
+		display: none;
+	}
 }
 
 /*TABLETS_LANDSCAPE*/
 @media (min-width: 780px) and (max-width: 1100px) and (orientation: landscape) {
-    h6 {
-        display: inline;
-        font: 6rem harry-fat, Arial, Helvetica, sans-serif;
-        text-decoration: none;
-        color: var(--green-color);
-    }
+	h6 {
+		display: inline;
+		font: 6rem harry-fat, Arial, Helvetica, sans-serif;
+		text-decoration: none;
+		color: var(--green-color);
+	}
 
-    h6 > span { color: #FFFFFF; }
-   
-    body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--blue-color);
-    }
+	h6 > span {
+		color: #ffffff;
+	}
 
-    #header-wrapper { display: none; }
-    #contact-article { display: none; }
-    main, article, section, form { display: none; }
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100vh;
+		background-color: var(--blue-color);
+	}
+
+	#header-wrapper {
+		display: none;
+	}
+	#contact-article {
+		display: none;
+	}
+	main,
+	article,
+	section,
+	form {
+		display: none;
+	}
 }
