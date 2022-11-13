@@ -26,12 +26,12 @@ export const ArticleWrapper = styled.article`
 		flex-flow: column;
 		justify-content: center;
 		padding: 0 6rem;
+		height: 150vh;
 
 		/*CHILDREN_ELEMENTS*/
 		aside {
 			display: unset;
 		}
-		height: 140vh;
 	}
 
 	/*MOBILE_LAND_SCAPE_WITH_BUTTONS*/
@@ -147,19 +147,12 @@ export const FormWrapper = styled.section`
 	/*MOBILE*/
 	@media (max-width: 779px) {
 		width: 100%;
-		height: 60vh;
+		height: unset;
+		max-height: unset;
 
 		/*CHILDREN_ELEMENTS*/
 		h4 {
-			font-size: 2.2rem;
-		}
-	}
-
-	/*TABLETS*/
-	@media (max-width: 779px) and (min-height: 900px) {
-		/*CHILDREN_ELEMENTS*/
-		h4 {
-			font-size: 3.5rem;
+			font-size: 2rem;
 		}
 	}
 `
@@ -240,14 +233,6 @@ export const FormSection = styled.section`
 			label {
 				font-size: 1.2rem;
 			}
-		}
-	}
-
-	/*TABLETS*/
-	@media (max-width: 779px) and (min-height: 900px) {
-		/*CHILDREN_ELEMENTS*/
-		div > label {
-			font-size: 1.5rem;
 		}
 	}
 `
