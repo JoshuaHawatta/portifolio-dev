@@ -32,6 +32,7 @@ export const Glassmorphisim = styled.div`
 	justify-content: space-evenly;
 	align-items: center;
 	width: 100%;
+	height: 50vh;
 	margin-bottom: 10rem;
 	padding: 3rem;
 	border-radius: 2rem;
@@ -40,23 +41,13 @@ export const Glassmorphisim = styled.div`
 	background-color: rgba(255, 255, 255, 0.1);
 	animation: ${pop} 0.5s ease forwards;
 
-	/*CHILDREN_COMPONENTS*/
-	h4 {
-		font: 8rem harry-fat, Arial, Helvetica;
-		color: var(--green-color);
-
-		/*CHILDREN_COMPONENTS*/
-		span {
-			color: #ffffff;
-		}
-	}
-
 	/*MOBILE*/
 	@media (max-width: 779px) {
 		margin: 0 auto;
 		padding: 2rem 0;
 		flex-flow: row wrap;
 		width: 100%;
+		height: 75vh;
 
 		/*CHILDREN ELEMENTS*/
 		h4 {
@@ -73,7 +64,7 @@ export const HardSkills = styled.section`
 	margin: 0 auto;
 	position: absolute;
 	width: 100%;
-	height: 100vh;
+	height: 90vh;
 	padding: 0 12rem;
 
 	/*CHILDREN_ELEMENTS*/
@@ -104,10 +95,17 @@ export const HardSkills = styled.section`
 
 		/*CHILDREN_ELEMENTS*/
 		button {
-			bottom: 6rem;
+			bottom: -5rem;
 			font-size: 1.5rem;
 			width: 45%;
 			max-width: unset;
+		}
+
+		div {
+			/*CHILDREN_ELEMENTS*/
+			button {
+				bottom: 5rem;
+			}
 		}
 
 		/*ICON_WITH_PERCENTAGE_ELEMENT*/
@@ -135,16 +133,6 @@ export const SoftSkills = styled(HardSkills)`
 	/*ICON_WITH_PERCENTAGE_ELEMENT*/
 	div > div > div {
 		width: 15%;
-	}
-
-	/*MOBILE*/
-	@media (max-width: 779px) {
-		/*ICON_WITH_PERCENTAGE_ELEMENT*/
-		div > div > div {
-			width: 25%;
-			align-items: center;
-			margin: 1rem;
-		}
 	}
 `
 
