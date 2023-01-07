@@ -1,135 +1,128 @@
-import { useState, useRef, useEffect } from 'react';
-import { FormWrapper, FormSection, SendEmailButton } from './Styles';
-
-const EMAIL_REGEX = /\w{2,}\@\w{2,}.com/;
+import { useState, useRef, useEffect } from 'react'
+import { FormWrapper, FormSection, SendEmailButton } from './Styles'
 
 const EMAIL_FORM_JSX = () => {
-    const [inputValues, setInputValues] = useState({});
-    const [message, setMessage] = useState('');
-    const [emailRef, messageRef, nameRef] = [useRef(null), useRef(null), useRef(null)];
+	const [inputValues, setInputValues] = useState({})
+	const [message, setMessage] = useState(null)
+	const [emailRef, messageRef, nameRef] = [useRef(null), useRef(null), useRef(null)]
 
-    const handleInputChange = e => {
-        const { name, value } = e.target;
-        setInputValues(state => ({ ...state, [name]: value }))
-    }
+	const emailRegex = /\w{2,}\@\w{2,}.com/
 
-    const sendEmail = e => {
-        e.preventDefault();
-        e.stopPropagation();
+	const handleInputChange = e => {
+		const { name, value } = e.target
+		setInputValues(state => ({ ...state, [name]: value }))
+	}
 
-        const { userName, userEmail, userMessage } = inputValues;
+	const sendEmail = e => {
+		e.preventDefault()
+		e.stopPropagation()
 
-        const TEMPLATE_PARAMS = {
-            from_name: userName,
-            message: userMessage,
-            email: userEmail,
-        };
+		const { userName, userEmail, userMessage } = inputValues
 
-        if (!userName) {
-            setMessage('Por favor, digite seu nome.');
-            nameRef.current.focus();
+		const TEMPLATE_PARAMS = {
+			from_name: userName,
+			message: userMessage,
+			email: userEmail,
+		}
 
-            return
-        }
-        else if (!EMAIL_REGEX.test(userEmail) || !userEmail) {
-            setMessage('Por favor, digite seu e-mail');
-            emailRef.current.focus();
+		if (!userName) {
+			setMessage('Por favor, digite seu nome.')
+			nameRef.current.focus()
 
-            return
-        }
-        else if (!userMessage) {
-            setMessage('Não esqueça do texto!');
-            messageRef.current.focus();
+			return
+		} else if (!emailRegex.test(userEmail) || !userEmail) {
+			setMessage('Por favor, digite seu e-mail')
+			emailRef.current.focus()
 
-            return
-        }
+			return
+		} else if (!userMessage) {
+			setMessage('Não esqueça do texto!')
+			messageRef.current.focus()
 
-        emailjs.send(
-            'service_ivq1che',
-            'template_xd283ip',
-            TEMPLATE_PARAMS,
-            'i7eLUpcHUWqqF7gMs'
-        )
-            .then(() => {
-                setMessage('E-mail enviado com sucesso!');
+			return
+		}
 
-                inputValues.userName = '';
-                inputValues.userEmail = '';
-                inputValues.userMessage = ''
-            },
-                //ERROR_MESSAGE
-                () => setMessage('Não foi possível enviar o e-mail :(')
-            )
-    }
+		emailjs.send('service_ivq1che', 'template_xd283ip', TEMPLATE_PARAMS, 'i7eLUpcHUWqqF7gMs').then(
+			() => {
+				setMessage('E-mail enviado com sucesso!')
 
-    useEffect(() => {
-        setTimeout(() => setMessage(''), 6000)
-    }, [message]);
+				inputValues.userName = ''
+				inputValues.userEmail = ''
+				inputValues.userMessage = ''
+			},
+			//ERROR_MESSAGE
+			() => setMessage('Não foi possível enviar o e-mail :(')
+		)
+	}
 
-    return (
-        <FormWrapper onSubmit={ sendEmail }>
-            <h4>{message || 'Me manda um E-mail!'}</h4>
+	useEffect(() => {
+		setTimeout(() => setMessage(null), 6000)
+	}, [message])
 
-            {/*NAME_INPUT*/}
-            <FormSection>
-                <div>
-                    <label htmlFor='user-name'>Seu nome</label>
-                    <input
-                        type='text'
-                        ref={ nameRef }
-                        name='userName'
-                        id='user-name'
-                        autoComplete='off'
-                        value={ inputValues.userName || '' }
-                        onChange={ handleInputChange }
-                        onKeyUp={ e => e.key === 'Enter' && emailRef.current.focus() }
-                        placeholder='Usuário 123'
-                    />
-                    <div />
-                </div>
-            </FormSection>
+	return (
+		<FormWrapper onSubmit={sendEmail}>
+			<h4>{message ?? 'Me manda um E-mail!'}</h4>
 
-            {/*E-MAIL_INPUT*/}
-            <FormSection>
-                <div>
-                    <label htmlFor='user-email'>Seu e-mail</label>
-                    <input
-                        type='email'
-                        ref={ emailRef }
-                        name='userEmail'
-                        id='user-email'
-                        autoComplete='off'
-                        value={ inputValues.userEmail || '' }
-                        onChange={ handleInputChange }
-                        onKeyUp={ e => e.key === 'Enter' && messageRef.current.focus() }
-                        placeholder='usuario123@gmail.com'
-                    />
-                    <div />
-                </div>
-            </FormSection>
+			{/*NAME_INPUT*/}
+			<FormSection>
+				<div>
+					<label htmlFor='user-name'>Seu nome</label>
+					<input
+						type='text'
+						ref={nameRef}
+						name='userName'
+						id='user-name'
+						autoComplete='off'
+						value={inputValues.userName || ''}
+						onChange={handleInputChange}
+						onKeyUp={e => e.key === 'Enter' && emailRef.current.focus()}
+						placeholder='Usuário 123'
+					/>
+					<div />
+				</div>
+			</FormSection>
 
-            {/*MESSAGE_AREA*/}
-            <FormSection>
-                <div>
-                    <label htmlFor='user-message'>Mensagem</label>
-                    <textarea
-                        name='userMessage'
-                        id='user-message'
-                        autoComplete='off'
-                        ref={ messageRef }
-                        onKeyUp={ e => e.key === 'Enter' && sendEmail(e) }
-                        value={ inputValues.userMessage || '' }
-                        onChange={ handleInputChange }
-                        placeholder='Olá, tenho um projeto que...'
-                    />
-                </div>
-            </FormSection>
+			{/*E-MAIL_INPUT*/}
+			<FormSection>
+				<div>
+					<label htmlFor='user-email'>Seu e-mail</label>
+					<input
+						type='email'
+						ref={emailRef}
+						name='userEmail'
+						id='user-email'
+						autoComplete='off'
+						value={inputValues.userEmail || ''}
+						onChange={handleInputChange}
+						onKeyUp={e => e.key === 'Enter' && messageRef.current.focus()}
+						placeholder='usuario123@gmail.com'
+					/>
+					<div />
+				</div>
+			</FormSection>
 
-            <FormSection>
-                <SendEmailButton onClick={ sendEmail }>Enviar</SendEmailButton>
-            </FormSection>
-        </FormWrapper>
-    )
+			{/*MESSAGE_AREA*/}
+			<FormSection>
+				<div>
+					<label htmlFor='user-message'>Mensagem</label>
+					<textarea
+						name='userMessage'
+						id='user-message'
+						autoComplete='off'
+						ref={messageRef}
+						onKeyUp={e => e.key === 'Enter' && sendEmail(e)}
+						value={inputValues.userMessage || ''}
+						onChange={handleInputChange}
+						placeholder='Olá, tenho um projeto que...'
+					/>
+				</div>
+			</FormSection>
+
+			<FormSection>
+				<SendEmailButton onClick={sendEmail}>Enviar</SendEmailButton>
+			</FormSection>
+		</FormWrapper>
+	)
 }
 
 export default EMAIL_FORM_JSX
