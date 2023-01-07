@@ -1,10 +1,21 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { ArticleWrapper, HardSkills, Glassmorphisim, SoftSkills, MySelf } from './Styles'
 
 //REACT_ICONS
-import { FaDatabase, FaTools, FaPen, FaUserAlt, FaRegClock } from 'react-icons/fa'
-import { SiJavascript, SiReact, SiHtml5, SiCss3, SiNodedotjs, SiJava } from 'react-icons/si'
+import { FaDatabase, FaTools, FaPen, FaUserAlt, FaRegClock, FaLaptop, FaRunning } from 'react-icons/fa'
+import {
+	SiJavascript,
+	SiReact,
+	SiHtml5,
+	SiCss3,
+	SiNodedotjs,
+	SiTypescript,
+	SiMongodb,
+	SiSequelize,
+	SiExpress,
+} from 'react-icons/si'
 import { RiUserVoiceFill, RiUserSettingsFill } from 'react-icons/ri'
+import { IoLogoSass } from 'react-icons/io'
 import { HiUserGroup, HiEmojiHappy } from 'react-icons/hi'
 
 //COMPONENTS
@@ -17,6 +28,11 @@ import aboutMeImage from '../../assets/images/about-me.jpg'
 
 const ResumePage = () => {
 	const [showSection, setShowSection] = useState('hard-skills')
+	const [stackType, setStackType] = useState('frontend')
+
+	const handleChangeStack = useCallback(() => {
+		stackType === 'frontend' ? setStackType('backend') : setStackType('frontend')
+	})
 
 	return (
 		<ArticleWrapper>
@@ -62,48 +78,91 @@ const ResumePage = () => {
 			{showSection === 'hard-skills' && (
 				<HardSkills>
 					<Glassmorphisim>
+						<CTA_BUTTON_JSX
+							btnWidth='20%'
+							outlined={true}
+							action={handleChangeStack}
+							text={stackType === 'frontend' ? 'Back-End' : 'Front-End'}
+							icon={stackType === 'frontend' ? <FaLaptop /> : <FaDatabase />}
+						/>
 						<div>
-							<ICON_WITH_TEXT_JSX
-								stackIcon={<SiJavascript color='#F0DB4F' />}
-								title='JavaScript'
-								percentage={100}
-							/>
+							{stackType === 'frontend' ? (
+								<>
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<SiJavascript color='#F0DB4F' />}
+										title='JavaScript'
+										percentage={100}
+									/>
 
-							<ICON_WITH_TEXT_JSX
-								stackIcon={<SiReact color='#61DBFB' />}
-								title='React'
-								percentage={95}
-							/>
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<SiTypescript color='#3178c6' />}
+										title='TypeScript'
+										percentage={100}
+									/>
 
-							<ICON_WITH_TEXT_JSX
-								stackIcon={<SiHtml5 color='#e34c26' />}
-								title='HTML'
-								percentage={100}
-							/>
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<SiReact color='#61DBFB' />}
+										title='React'
+										percentage={95}
+									/>
 
-							<ICON_WITH_TEXT_JSX
-								stackIcon={<SiCss3 color='#2965f1' />}
-								title='CSS'
-								percentage={95}
-							/>
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<SiHtml5 color='#e34c26' />}
+										title='HTML'
+										percentage={100}
+									/>
 
-							<ICON_WITH_TEXT_JSX
-								stackIcon={<SiNodedotjs color='#68AD63' />}
-								title='Node.js'
-								percentage={50}
-							/>
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<SiCss3 color='#2965f1' />}
+										title='CSS'
+										percentage={95}
+									/>
 
-							<ICON_WITH_TEXT_JSX
-								stackIcon={<FaDatabase color='#FFFFFF' />}
-								title='SQL'
-								percentage={65}
-							/>
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<IoLogoSass color='#cc6699 ' />}
+										title='Sass'
+										percentage={95}
+									/>
+								</>
+							) : (
+								<>
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<SiTypescript color='#3178c6' />}
+										title='TypeScript'
+										percentage={100}
+									/>
 
-							<ICON_WITH_TEXT_JSX
-								stackIcon={<SiJava color='#ED1D25' />}
-								title='Java'
-								percentage={45}
-							/>
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<SiNodedotjs color='#68AD63' />}
+										title='Node.js'
+										percentage={100}
+									/>
+
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<SiExpress color='#9e8cda' />}
+										title='Express'
+										percentage={100}
+									/>
+
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<SiMongodb color='#4DB33D' />}
+										title='MongoDB'
+										percentage={90}
+									/>
+
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<FaDatabase color='#FFFFFF' />}
+										title='SQL'
+										percentage={85}
+									/>
+
+									<ICON_WITH_TEXT_JSX
+										stackIcon={<SiSequelize color='#5861A0' />}
+										title='Sequelize'
+										percentage={85}
+									/>
+								</>
+							)}
 						</div>
 					</Glassmorphisim>
 
@@ -142,6 +201,12 @@ const ResumePage = () => {
 							<ICON_WITH_TEXT_JSX
 								stackIcon={<RiUserVoiceFill color='#4D4BCB' />}
 								title='Inglês'
+								percentage={100}
+							/>
+
+							<ICON_WITH_TEXT_JSX
+								stackIcon={<FaRunning color='#F0DB4F' />}
+								title='Velocidade'
 								percentage={100}
 							/>
 
