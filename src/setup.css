@@ -86,7 +86,7 @@ h6 {
 }
 
 /*TABLETS_LANDSCAPE*/
-@media (min-width: 780px) and (max-width: 1100px) and (orientation: landscape) {
+@media (min-width: 780px) and (max-width: 1000px) and (orientation: landscape) {
 	h6 {
 		display: inline;
 		font: 6rem harry-fat, Arial, Helvetica, sans-serif;
