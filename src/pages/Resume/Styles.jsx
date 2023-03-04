@@ -54,6 +54,11 @@ export const Glassmorphisim = styled.div`
 			font-size: 4rem;
 		}
 	}
+
+	/*TABLES*/
+	@media (min-width: 1016px) and (max-width: 1240px) {
+		height: 80vh;
+	}
 `
 
 export const HardSkills = styled.section`
@@ -108,6 +113,10 @@ export const HardSkills = styled.section`
 			}
 		}
 
+		button {
+			bottom: 0;
+		}
+
 		/*ICON_WITH_PERCENTAGE_ELEMENT*/
 		div > div > div {
 			text-align: center;
@@ -121,10 +130,13 @@ export const HardSkills = styled.section`
 		}
 	}
 
-	/*JUST_FIXING_BUTTON_SIZE_ON_iPADS*/
+	/*TABLES*/
 	@media (min-width: 1016px) and (max-width: 1240px) {
+		height: 100vh;
+
+		/*CHILDREN_ELEMENTS*/
 		button {
-			width: 30%;
+			width: 40%;
 		}
 	}
 `
