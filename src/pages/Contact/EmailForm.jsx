@@ -1,5 +1,11 @@
 import { useState, useRef, useEffect } from 'react'
-import { FormWrapper, FormSection, SendEmailButton } from './Styles'
+
+//COMPONENTS
+import CARD_JSX from '../../components/Card'
+import CTA_BUTTON_JSX from '../../components/CtaButton'
+
+//STYLING
+import { FormWrapper, FormSection } from './Styles'
 
 const EMAIL_FORM_JSX = () => {
 	const [inputValues, setInputValues] = useState({})
@@ -26,17 +32,17 @@ const EMAIL_FORM_JSX = () => {
 		}
 
 		if (!userName) {
-			setMessage('Por favor, digite seu nome.')
+			setMessage('Nome, por favor!')
 			nameRef.current.focus()
 
 			return
 		} else if (!emailRegex.test(userEmail) || !userEmail) {
-			setMessage('Por favor, digite seu e-mail')
+			setMessage('E-mail, por favor!')
 			emailRef.current.focus()
 
 			return
 		} else if (!userMessage) {
-			setMessage('Não esqueça do texto!')
+			setMessage('Texto, por favor!')
 			messageRef.current.focus()
 
 			return
@@ -60,68 +66,65 @@ const EMAIL_FORM_JSX = () => {
 	}, [message])
 
 	return (
-		<FormWrapper onSubmit={sendEmail}>
-			<h4>{message ?? 'Me manda um E-mail!'}</h4>
+		<CARD_JSX title={message ?? 'Fale comigo!'}>
+			<FormWrapper onSubmit={sendEmail}>
+				<FormSection>
+					<div>
+						<label htmlFor='user-name'>Seu nome</label>
+						<input
+							type='text'
+							ref={nameRef}
+							name='userName'
+							id='user-name'
+							autoComplete='off'
+							value={inputValues.userName || ''}
+							onChange={handleInputChange}
+							onKeyUp={e => e.key === 'Enter' && emailRef.current.focus()}
+							placeholder='Usuário 123'
+						/>
+						<div />
+					</div>
+				</FormSection>
 
-			{/*NAME_INPUT*/}
-			<FormSection>
-				<div>
-					<label htmlFor='user-name'>Seu nome</label>
-					<input
-						type='text'
-						ref={nameRef}
-						name='userName'
-						id='user-name'
-						autoComplete='off'
-						value={inputValues.userName || ''}
-						onChange={handleInputChange}
-						onKeyUp={e => e.key === 'Enter' && emailRef.current.focus()}
-						placeholder='Usuário 123'
-					/>
-					<div />
-				</div>
-			</FormSection>
+				<FormSection>
+					<div>
+						<label htmlFor='user-email'>Seu e-mail</label>
+						<input
+							type='email'
+							ref={emailRef}
+							name='userEmail'
+							id='user-email'
+							autoComplete='off'
+							value={inputValues.userEmail || ''}
+							onChange={handleInputChange}
+							onKeyUp={e => e.key === 'Enter' && messageRef.current.focus()}
+							placeholder='usuario123@gmail.com'
+						/>
+						<div />
+					</div>
+				</FormSection>
 
-			{/*E-MAIL_INPUT*/}
-			<FormSection>
-				<div>
-					<label htmlFor='user-email'>Seu e-mail</label>
-					<input
-						type='email'
-						ref={emailRef}
-						name='userEmail'
-						id='user-email'
-						autoComplete='off'
-						value={inputValues.userEmail || ''}
-						onChange={handleInputChange}
-						onKeyUp={e => e.key === 'Enter' && messageRef.current.focus()}
-						placeholder='usuario123@gmail.com'
-					/>
-					<div />
-				</div>
-			</FormSection>
+				<FormSection>
+					<div>
+						<label htmlFor='user-message'>Mensagem</label>
+						<textarea
+							name='userMessage'
+							id='user-message'
+							autoComplete='off'
+							ref={messageRef}
+							onKeyUp={e => e.key === 'Enter' && sendEmail(e)}
+							value={inputValues.userMessage || ''}
+							onChange={handleInputChange}
+							placeholder='Olá, tenho um projeto que...'
+						/>
+					</div>
+				</FormSection>
 
-			{/*MESSAGE_AREA*/}
-			<FormSection>
-				<div>
-					<label htmlFor='user-message'>Mensagem</label>
-					<textarea
-						name='userMessage'
-						id='user-message'
-						autoComplete='off'
-						ref={messageRef}
-						onKeyUp={e => e.key === 'Enter' && sendEmail(e)}
-						value={inputValues.userMessage || ''}
-						onChange={handleInputChange}
-						placeholder='Olá, tenho um projeto que...'
-					/>
-				</div>
-			</FormSection>
-
-			<FormSection>
-				<SendEmailButton onClick={sendEmail}>Enviar</SendEmailButton>
-			</FormSection>
-		</FormWrapper>
+				<FormSection>
+					<CTA_BUTTON_JSX action={sendEmail} btnWidth='100%' text='Enviar' color='4d4bcb' />
+				</FormSection>
+			</FormWrapper>
+		</CARD_JSX>
 	)
 }
 

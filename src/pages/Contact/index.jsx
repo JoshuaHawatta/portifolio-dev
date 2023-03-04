@@ -1,14 +1,17 @@
-import { ArticleWrapper, Line, Conctats } from './Styles'
-import CTA_BUTTON_JSX from '../../components/CtaButton'
 import { FaGithub, FaWhatsapp, FaInstagram, FaLinkedin } from 'react-icons/fa'
+
+//COMPONENTS
 import EMAIL_FORM_JSX from './EmailForm'
+import CTA_BUTTON_JSX from '../../components/CtaButton'
+import CARD_JSX from '../../components/Card'
+
+//STYLES
+import { ArticleWrapper, Line, ConctatsWrapper } from './Styles'
 
 const ContactPage = () => (
 	<ArticleWrapper id='contact-article'>
-		<Conctats>
-			<h4>Redes Sociais</h4>
-
-			<div>
+		<CARD_JSX title='Redes Sociais'>
+			<ConctatsWrapper>
 				<a href='https://github.com/JoshuaHawatta' target='_blank'>
 					<CTA_BUTTON_JSX icon={<FaGithub />} text='GitHub' color='000000' btnWidth='100%' />
 				</a>
@@ -39,8 +42,8 @@ const ContactPage = () => (
 						btnWidth='100%'
 					/>
 				</a>
-			</div>
-		</Conctats>
+			</ConctatsWrapper>
+		</CARD_JSX>
 
 		<Line />
 

@@ -40,77 +40,35 @@ export const ArticleWrapper = styled.article`
 	}
 `
 
-export const Conctats = styled.section`
+export const ConctatsWrapper = styled.div`
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
-	justify-content: space-between;
-	width: 30vw;
-	height: 80vh;
-	max-height: 80vh;
-	background: #ffffff;
-	padding: 4rem;
-	border-radius: 3rem;
+	justify-content: center;
+	gap: 2rem;
+	width: 100%;
 
 	/*CHILDREN_ELEMENTS*/
-	h4 {
-		font: 2.8rem now-light, Helvetica, sans-serif;
-		color: var(--blue-color);
-	}
-
-	div {
-		display: flex;
-		flex-flow: column wrap;
-		justify-content: center;
-		align-items: center;
-		justify-content: center;
+	a {
 		width: 100%;
-		height: 100vh;
+		text-decoration: none;
 
 		/*CHILDREN_ELEMENTS*/
-		a {
-			width: 100%;
-			text-decoration: none;
-
-			/*CHILDREN_ELEMENTS*/
-			button {
-				margin: 1rem 0;
-			}
+		button {
+			width: inherit;
 		}
 	}
 
 	/*MOBILE*/
 	@media (max-width: 779px) {
-		display: flex;
-		width: 100%;
-		overflow: hidden;
 		height: 50vh;
-
-		margin-bottom: 6rem;
-
-		/*CHILDREN_ELEMENTS*/
-		h4 {
-			font-size: 2.2rem;
-		}
 	}
 
 	/*TABLETS*/
 	@media (max-width: 779px) and (min-height: 900px) {
-		/*CHILDREN_ELEMENTS*/
-		h4 {
-			font-size: 3.5rem;
-		}
-
-		div {
-			display: flex;
-			width: 100%;
-			justify-content: center;
-			transform: translateY(-11rem);
-
-			button {
-				width: 100%;
-			}
-		}
+		font-size: 3.5rem;
+		gap: 3rem;
+		width: 100%;
 	}
 `
 
@@ -126,65 +84,36 @@ export const Line = styled.div`
 	}
 `
 
-export const FormWrapper = styled.section`
+export const FormWrapper = styled.form`
 	display: flex;
 	flex-flow: column wrap;
-	justify-content: center;
 	align-items: center;
-	background: #ffffff;
-	border-radius: 3rem;
-	width: 30vw;
-	height: 80vh;
-	max-height: 80vh;
-	padding: 4rem 0;
-
-	/*CHILDREN_ELEMENTS*/
-	h4 {
-		font: 2.8rem now-light, Helvetica, sans-serif;
-		color: var(--blue-color);
-	}
-
-	/*MOBILE*/
-	@media (max-width: 779px) {
-		width: 100%;
-		height: unset;
-		max-height: unset;
-
-		/*CHILDREN_ELEMENTS*/
-		h4 {
-			font-size: 2rem;
-		}
-	}
-`
-
-export const FormSection = styled.section`
-	display: flex;
 	justify-content: center;
 	width: 100%;
+`
 
+export const FormSection = styled(FormWrapper)`
 	/*CHILDREN_ELEMENTS*/
 	div {
 		display: flex;
 		flex-flow: column wrap;
-		margin-bottom: 0.5rem;
+		gap: 1.7rem;
 
 		/*CHILDREN_ELEMENTS*/
 		label {
 			font: 1.6rem now-light, Helvetica, sans-serif;
 			color: var(--blue-color);
 			text-align: center;
-			margin: 0.8rem 0;
-			padding: 0.5rem 0;
-			transform: translateY(1.8rem);
+			transform: translateY(2rem);
 			background: #ffffff;
-			width: 35%;
+			width: 40%;
 		}
 
 		input,
 		textarea {
 			outline: none;
 			font: 1.4rem now-light, Helvetica, sans-serif;
-			width: 30rem;
+			width: 35rem;
 			border-radius: 0.4rem;
 			padding: 2rem 1rem;
 			border: 0.1rem solid var(--blue-color);
@@ -210,20 +139,13 @@ export const FormSection = styled.section`
 	}
 
 	/*MOBILE*/
-	@media (max-width: 779px) {
-		width: 100%;
-
+	@media (max-width: 700px) {
 		/*CHILDREN_ELEMENTS*/
 		div {
-			padding: 0 2rem;
-			margin: 0 2rem;
-			width: 100%;
-			justify-content: center;
-
 			/*CHILDREN_ELEMENTS*/
 			input,
 			textarea {
-				width: 100%;
+				width: 18rem;
 			}
 
 			textarea {
@@ -235,34 +157,47 @@ export const FormSection = styled.section`
 			}
 		}
 	}
-`
 
-export const SendEmailButton = styled.button.attrs({ type: 'submit' })`
-	font: 2rem now-light, Helvetica, sans-serif;
-	color: var(--blue-color);
-	background: none;
-	outline: none;
-	border: none;
-	text-decoration: underline;
-	margin-top: 2rem;
-	width: 11vw;
-	cursor: pointer;
-`
+	/*TABLETS*/
+	@media (min-width: 701px) and (max-width: 1200px) {
+		margin-top: 1.5rem;
+		height: 9rem;
+		/*CHILDREN_ELEMENTS*/
+		div {
+			/*CHILDREN_ELEMENTS*/
+			input,
+			textarea {
+				width: 70vw;
+			}
 
-export const FooterLinksSection = styled.section`
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-end;
-	align-items: center;
-	position: absolute;
-	padding: 1rem 4rem;
-	width: 100%;
-	bottom: 0;
+			textarea {
+				height: 12vh;
+			}
+		}
 
-	/*CHILDREN_ELEMENTS*/
-	a {
-		font-size: 2rem;
-		margin: 0 0.8rem;
-		color: var(--green-color);
+		button {
+			width: 92%;
+		}
+	}
+
+	/*TABLETS_LANDSCAPE*/
+	@media (min-width: 701px) and (max-width: 1200px) and (orientation: landscape) {
+		height: 11rem;
+		/*CHILDREN_ELEMENTS*/
+		div {
+			/*CHILDREN_ELEMENTS*/
+			input,
+			textarea {
+				width: 20vw;
+			}
+
+			textarea {
+				height: 12vh;
+			}
+		}
+
+		button {
+			width: 100%;
+		}
 	}
 `
