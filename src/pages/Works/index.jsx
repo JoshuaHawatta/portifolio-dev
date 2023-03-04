@@ -1,11 +1,9 @@
-import { Link } from 'react-router-dom';
-import { FaChevronDown } from 'react-icons/fa';
-import { ArticleWrapper  } from './Styles';
+import { ArticleWrapper } from './Styles'
 
 const WorksPage = () => (
-    <ArticleWrapper>
-        
-    </ArticleWrapper>
+	<ArticleWrapper>
+		<h1>Hello world from Works Page!</h1>
+	</ArticleWrapper>
 )
 
 export default WorksPage
