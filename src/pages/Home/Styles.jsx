@@ -47,6 +47,11 @@ export const WhoIAm = styled.div`
 			font: 1.6rem now-light, Helvetica, sans-serif;
 			color: #ffffff;
 		}
+
+		//CREATE_SPACE_BETWEEN_BUTTON_AND_TEXT
+		p + p + p {
+			margin-bottom: 2rem;
+		}
 	}
 
 	/*MOBILE*/
