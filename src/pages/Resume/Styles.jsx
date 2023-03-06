@@ -218,4 +218,11 @@ export const MySelf = styled(HardSkills)`
 			font-size: 1.5rem;
 		}
 	}
+
+	/*TABLETS*/
+	@media (max-width: 1100px) and (orientation: landscape) {
+		div > div > p {
+			width: 30rem;
+		}
+	}
 `
