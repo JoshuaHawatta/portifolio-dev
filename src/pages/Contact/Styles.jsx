@@ -45,7 +45,7 @@ export const ConctatsWrapper = styled.div`
 	flex-flow: column nowrap;
 	align-items: center;
 	justify-content: center;
-	gap: 2rem;
+	gap: 5.6rem;
 	width: 100%;
 
 	/*CHILDREN_ELEMENTS*/
@@ -62,6 +62,7 @@ export const ConctatsWrapper = styled.div`
 	/*MOBILE*/
 	@media (max-width: 779px) {
 		height: 50vh;
+		gap: 3rem;
 	}
 
 	/*TABLETS*/
@@ -97,7 +98,7 @@ export const FormSection = styled(FormWrapper)`
 	div {
 		display: flex;
 		flex-flow: column wrap;
-		gap: 1.7rem;
+		gap: 1rem;
 
 		/*CHILDREN_ELEMENTS*/
 		label {
@@ -113,7 +114,7 @@ export const FormSection = styled(FormWrapper)`
 		textarea {
 			outline: none;
 			font: 1.4rem now-light, Helvetica, sans-serif;
-			width: 35rem;
+			width: 36rem;
 			border-radius: 0.4rem;
 			padding: 2rem 1rem;
 			border: 0.1rem solid var(--blue-color);
@@ -135,6 +136,7 @@ export const FormSection = styled(FormWrapper)`
 		textArea {
 			resize: none;
 			height: 19vh;
+			margin-bottom: 2rem;
 		}
 	}
 
