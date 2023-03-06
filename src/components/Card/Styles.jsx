@@ -15,6 +15,8 @@ const CardWrapper = styled.section`
 	/*CHILDREN_ELEMENTS*/
 	h4 {
 		font: 2.7rem now-light, Helvetica, sans-serif;
+		position: absolute;
+		top: 12rem;
 		color: var(--blue-color);
 	}
 
@@ -31,6 +33,8 @@ const CardWrapper = styled.section`
 
 		/*CHILDREN_ELEMENTS*/
 		h4 {
+			position: unset;
+			top: unset;
 			font-size: 2.2rem;
 		}
 	}
