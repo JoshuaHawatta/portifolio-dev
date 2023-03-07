@@ -187,7 +187,7 @@ export const PopupWrapper = styled.div`
 	position: fixed;
 	width: 50vw;
 	max-width: 50vw;
-	height: 43vh;
+	height: 45.5vh;
 	margin: 0 auto;
 	top: 0;
 	right: 0;

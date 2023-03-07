@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { HamburgerDiv, NavBar } from './Styles'
-import { FaHome, FaCode, FaFile, FaPaperPlane } from 'react-icons/fa'
+import { FaHome, FaCode, FaFile, FaPaperPlane, FaLock } from 'react-icons/fa'
 
 const NAVBAR_JSX = () => {
 	const [openMenu, setOpenMenu] = useState(true)
@@ -42,6 +42,13 @@ const NAVBAR_JSX = () => {
 						<FaPaperPlane />
 					</Link>
 					<p>Contato</p>
+				</div>
+
+				<div>
+					<Link onClick={handleDisplayMenu} to='/privacypolicy'>
+						<FaLock />
+					</Link>
+					<p>Privacidade</p>
 				</div>
 			</NavBar>
 		</>
