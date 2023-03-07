@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/Home'
-import WorksPage from './pages/Works'
+import JobsPage from './pages/Works'
 import ResumePage from './pages/Resume'
 import ContactPage from './pages/Contact'
 
 const ROUTES_PATHS = () => (
 	<Routes>
 		<Route path='/' element={<HomePage />} />
-		<Route path='/jobs' element={<WorksPage />} />
+		<Route path='/jobs' element={<JobsPage />} />
 		<Route path='/resume' element={<ResumePage />} />
 		<Route path='/contact' element={<ContactPage />} />
 		<Route path='*' element={<HomePage />} />

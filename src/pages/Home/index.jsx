@@ -13,7 +13,7 @@ const HomePage = () => {
 				<WhoIAm>
 					<div>
 						<h1>
-							D<span>e</span>senvolvedor Full-Stack
+							D<span>e</span>senvolvedor Full Stack
 						</h1>
 						<p>Eu crio interfaces para sites, web-apps e afins.</p>
 						<p>Atualmente estudo Node.js e SQL para a criação de APIs.</p>

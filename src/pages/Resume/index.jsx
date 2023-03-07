@@ -38,20 +38,20 @@ const ResumePage = () => {
 								<p>
 									Oi, meu nome é Joshua Hawatta!
 									<br />
-									Tenho 19 anos e sou Programador Full-Stack. Eu crio tanto o banco de
+									Tenho 19 anos e sou Programador Full Stack. Eu crio tanto o banco de
 									dados quanto a parte visual de uma aplicação-web.
 									<br />
 									Meus hobbies envolvem ler, ver filmes de sci-fi e ouvir música boa.
 								</p>
 
 								<p>
-									Se você tem uma ideia de site, blog, landing-page, etc... eu sou o
+									Se você tem uma ideia de site, blog, landing page, etc... eu sou o
 									cara para isso!
 								</p>
 
 								<p>
-									Morando em Brasília, mas estou à uma mensagem de distância para
-									qualquer que seja a sua demanda!
+									Moro em Brasília, mas estou à uma mensagem de distância para qualquer
+									que seja a sua demanda!
 								</p>
 							</div>
 						</div>

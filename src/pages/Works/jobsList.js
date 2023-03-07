@@ -7,7 +7,7 @@ const jobsList = [
 	{
 		id: 1,
 		company: 'BB Consórcios',
-		role: 'Estagiário Full-Stack',
+		role: 'Estagiário Full Stack',
 		img: bbcLogo,
 		stacks: ['Java', 'Spring MVC', 'React', 'Prime Faces', 'PostgreSQL'],
 		description:

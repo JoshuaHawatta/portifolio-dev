@@ -45,7 +45,7 @@ export const ConctatsWrapper = styled.div`
 	flex-flow: column nowrap;
 	align-items: center;
 	justify-content: center;
-	gap: 5.6rem;
+	gap: 4rem;
 	width: 100%;
 
 	/*CHILDREN_ELEMENTS*/
@@ -98,7 +98,9 @@ export const FormSection = styled(FormWrapper)`
 	div {
 		display: flex;
 		flex-flow: column wrap;
+		align-items: flex-start;
 		gap: 1rem;
+		width: 100%;
 
 		/*CHILDREN_ELEMENTS*/
 		label {
@@ -114,7 +116,7 @@ export const FormSection = styled(FormWrapper)`
 		textarea {
 			outline: none;
 			font: 1.4rem now-light, Helvetica, sans-serif;
-			width: 36rem;
+			width: 100%;
 			border-radius: 0.4rem;
 			padding: 2rem 1rem;
 			border: 0.1rem solid var(--blue-color);
@@ -145,11 +147,6 @@ export const FormSection = styled(FormWrapper)`
 		/*CHILDREN_ELEMENTS*/
 		div {
 			/*CHILDREN_ELEMENTS*/
-			input,
-			textarea {
-				width: 18rem;
-			}
-
 			textarea {
 				height: 12vh;
 			}
@@ -160,39 +157,14 @@ export const FormSection = styled(FormWrapper)`
 		}
 	}
 
-	/*TABLETS*/
-	@media (min-width: 701px) and (max-width: 1200px) {
-		margin-top: 1.5rem;
-		height: 9rem;
-		/*CHILDREN_ELEMENTS*/
-		div {
-			/*CHILDREN_ELEMENTS*/
-			input,
-			textarea {
-				width: 70vw;
-			}
-
-			textarea {
-				height: 12vh;
-			}
-		}
-
-		button {
-			width: 92%;
-		}
-	}
-
 	/*TABLETS_LANDSCAPE*/
 	@media (min-width: 701px) and (max-width: 1200px) and (orientation: landscape) {
-		height: 11rem;
+		margin-top: 1.5rem;
+		height: 9rem;
+
 		/*CHILDREN_ELEMENTS*/
 		div {
 			/*CHILDREN_ELEMENTS*/
-			input,
-			textarea {
-				width: 20vw;
-			}
-
 			textarea {
 				height: 12vh;
 			}

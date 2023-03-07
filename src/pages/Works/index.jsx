@@ -3,7 +3,7 @@ import { AiOutlinePlus, AiOutlineClose } from 'react-icons/ai'
 import jobsList from './jobsList'
 import * as Styled from './Styles'
 
-const WorksPage = () => {
+const JobsPage = () => {
 	const [job, setJob] = useState({})
 	const [showPopup, setShowPopup] = useState(false)
 
@@ -74,4 +74,4 @@ const WorksPage = () => {
 	)
 }
 
-export default WorksPage
+export default JobsPage

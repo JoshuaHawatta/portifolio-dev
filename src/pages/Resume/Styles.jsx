@@ -32,7 +32,7 @@ export const Glassmorphisim = styled.div`
 	justify-content: space-evenly;
 	align-items: center;
 	width: 100%;
-	height: 50vh;
+	height: 55vh;
 	margin-bottom: 10rem;
 	padding: 3rem;
 	border-radius: 2rem;
@@ -57,7 +57,7 @@ export const Glassmorphisim = styled.div`
 
 	/*TABLES*/
 	@media (min-width: 1016px) and (max-width: 1240px) {
-		height: 80vh;
+		height: 85vh;
 	}
 `
 
