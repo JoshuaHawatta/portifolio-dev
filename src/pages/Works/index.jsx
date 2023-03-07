@@ -1,46 +1,76 @@
-import { ArticleWrapper, ExperiencesSection } from './Styles'
-import JOB_JSX from './Job'
-
-import bbcLogo from '../../assets/images/bbc-logo.png'
-import SGTechLogo from '../../assets/images/sg-tech.png'
-import joshuaHawattaLogo from '../../assets/images/Favicon.png'
-import tangerineLogo from '../../assets/images/tangerine-logo.png'
+import { useState, useCallback } from 'react'
+import { AiOutlinePlus, AiOutlineClose } from 'react-icons/ai'
+import jobsList from './jobsList'
+import * as Styled from './Styles'
 
 const WorksPage = () => {
+	const [job, setJob] = useState({})
+	const [showPopup, setShowPopup] = useState(false)
+
+	const stacks = job?.stacks?.reduce((acc, actualItem) => `${acc}, ${actualItem}`)
+
+	const handleGetJob = useCallback(
+		id => {
+			setJob(jobsList.filter(job => job.id === id).at(0))
+			setShowPopup(true)
+		},
+		[job]
+	)
+
+	const JobPopup = () =>
+		showPopup && (
+			<Styled.PopupWrapper>
+				<Styled.PopupContent>
+					<div>
+						<button onClick={() => setShowPopup(false)}>
+							<AiOutlineClose />
+						</button>
+					</div>
+
+					<div>
+						<h5>{job.company}</h5>
+					</div>
+
+					<div>
+						<p>{job.description}</p>
+					</div>
+
+					<ul>
+						<li>Stacks: {stacks}</li>
+					</ul>
+				</Styled.PopupContent>
+			</Styled.PopupWrapper>
+		)
+
 	return (
-		<ArticleWrapper>
+		<Styled.ArticleWrapper id='jobs-article'>
+			<JobPopup />
 			<h1>
 				M<span>e</span>us principais trabalhos
 			</h1>
 
-			<ExperiencesSection>
-				<JOB_JSX
-					image={bbcLogo}
-					company='BB Consórcios'
-					role='Estagiário Full-Stack'
-					onClick={() => alert('Esta é a BB Consórcios!')}
-				/>
+			{/*JOBS_CARDS*/}
+			<Styled.ExperiencesSection>
+				{jobsList.map(({ id, img, company, role }) => (
+					<button onClick={() => handleGetJob(id)} key={id}>
+						<Styled.Jobs>
+							<span>
+								<AiOutlinePlus />
+							</span>
 
-				<JOB_JSX
-					image={SGTechLogo}
-					company='SG Tech Informática'
-					role='API de agendamentos'
-					onClick={() => alert('Esta é a SG Tech Info!')}
-				/>
-				<JOB_JSX
-					image={tangerineLogo}
-					company='Tangerine Inglês'
-					role='Landing Page'
-					onClick={() => alert('Esta é a Tangerine Inglês!')}
-				/>
-				<JOB_JSX
-					image={joshuaHawattaLogo}
-					company='Joshua Hawatta'
-					role='Portifólio'
-					onClick={() => alert('Este é do Joshua Hawatta!')}
-				/>
-			</ExperiencesSection>
-		</ArticleWrapper>
+							<Styled.JobTitleDiv>
+								<img src={img} alt={img.toUpperCase()} />
+
+								<Styled.RoleDiv>
+									<h4>{company}</h4>
+									<p>{role}</p>
+								</Styled.RoleDiv>
+							</Styled.JobTitleDiv>
+						</Styled.Jobs>
+					</button>
+				))}
+			</Styled.ExperiencesSection>
+		</Styled.ArticleWrapper>
 	)
 }
 

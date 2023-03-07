@@ -7,7 +7,7 @@ import ContactPage from './pages/Contact'
 const ROUTES_PATHS = () => (
 	<Routes>
 		<Route path='/' element={<HomePage />} />
-		<Route path='/works' element={<WorksPage />} />
+		<Route path='/jobs' element={<WorksPage />} />
 		<Route path='/resume' element={<ResumePage />} />
 		<Route path='/contact' element={<ContactPage />} />
 		<Route path='*' element={<HomePage />} />

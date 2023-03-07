@@ -20,6 +20,13 @@ export const HeaderWrapper = styled.header`
 		box-shadow: none;
 		width: 17%;
 	}
+
+	/*TABLETS*/
+	@media (max-width: 1100px) and (orientation: landscape) {
+		background: none;
+		box-shadow: none;
+		width: 10%;
+	}
 `
 
 export const LogoDiv = styled.div`
@@ -89,6 +96,23 @@ export const NavBar = styled.nav`
 			transform: translateY(4rem);
 		}
 	}
+
+	/*TABLETS*/
+	@media (max-width: 1100px) and (orientation: landscape) {
+		position: fixed;
+		width: 10%;
+		top: 0;
+		left: 0;
+		padding: 8rem 0;
+		transform: ${({ showNavBar }) => (showNavBar ? 'translateX(-100%)' : 'translateX(0)')};
+		box-shadow: ${({ showNavBar }) => (!showNavBar ? '.4rem 0 2rem rgba(0, 0, 0, .2)' : 'none')};
+		background-color: var(--blue-color);
+
+		/*CHILDREN_ELEMENTS*/
+		div {
+			transform: translateY(4rem);
+		}
+	}
 `
 
 export const HamburgerDiv = styled.div`
@@ -125,6 +149,11 @@ export const HamburgerDiv = styled.div`
 
 	/*MOBILE*/
 	@media (max-width: 779px) {
+		display: flex;
+	}
+
+	/*TABLES*/
+	@media (max-width: 1100px) and (orientation: landscape) {
 		display: flex;
 	}
 `
