@@ -19,7 +19,7 @@ const JobsPage = () => {
 
 	const JobPopup = () =>
 		showPopup && (
-			<Styled.PopupWrapper>
+			<Styled.PopupWrapper onClick={() => setShowPopup(false)}>
 				<Styled.PopupContent>
 					<div>
 						<button onClick={() => setShowPopup(false)}>
@@ -45,6 +45,7 @@ const JobsPage = () => {
 	return (
 		<Styled.ArticleWrapper id='jobs-article'>
 			<JobPopup />
+
 			<h1>
 				M<span>e</span>us principais trabalhos
 			</h1>
