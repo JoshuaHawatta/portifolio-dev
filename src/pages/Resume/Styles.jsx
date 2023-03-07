@@ -172,7 +172,7 @@ export const MySelf = styled(HardSkills)`
 			justify-content: space-evenly;
 			margin: 0 auto;
 			max-width: unset;
-			width: 80%;
+			width: 60%;
 			height: 41vh;
 
 			/*CHILDREN_ELEMENTS*/
@@ -203,7 +203,7 @@ export const MySelf = styled(HardSkills)`
 
 				/*CHIDLREN_ELEMENTS*/
 				p {
-					font-size: 1.4rem;
+					font-size: 1.3rem;
 				}
 				p ~ p {
 					margin-top: 1rem;
