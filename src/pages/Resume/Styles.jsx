@@ -32,7 +32,7 @@ export const Glassmorphisim = styled.div`
 	justify-content: space-evenly;
 	align-items: center;
 	width: 100%;
-	height: 55vh;
+	height: 60vh;
 	margin-bottom: 10rem;
 	padding: 3rem;
 	border-radius: 2rem;
@@ -79,7 +79,7 @@ export const HardSkills = styled.section`
 		justify-content: center;
 		flex-flow: row wrap;
 		align-items: center;
-
+		gap: 0.8rem;
 		/*ICON_WITH_PERCENTAGE_ELEMENT*/
 		div > div {
 			width: 9%;
