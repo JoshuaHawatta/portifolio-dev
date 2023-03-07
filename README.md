@@ -16,7 +16,7 @@ Site: [Joshuahawatta.com](http://joshuahawatta.com)
 ## LIBS
 
 <a href='https://github.com/shivamkapasia0' target="_blank">
-  <img alt='react.js' src='https://img.shields.io/badge/React-100000?style=for-the-badge&logo=react&logoColor=FFFFFF&labelColor=3c873a&color=3c873a'/>
+  <img alt='react.js' src='https://img.shields.io/badge/React-100000?style=for-the-badge&logo=react&logoColor=000000&labelColor=61DAFB&color=61DAFB'/>
 </a>
 
 <a href='https://github.com/shivamkapasia0' target="_blank">
@@ -28,7 +28,7 @@ Site: [Joshuahawatta.com](http://joshuahawatta.com)
 </a>
 
 <a href='https://github.com/shivamkapasia0' target="_blank">
-  <img alt='React router dom' src='https://img.shields.io/badge/React_Router dom-100000?style=for-the-badge&logo=React router dom&logoColor=white&labelColor=6786A7&color=6786A7'/>
+  <img alt='React router dom' src='https://img.shields.io/badge/React_Router dom-100000?style=for-the-badge&logo=React Router Dom&logoColor=000000&labelColor=61DAFB&color=61DAFB'/>
 </a>
 
 ## WHAT I´VE LEARNED
