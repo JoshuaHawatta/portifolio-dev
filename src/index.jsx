@@ -4,8 +4,4 @@ import App from './App'
 
 import './setup.css'
 
-ReactDOM.createRoot(document.querySelector('#root')).render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>
-)
+ReactDOM.createRoot(document.querySelector('#root')).render(<App />)
