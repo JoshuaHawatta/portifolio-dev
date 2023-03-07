@@ -61,7 +61,7 @@ const ResumePage = () => {
 						btnWidth='35%'
 						outlined={true}
 						action={() => setShowSection('hard-skills')}
-						text='Hard-Skills'
+						text='Hard Skills'
 						icon={<FAIcons.FaTools />}
 					/>
 				</MySelf>
@@ -74,7 +74,7 @@ const ResumePage = () => {
 							btnWidth='20%'
 							outlined={true}
 							action={handleChangeStack}
-							text={stackType === 'frontend' ? 'Back-End' : 'Front-End'}
+							text={stackType === 'frontend' ? 'Back End' : 'Front End'}
 							icon={
 								stackType === 'frontend' ? <FAIcons.FaDatabase /> : <FAIcons.FaLaptop />
 							}
@@ -176,7 +176,7 @@ const ResumePage = () => {
 						btnWidth='35%'
 						outlined={true}
 						action={() => setShowSection('soft-skills')}
-						text='Soft-Skills'
+						text='Soft Skills'
 						icon={<FAIcons.FaPen />}
 					/>
 				</HardSkills>
