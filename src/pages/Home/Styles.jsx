@@ -5,6 +5,7 @@ export const MainWrapper = styled.main`
 	height: 100vh;
 `
 
+//CONTAINS_ALL_PAGE_RESPONSIVITY
 export const Presentation = styled.section`
 	display: flex;
 	justify-content: space-between;
@@ -15,10 +16,69 @@ export const Presentation = styled.section`
 	background-color: var(--blue-color);
 
 	/*MOBILE*/
-	@media (max-width: 779px) {
+	@media (max-width: 500px) {
 		flex-flow: column-reverse;
 		justify-content: center;
+		align-items: center;
 		padding: 0 6rem;
+		height: 100vh;
+
+		/*CHILDREN_ELEMENTS*/
+		button {
+			display: none;
+		}
+
+		div {
+			display: flex;
+			flex-flow: column wrap;
+			align-items: center;
+			width: 100%;
+
+			img {
+				width: 45vw;
+			}
+
+			div {
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				width: 100%;
+
+				h1 {
+					font-size: 10vw;
+					margin-top: 2rem;
+					width: 100%;
+				}
+
+				p {
+					font-size: 3.5vw;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 500px) and (orientation: landscape) {
+		div {
+			img {
+				width: 25vw;
+			}
+
+			button {
+				display: none;
+			}
+
+			div {
+				p {
+					font-size: 2.3vw;
+				}
+			}
+		}
+	}
+
+	//TABLET
+	@media (min-width: 501px) and (max-width: 1100px) {
+		background-color: red;
 	}
 `
 
@@ -53,51 +113,6 @@ export const WhoIAm = styled.div`
 			margin-bottom: 2rem;
 		}
 	}
-
-	/*MOBILE*/
-	@media (max-width: 779px) {
-		width: 100vw;
-
-		/*CHILDREN_ELEMENTS*/
-		div {
-			display: flex;
-			flex-flow: column wrap;
-			align-items: center;
-			text-align: center;
-			justify-content: center;
-
-			/*CHILDREN_ELEMENTS*/
-			h1 {
-				font-size: 5rem;
-			}
-			br {
-				display: none;
-			}
-
-			p {
-				font-size: 1.3rem;
-				max-width: 90%;
-			}
-		}
-	}
-
-	/*JUST_TO_KEEP_THE_TEXT_ON_A_REGULAR_SIZE*/
-	@media (min-width: 500px) and (max-width: 779px) {
-		/*CHILDREN_ELEMENTS*/
-		div > h1 {
-			font-size: 4rem;
-		}
-		div > p {
-			max-width: 100%;
-		}
-	}
-
-	/*JUST_TO_KEEP_THE_H1_ON_A_REGULAR_SIZE*/
-	@media (min-width: 434px) and (max-width: 779px) {
-		div > h1 {
-			width: 50%;
-		}
-	}
 `
 
 export const PresentationImage = styled.div`
@@ -109,28 +124,5 @@ export const PresentationImage = styled.div`
 		width: 75%;
 		border-radius: 50%;
 		box-shadow: -4rem 1rem 3rem rgba(0, 0, 0, 0.3);
-	}
-
-	/*MOBILE*/
-	@media (max-width: 427px) {
-		justify-content: center;
-
-		/*CHILDREN_ELEMENTS*/
-		img {
-			margin: 2rem 0;
-			box-shadow: none;
-		}
-	}
-
-	/*SMALL_SCREENS*/
-	@media (min-width: 428px) and (max-width: 779px) {
-		justify-content: center;
-
-		/*CHILDREN_ELEMENTS*/
-		img {
-			margin-bottom: 2rem;
-			max-width: 60%;
-			box-shadow: none;
-		}
 	}
 `
