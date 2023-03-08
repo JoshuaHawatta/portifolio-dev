@@ -11,7 +11,7 @@ const jobsList = [
 		img: bbcLogo,
 		stacks: ['Java', 'Spring MVC', 'React', 'Prime Faces', 'PostgreSQL'],
 		description:
-			'Tive o privilégio de ir para uma empresa de renome e aprender um monte de coisa bacana. A melhor foi estar em equipe e aprender o passo-a-passo de um projeto grande.',
+			'Tive o privilégio de ir para uma empresa de renome e aprender um monte de coisas bacanas. A melhor parte? estar em equipe e aprender o passo-a-passo de um projeto grande.',
 	},
 	{
 		id: 2,

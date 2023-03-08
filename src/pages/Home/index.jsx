@@ -15,8 +15,8 @@ const HomePage = () => {
 						<h1>
 							D<span>e</span>senvolvedor Full Stack
 						</h1>
-						<p>Eu crio interfaces para sites, web-apps e afins.</p>
-						<p>Atualmente estudo Node.js e SQL para a criação de APIs.</p>
+						<p>Eu crio interfaces para sites, Web APPs e afins.</p>
+						<p>Uso Node.js e Java para a criação de APIs.</p>
 
 						<p>Gosto de usar esse superpoder para ajudar você a criar seu site!</p>
 
