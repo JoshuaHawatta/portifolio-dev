@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import emailJs from '@emailjs/browser'
 
 //COMPONENTS
 import CARD_JSX from '../../components/Card'
