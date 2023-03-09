@@ -78,7 +78,83 @@ export const Presentation = styled.section`
 
 	//TABLET
 	@media (min-width: 501px) and (max-width: 1100px) {
-		background-color: red;
+		width: 100%;
+		padding: 8rem;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-flow: column-reverse;
+
+		/*CHILDREN_ELEMENTS*/
+		div {
+			align-items: center;
+			display: flex;
+			flex-flow: column;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+
+			img {
+				width: 25rem;
+			}
+
+			/*CHILDREN_ELEMENTS*/
+			div {
+				h1 {
+					font-size: 7.4vw;
+					width: 100%;
+					margin-bottom: 2rem;
+				}
+
+				p {
+					font-size: 2vw;
+				}
+			}
+
+			button {
+				width: 36vw;
+			}
+		}
+	}
+
+	@media (min-width: 501px) and (max-width: 1100px) and (orientation: landscape) {
+		width: 100%;
+		padding: 8rem;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-flow: column-reverse;
+
+		/*CHILDREN_ELEMENTS*/
+		div {
+			align-items: center;
+			display: flex;
+			flex-flow: column;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+
+			img {
+				width: 20rem;
+			}
+
+			/*CHILDREN_ELEMENTS*/
+			div {
+				h1 {
+					font-size: 6vw;
+					width: 100%;
+					margin-bottom: 2rem;
+				}
+
+				p {
+					font-size: 1.8vw;
+				}
+			}
+
+			button {
+				display: none;
+			}
+		}
 	}
 `
 
