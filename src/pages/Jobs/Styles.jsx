@@ -10,7 +10,19 @@ const showFromUp = keyframes`
     100% {
 		transform: translate(-50%, 0);
 	}
-	`
+`
+
+const showFromUpMobile = keyframes`
+    0% {
+		transform: translate(-50%, 4rem);
+    }
+    50% {
+		transform: translate(-50%, -2rem);
+	}
+    100% {
+		transform: translate(-50%, 0);
+	}
+`
 
 const pop = keyframes`
     0% {
@@ -21,13 +33,6 @@ const pop = keyframes`
     }
     100% { transform: scale(1); }
 `
-
-/*TABLETS*/
-// @media (max-width: 1100px) and (orientation: landscape) {
-// 	div > div > p {
-// 		width: 30rem;
-// 	}
-// }
 
 export const ArticleWrapper = styled.article`
 	display: flex;
@@ -52,20 +57,195 @@ export const ArticleWrapper = styled.article`
 	}
 
 	/*MOBILE*/
-	@media (max-width: 779px) {
-		padding: 0 2rem;
-		height: 135vh;
+	@media (max-width: 500px) {
+		padding: 4rem 2rem;
+		height: 215vh;
 
 		/*CHILDREN_ELEMENTS*/
 		h1 {
-			margin: 10rem 0;
 			width: 100%;
-			font-size: 3.7rem;
+			font-size: 15vw;
+		}
+
+		div {
+			width: 20rem;
+			height: 20rem;
+			padding: 2rem 0;
+
+			span {
+				display: none;
+			}
+
+			h4 + p {
+				display: none;
+			}
+		}
+
+		aside {
+			top: unset;
+			bottom: 0;
+			width: 100vw;
+			height: 70vh;
+			border-radius: 0;
+			z-index: 4;
+			max-width: unset;
+			animation: ${showFromUpMobile} 0.8s ease forwards;
+
+			button {
+				font-size: 13vw;
+			}
+
+			section {
+				display: flex;
+				height: unset;
+				align-items: flex-start;
+				justify-content: space-evenly;
+				height: 100%;
+				width: 100%;
+				padding: 0;
+
+				h5 {
+					width: 100%;
+					font-size: 13vw;
+				}
+
+				/*REMOVE_UNNECESSARY_DIV_AND_SHOWING_JUST_THE_OTHER_TWO*/
+
+				div + div,
+				div + div + div {
+					display: flex;
+					align-items: center;
+					text-align: center;
+					justify-content: center;
+					width: 100%;
+					height: 50%;
+				}
+
+				div + div {
+					height: 20%;
+				}
+
+				div + div + div {
+					width: 100%;
+
+					p {
+						width: 100%;
+						font-size: 4.5vw;
+					}
+				}
+
+				ul > li {
+					font-size: 4vw;
+				}
+			}
 		}
 	}
 
-	@media (max-width: 1100px) and (orientation: landscape) {
-		height: 135vh;
+	@media (max-width: 500px) and (orientation: landscape) {
+		padding: 2rem;
+		height: 150vh;
+
+		/*CHILDREN_ELEMENTS*/
+		h1 {
+			width: 100%;
+			margin: 6rem;
+			font-size: 10vw;
+		}
+
+		h1 + section {
+			width: 100%;
+			gap: 4rem;
+		}
+
+		div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 18vw;
+			height: 18vw;
+
+			img {
+				width: 12vw;
+				height: 12vw;
+				margin: 0;
+				transform: translateY(50%);
+			}
+
+			span {
+				display: none;
+			}
+
+			h4 {
+				display: none;
+			}
+		}
+
+		aside {
+			top: unset;
+			bottom: 0;
+			width: 100vw;
+			height: 100vh;
+			border-radius: 0;
+			z-index: 4;
+			max-width: unset;
+			animation: ${showFromUpMobile} 0.8s ease forwards;
+
+			button {
+				transform: translateX(-100%);
+				font-size: 13vw;
+			}
+
+			section {
+				display: flex;
+				height: unset;
+				align-items: flex-start;
+				justify-content: space-evenly;
+				height: 100%;
+				width: 100%;
+				padding: 0;
+
+				h5 {
+					width: 100%;
+					font-size: 10vw;
+				}
+
+				/*REMOVE_UNNECESSARY_DIV_AND_SHOWING_JUST_THE_OTHER_TWO*/
+
+				div + div,
+				div + div + div {
+					display: flex;
+					align-items: center;
+					text-align: center;
+					justify-content: center;
+					width: 100%;
+					height: 50%;
+				}
+
+				div + div {
+					height: 20%;
+				}
+
+				div + div + div {
+					width: 100%;
+
+					p {
+						width: 100%;
+						font-size: 3.5vw;
+					}
+				}
+
+				ul > li {
+					font-size: 3.5vw;
+				}
+			}
+		}
+	}
+
+	//TABLET
+	@media (min-width: 501px) and (max-width: 1100px) {
+	}
+
+	@media (min-width: 501px) and (max-width: 1100px) and (orientation: landscape) {
 	}
 `
 
@@ -82,11 +262,6 @@ export const ExperiencesSection = styled.section`
 		outline: none;
 		background: none;
 		border: none;
-	}
-
-	/*TABLETS*/
-	@media (max-width: 1100px) and (orientation: landscape) {
-		width: 100%;
 	}
 `
 
@@ -119,14 +294,6 @@ export const Jobs = styled.div`
 		height: 3rem;
 		font-size: 2rem;
 	}
-
-	/*MOBILE*/
-	@media (max-width: 779px) {
-		padding: none;
-		width: 15rem;
-		height: 15rem;
-		box-shadow: none;
-	}
 `
 
 export const JobTitleDiv = styled.div`
@@ -140,15 +307,6 @@ export const JobTitleDiv = styled.div`
 	img {
 		width: 7rem;
 		height: 7rem;
-	}
-
-	/*MOBILE*/
-	@media (max-width: 779px) {
-		/*CHILDREN_ELEMENTS*/
-		img {
-			width: 5rem;
-			height: 5rem;
-		}
 	}
 `
 
@@ -172,18 +330,10 @@ export const RoleDiv = styled.div`
 	p {
 		font: 1.3rem 'now-medium', Arial, sans-serif;
 	}
-
-	/*MOBILE*/
-	@media (max-width: 779px) {
-		/*CHILDREN_ELEMENTS*/
-		p {
-			display: none;
-		}
-	}
 `
 
 /*POPUP*/
-export const PopupWrapper = styled.div`
+export const PopupWrapper = styled.aside`
 	position: fixed;
 	width: 50vw;
 	max-width: 50vw;
@@ -198,18 +348,6 @@ export const PopupWrapper = styled.div`
 	box-shadow: -4rem 2rem 3rem rgba(0, 0, 0, 0.5);
 	animation: ${showFromUp} 0.7s ease forwards;
 	background-color: #ffffff;
-
-	/*MOBILE*/
-	@media (max-width: 779px) {
-		animation: ${pop} 0.4s ease forwards;
-		max-width: unset;
-		max-height: unset;
-		width: 90vw;
-		height: 55vh;
-		top: 50vw;
-		left: 0;
-		z-index: 2;
-	}
 `
 
 export const PopupContent = styled.section`
@@ -259,12 +397,5 @@ export const PopupContent = styled.section`
 
 	li {
 		font: 1.5rem 'now-medium', Arial, sans-serif;
-	}
-
-	/*MOBILE*/
-	@media (max-width: 779px) {
-		p {
-			width: 80%;
-		}
 	}
 `
