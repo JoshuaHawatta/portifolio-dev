@@ -1,7 +1,7 @@
 import bbcLogo from '../../assets/images/bbc-logo.png'
 import SGTechLogo from '../../assets/images/sg-tech.png'
 import joshuaHawattaLogo from '../../assets/images/Favicon.png'
-import tangerineLogo from '../../assets/images/tangerine-logo.png'
+import tangerineLogo from '../../assets/images/tangerine-logo.svg'
 
 const jobsList = [
 	{
