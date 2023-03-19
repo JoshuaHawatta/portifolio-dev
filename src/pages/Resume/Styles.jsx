@@ -126,7 +126,7 @@ export const ArticleWrapper = styled.article`
 		}
 	}
 
-	//TABLET
+	/*TABLET*/
 	@media (min-width: 501px) and (max-width: 1100px) {
 		display: flex;
 		align-items: center;
@@ -220,7 +220,7 @@ export const ArticleWrapper = styled.article`
 		}
 	}
 
-	//SMALL_TABLETS
+	/*SMALL_TABLETS*/
 	@media (min-width: 1024px) and (max-width: 1080px) and (orientation: landscape) {
 		flex-flow: column;
 		width: 100%;
