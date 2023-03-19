@@ -12,17 +12,93 @@ const pop = keyframes`
     100% { transform: scale(1); }
 `
 
+//CONTAINS_ALL_PAGE_RESPONSIVITY
 export const ArticleWrapper = styled.article`
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.5);
 
-	/*CHILDREN_COMPONENTS*/
+	/*CHILDREN_ELEMENTS*/
 	img {
 		width: 100%;
 		height: 100vh;
+		margin: 0 auto;
 		position: absolute;
 		z-index: -1;
+	}
+
+	/*MOBILE*/
+	@media (max-width: 500px) {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 110vh;
+
+		img {
+			height: 110vh;
+		}
+
+		/*CHILDREN_ELEMENTS*/
+		div {
+			width: 100%;
+			height: 110vh;
+			padding: 6rem 0;
+			margin: 0 auto;
+			flex-flow: column;
+			align-items: center;
+			border-radius: unset;
+
+			div {
+				flex-flow: column;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+
+				img {
+					width: 20rem;
+					height: 20rem;
+				}
+
+				div {
+					width: 75%;
+
+					p {
+						text-align: center;
+						font-size: 1.7vh;
+					}
+				}
+			}
+
+			aside {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transform: unset;
+				flex-wrap: wrap;
+				width: 60%;
+				height: 15%;
+
+				svg {
+					margin: 1rem 0;
+					font-size: 2.3vh;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 500px) and (orientation: landscape) {
+	}
+
+	//TABLET
+	@media (min-width: 501px) and (max-width: 1100px) {
+	}
+
+	@media (min-width: 501px) and (max-width: 1100px) and (orientation: landscape) {
 	}
 `
 
@@ -30,133 +106,20 @@ export const Glassmorphisim = styled.div`
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-evenly;
-	align-items: center;
-	width: 100%;
+	align-items: flex-start;
+	width: 80%;
 	height: 60vh;
-	margin-bottom: 10rem;
-	padding: 3rem;
-	border-radius: 2rem;
+	padding: 0 2rem;
+	border-radius: 4rem;
 	backdrop-filter: blur(1rem);
 	-webkit-backdrop-filter: blur(1rem);
 	background-color: rgba(255, 255, 255, 0.1);
 	animation: ${pop} 0.5s ease forwards;
 
-	/*MOBILE*/
-	@media (max-width: 779px) {
-		margin: 0 auto;
-		padding: 2rem 0;
-		flex-flow: row wrap;
-		width: 100%;
-		height: 75vh;
-
-		/*CHILDREN ELEMENTS*/
-		h4 {
-			font-size: 4rem;
-		}
-	}
-
-	/*TABLES*/
-	@media (min-width: 1016px) and (max-width: 1240px) {
-		height: 85vh;
-	}
-`
-
-export const HardSkills = styled.section`
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-	align-items: center;
-	margin: 0 auto;
-	position: absolute;
-	width: 100%;
-	height: 90vh;
-	padding: 0 12rem;
-
-	/*CHILDREN_ELEMENTS*/
 	div {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-flow: row wrap;
-		align-items: center;
-		gap: 0.8rem;
-		/*ICON_WITH_PERCENTAGE_ELEMENT*/
-		div > div {
-			width: 9%;
-			max-width: 9%;
-			text-align: center;
-		}
-	}
+		width: 100%;
 
-	button {
-		position: absolute;
-		bottom: 1.5rem;
-		width: 18%;
-	}
-
-	/*MOBILE*/
-	@media (max-width: 779px) {
-		padding: 0 4rem;
-
-		/*CHILDREN_ELEMENTS*/
-		button {
-			bottom: -5rem;
-			font-size: 1.5rem;
-			width: 45%;
-			max-width: unset;
-		}
-
-		div {
-			/*CHILDREN_ELEMENTS*/
-			button {
-				bottom: 5rem;
-			}
-		}
-
-		button {
-			bottom: 0;
-		}
-
-		/*ICON_WITH_PERCENTAGE_ELEMENT*/
-		div > div > div {
-			text-align: center;
-			width: 20%;
-			margin-top: 2rem;
-
-			/*CHILDREN_ELEMENTS*/
-			h5 {
-				font-size: 1rem;
-			}
-		}
-	}
-
-	/*TABLES*/
-	@media (min-width: 1016px) and (max-width: 1240px) {
-		height: 100vh;
-
-		/*CHILDREN_ELEMENTS*/
-		button {
-			width: 40%;
-		}
-	}
-`
-
-export const SoftSkills = styled(HardSkills)`
-	/*ICON_WITH_PERCENTAGE_ELEMENT*/
-	div > div > div {
-		width: 15%;
-	}
-`
-
-export const MySelf = styled(HardSkills)`
-	div > div {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		padding: 0 4rem;
-		width: 95%;
-
-		/*CHILDREN_ELEMENTS*/
 		img {
 			z-index: unset;
 			position: unset;
@@ -173,7 +136,7 @@ export const MySelf = styled(HardSkills)`
 			margin: 0 auto;
 			max-width: unset;
 			width: 60%;
-			height: 41vh;
+			height: 100%;
 
 			/*CHILDREN_ELEMENTS*/
 			p {
@@ -183,46 +146,17 @@ export const MySelf = styled(HardSkills)`
 		}
 	}
 
-	/*MOBILE*/
-	@media (max-width: 779px) {
-		div > div {
-			flex-flow: column wrap;
-			padding: 0 1rem;
+	aside {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		width: 80%;
+		height: 10%;
+		transform: translateX(6%);
 
-			/*CHILDREN_ELEMENTS*/
-			img {
-				width: 20rem;
-				height: 20rem;
-			}
-
-			div {
-				height: unset;
-				text-align: center;
-				margin-top: 2rem;
-				width: 100%;
-
-				/*CHIDLREN_ELEMENTS*/
-				p {
-					font-size: 1.3rem;
-				}
-				p ~ p {
-					margin-top: 1rem;
-				}
-			}
-		}
-	}
-
-	/*SMALL_LAPTOPS_TEXT_SIZE*/
-	@media (min-width: 790px) and (max-width: 1104px) and (min-height: 1000px) {
-		div > div > div > p {
-			font-size: 1.5rem;
-		}
-	}
-
-	/*TABLETS*/
-	@media (max-width: 1100px) and (orientation: landscape) {
-		div > div > p {
-			width: 30rem;
+		//CHILDREN_ELEMENTS
+		svg {
+			font-size: 2.8rem;
 		}
 	}
 `
