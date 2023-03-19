@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 //CONTAINS_ALL_PAGE_RESPONSIVITY
 export const ArticleWrapper = styled.article`
