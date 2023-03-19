@@ -1,17 +1,5 @@
 import styled, { keyframes } from 'styled-components'
 
-const pop = keyframes`
-    0% {
-        div { display: none; }
-        transform: scale(0);
-    }
-    50% {
-        div { display: flex; }
-        transform: scale(1.2);
-    }
-    100% { transform: scale(1); }
-`
-
 //CONTAINS_ALL_PAGE_RESPONSIVITY
 export const ArticleWrapper = styled.article`
 	display: flex;
@@ -272,7 +260,6 @@ export const Glassmorphisim = styled.div`
 	backdrop-filter: blur(1rem);
 	-webkit-backdrop-filter: blur(1rem);
 	background-color: rgba(255, 255, 255, 0.1);
-	animation: ${pop} 0.5s ease forwards;
 
 	div {
 		display: flex;
