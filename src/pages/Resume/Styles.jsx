@@ -65,6 +65,97 @@ export const ArticleWrapper = styled.article`
 				}
 
 				div {
+					width: 80%;
+
+					p {
+						text-align: center;
+						margin-top: 1rem;
+						font-size: 1.5vh;
+					}
+				}
+			}
+
+			aside {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transform: unset;
+				flex-wrap: wrap;
+				width: 60%;
+				height: 15%;
+
+				svg {
+					margin: 1rem 0;
+					font-size: 2.3vh;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 500px) and (orientation: landscape) {
+		flex-flow: column;
+		width: 100%;
+
+		/*CHILDREN_ELEMENTS*/
+		div {
+			img {
+				display: none;
+			}
+
+			div {
+				div {
+					flex-flow: column;
+					gap: 1rem;
+
+					p {
+						font-size: 2vw;
+					}
+				}
+			}
+
+			aside {
+				margin-top: 2rem;
+				width: 100%;
+
+				transform: unset;
+
+				svg {
+					font-size: 3vw;
+				}
+			}
+		}
+	}
+
+	/*TABLET*/
+	@media (min-width: 501px) and (max-width: 1100px) {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		/*CHILDREN_ELEMENTS*/
+		div {
+			width: 100%;
+			height: 100vh;
+			padding: 6rem 0;
+			margin: 0 auto;
+			flex-flow: column;
+			align-items: center;
+			border-radius: unset;
+
+			div {
+				flex-flow: column;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+
+				img {
+					width: 20rem;
+					height: 20rem;
+				}
+
+				div {
 					width: 75%;
 
 					p {
@@ -91,14 +182,81 @@ export const ArticleWrapper = styled.article`
 		}
 	}
 
-	@media (max-width: 500px) and (orientation: landscape) {
-	}
-
-	//TABLET
-	@media (min-width: 501px) and (max-width: 1100px) {
-	}
-
 	@media (min-width: 501px) and (max-width: 1100px) and (orientation: landscape) {
+		flex-flow: column;
+		width: 100%;
+		height: 170vh;
+
+		img {
+			height: 170vh;
+		}
+
+		/*CHILDREN_ELEMENTS*/
+		div {
+			height: 170vh;
+
+			div {
+				div {
+					flex-flow: column;
+					gap: 1rem;
+
+					p {
+						width: 75%;
+						font-size: 1.5vw;
+					}
+				}
+			}
+
+			aside {
+				margin-top: 2rem;
+				width: 100%;
+
+				transform: unset;
+
+				svg {
+					font-size: 3vw;
+				}
+			}
+		}
+	}
+
+	/*SMALL_TABLETS*/
+	@media (min-width: 1024px) and (max-width: 1080px) and (orientation: landscape) {
+		flex-flow: column;
+		width: 100%;
+		height: 100vh;
+
+		img {
+			height: 100vh;
+		}
+
+		/*CHILDREN_ELEMENTS*/
+		div {
+			height: 100vh;
+
+			div {
+				div {
+					flex-flow: column;
+					gap: 1rem;
+
+					p {
+						width: 70%;
+						font-size: 1.4vw;
+					}
+				}
+			}
+
+			aside {
+				margin-top: 2rem;
+				width: 100%;
+
+				transform: unset;
+
+				svg {
+					font-size: 3vw;
+				}
+			}
+		}
 	}
 `
 

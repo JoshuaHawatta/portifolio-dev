@@ -97,6 +97,16 @@ export const NavBar = styled.nav`
 		}
 	}
 
+	/*MOBILE*/
+	@media (max-width: 779px) and (orientation: landscape) {
+		/*CHILDREN_ELEMENTS*/
+		div {
+			p {
+				display: none;
+			}
+		}
+	}
+
 	/*TABLETS*/
 	@media (max-width: 1100px) and (orientation: landscape) {
 		position: fixed;

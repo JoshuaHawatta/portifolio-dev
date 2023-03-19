@@ -18,22 +18,29 @@ const ResumePage = () => {
 					<img src={aboutMeImage} alt='presenting-my-self' />
 					<div>
 						<p>
-							Oi, meu nome é Joshua Hawatta!
+							Olá, meu nome é Joshua Hawatta e eu sou um programador Full Stack de 19 anos
+							com experiência em desenvolvimento de aplicativos para a web.
 							<br />
-							Tenho 19 anos e sou Programador Full Stack. Eu crio tanto o banco de dados
-							quanto a parte visual de uma aplicação-web.
+							Sou especialista em criar desde o banco de dados até a interface visual de
+							uma aplicação, de uma maneira fácil e eficiente.
 							<br />
 							Meus hobbies envolvem ler, ver filmes de sci-fi e ouvir música boa.
 						</p>
 
 						<p>
-							Se você tem uma ideia de site, blog, landing page, etc... eu sou o cara para
-							isso!
+							Além da minha paixão por programação, adoro passar meu tempo livre lendo,
+							assistindo filmes de ficção científica e ouvindo música de qualidade.
+							<br />
+							Se você tem uma ideia para um site, blog ou landing page, estou aqui para
+							ajudar.
 						</p>
 
 						<p>
-							Moro em Brasília, mas estou à uma mensagem de distância para qualquer que
-							seja a sua demanda!
+							Embora esteja baseado em Brasília, estou disponível para atender suas
+							demandas de qualquer lugar, e podemos trabalhar remotamente.
+							<br />
+							Sinta-se à vontade para entrar em contato comigo para iniciarmos o trabalho
+							no seu projeto. Juntos, podemos criar algo incrível.
 						</p>
 					</div>
 				</div>
