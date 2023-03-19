@@ -2,7 +2,7 @@ import { FaGithub, FaWhatsapp, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 //COMPONENTS
 import CTA_BUTTON_JSX from '../../components/CtaButton'
-import CARD_JSX from '../../components/Card'
+import CARD_JSX from '../../components/Cards'
 
 //STYLES
 import { ArticleWrapper, ConctatsWrapper } from './Styles'
