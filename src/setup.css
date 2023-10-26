@@ -1,50 +1,51 @@
 /*FONTS*/
 @font-face {
-	font-family: harry-fat;
-	src: url('./assets/fonts/harry-fat.otf');
+  font-family: harry-fat;
+  src: url("./assets/fonts/harry-fat.otf");
 }
 
 @font-face {
-	font-family: harry-heavy;
-	src: url('./assets/fonts/harry-heavy.otf');
+  font-family: harry-heavy;
+  src: url("./assets/fonts/harry-heavy.otf");
 }
 
 @font-face {
-	font-family: now-medium;
-	src: url('./assets/fonts/Now-Medium.otf');
+  font-family: now-medium;
+  src: url("./assets/fonts/Now-Medium.otf");
 }
 
 @font-face {
-	font-family: now-light;
-	src: url('./assets/fonts/now-light.otf');
+  font-family: now-light;
+  src: url("./assets/fonts/now-light.otf");
 }
 
 /*BASIC_STYLING*/
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	text-rendering: geometricPrecision !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: geometricPrecision !important;
 }
 
 html {
-	font-size: 62.5%;
-	scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /*MESSAGE_TO_SHOW_THE_USER_TO_ROTATE_THE_PHONE*/
 h6 {
-	display: none;
+  display: none;
 }
 
 ::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 /*COLORS*/
 :root {
-	--blue-color: #4d4bcb;
-	--brighter-blue-color: #5a58df;
-	--green-color: #c7e87d;
-	--gray-color: #d8e5e7;
+  --blue-color: #4d4bcb;
+  --brighter-blue-color: #5a58df;
+  --darker-blue-color: #343393;
+  --green-color: #c7e87d;
+  --gray-color: #d8e5e7;
 }

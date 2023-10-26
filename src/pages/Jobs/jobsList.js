@@ -2,6 +2,8 @@ import bbcLogo from "../../assets/images/bbc-logo.png";
 import SGTechLogo from "../../assets/images/sg-tech.png";
 import joshuaHawattaLogo from "../../assets/images/Favicon.png";
 import tangerineLogo from "../../assets/images/tangerine-logo.svg";
+import { BsFillLaptopFill } from "react-icons/bs";
+import { FaWarehouse } from "react-icons/fa";
 
 const jobsList = [
   {
@@ -40,16 +42,18 @@ const jobsList = [
   },
   {
     id: 5,
+    icon: FaWarehouse,
     company: "Startups",
     role: "Desenvovledor Fullstack",
-    stacks: ["React", "Node.js", "Docker", "..."],
+    stacks: ["React", "Node.js", "Docker", "AWS"],
     description: "Ajudei Startups em cresimento, fazendo parte de pequenos e grandes projetos!",
   },
   {
     id: 6,
+    icon: BsFillLaptopFill,
     company: "Freelancer",
     role: "Desenvovledor Fullstack",
-    stacks: ["React", "Node.js", "Docker", "Java", "React Natiive", "..."],
+    stacks: ["React", "Node.js", "Docker", "Java", "React Natiive", "Docker", "AWS"],
     description:
       "Meu trabalho principal, onde ajudo pessoas a tirar a ideia da cabeça. Seja uma dessas pessoas também!",
   },

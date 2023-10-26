@@ -26,17 +26,15 @@ export const ArticleWrapper = styled.article`
     align-items: center;
     justify-content: center;
     height: auto;
+    background-color: #4d4bcb;
 
     img {
-      opacity: 0;
+      display: none;
     }
 
     /*CHILDREN_ELEMENTS*/
     div {
-      img {
-        opacity: 1;
-      }
-
+      background-color: unset;
       width: 100%;
       height: auto;
       padding: 6rem 0;
@@ -45,24 +43,28 @@ export const ArticleWrapper = styled.article`
       align-items: center;
       border-radius: unset;
 
+      img {
+        display: unset;
+      }
+
       div {
         flex-flow: column;
+        padding: 2rem 0;
         align-items: center;
         width: 100%;
-        height: 100%;
+        height: 100vh;
 
         img {
-          width: 20rem;
-          height: 20rem;
+          width: 15rem;
+          height: 15rem;
         }
 
         div {
           width: 80%;
 
           p {
-            text-align: center;
             margin-top: 1rem;
-            font-size: 1.5vh;
+            font-size: 1.6vh;
           }
         }
       }
@@ -73,11 +75,16 @@ export const ArticleWrapper = styled.article`
         align-items: center;
         transform: unset;
         flex-wrap: wrap;
-        width: 60%;
-        height: 15%;
+        width: 100%;
+        position: fixed;
+        height: 20vh;
+        bottom: 0;
+        padding: 2rem;
+        border-top-left-radius: 15%;
+        border-top-right-radius: 15%;
+        background-color: var(--darker-blue-color);
 
         svg {
-          margin: 1rem 0;
           font-size: 2.3vh;
         }
       }
@@ -125,6 +132,7 @@ export const ArticleWrapper = styled.article`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--blue-color);
 
     /*CHILDREN_ELEMENTS*/
     div {
@@ -139,8 +147,8 @@ export const ArticleWrapper = styled.article`
       div {
         flex-flow: column;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        width: auto;
+        height: 100vh;
 
         img {
           width: 20rem;
@@ -151,7 +159,6 @@ export const ArticleWrapper = styled.article`
           width: 75%;
 
           p {
-            text-align: center;
             font-size: 1.7vh;
           }
         }
@@ -163,8 +170,13 @@ export const ArticleWrapper = styled.article`
         align-items: center;
         transform: unset;
         flex-wrap: wrap;
-        width: 60%;
-        height: 15%;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        height: 20vh;
+        border-top-left-radius: 15%;
+        border-top-right-radius: 15%;
+        background-color: var(--darker-blue-color);
 
         svg {
           margin: 1rem 0;

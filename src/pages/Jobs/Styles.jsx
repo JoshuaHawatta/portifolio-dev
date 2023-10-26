@@ -57,6 +57,10 @@ export const ArticleWrapper = styled.article`
       font-size: 15vw;
     }
 
+    section {
+      justify-content: center;
+    }
+
     div {
       width: 20rem;
       height: 20rem;
@@ -64,6 +68,12 @@ export const ArticleWrapper = styled.article`
 
       span {
         display: none;
+      }
+
+      div {
+        svg {
+          font-size: 17rem;
+        }
       }
 
       h4 + p {
@@ -246,6 +256,10 @@ export const ArticleWrapper = styled.article`
       height: 15rem;
       padding: 1rem 0;
 
+      svg {
+        font-size: 17rem;
+      }
+
       span {
         display: none;
       }
@@ -317,9 +331,13 @@ export const ArticleWrapper = styled.article`
   @media (min-width: 501px) and (max-width: 1100px) and (orientation: landscape) {
     height: auto;
 
+    section {
+      justify-content: center;
+    }
+
     /*CHILDREN_ELEMENTS*/
     h1 {
-      width: 100%;
+      width: auto;
       margin: 5rem 0;
       font-size: 8vw;
     }
@@ -391,7 +409,7 @@ export const ArticleWrapper = styled.article`
 
   //FIXING_FOR_BIGGER_TABLES
   @media (min-width: 1020px) and (max-width: 1190px) and (orientation: landscape) {
-    height: 100vh;
+    height: auto;
 
     /*CHILDREN_ELEMENTS*/
     h1 {
@@ -524,6 +542,11 @@ export const JobTitleDiv = styled.div`
   img {
     width: 7rem;
     height: 7rem;
+  }
+
+  svg {
+    font-size: 5rem;
+    color: var(--blue-color);
   }
 `;
 

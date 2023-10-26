@@ -52,7 +52,7 @@ const JobsPage = () => {
 
       {/*JOBS_CARDS*/}
       <Styled.ExperiencesSection>
-        {jobsList.map(({ id, img, company, role }) => (
+        {jobsList.map(({ id, img, icon: Icon, company, role }) => (
           <button onClick={() => handleGetJob(id)} key={id}>
             <Styled.Jobs>
               <span>
@@ -61,6 +61,7 @@ const JobsPage = () => {
 
               <Styled.JobTitleDiv>
                 {img && <img src={img} alt={img.toUpperCase()} />}
+                {Icon && <Icon />}
 
                 <Styled.RoleDiv>
                   <h4>{company}</h4>
